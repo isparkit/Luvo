@@ -562,40 +562,97 @@
           "type": "step",
           "settings": {
             "tab_title": "Wear the Ring",
-            "block_heading": "What Happens",
-            "block_subtext": "Simply slip Luvo on your finger...",
-            "block_video": ""
+            "block_heading_one": "01. What Happens:",
+            "block_subtext_one": "Simply slip Luvo on your finger—its lightweight and ergonomic design ensures comfort all day.",
+            "block_heading_two": "02. Why It Matters:",
+            "block_subtext_two": "Unlike bulky wearables, Luvo blends seamlessly with your lifestyle you’ll forget you’re even wearing.",
+            "block_heading_three": "03. Visual Idea:",
+            "block_subtext_three": "Close-up shot of the ring on a hand, with a glow effect highlighting comfort and elegance.",
+            "block_image": "shopify://shop_images/image_1.png"
           }
         },
         "step_qg3HpH": {
           "type": "step",
           "settings": {
-            "tab_title": "Wear the Ring",
-            "block_heading": "What Happens",
-            "block_subtext": "Simply slip Luvo on your finger...",
-            "block_video": ""
+            "tab_title": "Track Your Body",
+            "block_heading_one": "01. What Happens:",
+            "block_subtext_one": "Simply slip Luvo on your finger—its lightweight and ergonomic design ensures comfort all day.",
+            "block_heading_two": "02. Why It Matters:",
+            "block_subtext_two": "Unlike bulky wearables, Luvo blends seamlessly with your lifestyle you’ll forget you’re even wearing.",
+            "block_heading_three": "03. Visual Idea:",
+            "block_subtext_three": "Close-up shot of the ring on a hand, with a glow effect highlighting comfort and elegance.",
+            "block_image": "shopify://shop_images/12.png"
           }
         },
-        "step_LwVAdG": {
+        "step_E7x69b": {
           "type": "step",
           "settings": {
-            "tab_title": "Wear the Ring",
-            "block_heading": "What Happens",
-            "block_subtext": "Simply slip Luvo on your finger...",
-            "block_video": ""
+            "tab_title": "Sync Instantly",
+            "block_heading_one": "01. What Happens:",
+            "block_subtext_one": "Simply slip Luvo on your finger—its lightweight and ergonomic design ensures comfort all day.",
+            "block_heading_two": "02. Why It Matters:",
+            "block_subtext_two": "Unlike bulky wearables, Luvo blends seamlessly with your lifestyle you’ll forget you’re even wearing.",
+            "block_heading_three": "03. Visual Idea:",
+            "block_subtext_three": "Close-up shot of the ring on a hand, with a glow effect highlighting comfort and elegance.",
+            "block_image": "shopify://shop_images/12.png"
+          }
+        },
+        "step_x4DKn4": {
+          "type": "step",
+          "settings": {
+            "tab_title": "Get Smart Insights",
+            "block_heading_one": "01. What Happens:",
+            "block_subtext_one": "Simply slip Luvo on your finger—its lightweight and ergonomic design ensures comfort all day.",
+            "block_heading_two": "02. Why It Matters:",
+            "block_subtext_two": "Unlike bulky wearables, Luvo blends seamlessly with your lifestyle you’ll forget you’re even wearing.",
+            "block_heading_three": "03. Visual Idea:",
+            "block_subtext_three": "Close-up shot of the ring on a hand, with a glow effect highlighting comfort and elegance.",
+            "block_image": "shopify://shop_images/image_1.png"
           }
         }
       },
       "block_order": [
         "step_H4HgEC",
         "step_qg3HpH",
-        "step_LwVAdG"
+        "step_E7x69b",
+        "step_x4DKn4"
       ],
       "name": "Custom Luvo Works",
       "settings": {
-        "background_color": "#000000",
+        "color_scheme": "scheme-4",
         "section_heading": "How Luvo Works",
-        "section_subtext": "Luvo combines cutting-edge sensors, seamless connectivity, and AI-powered insights—so you can focus on living, while it takes care of the tracking."
+        "section_subtext": "Luvo combines cutting-edge sensors, seamless connectivity, and AI-powered insights—so you can focus on living, while it takes care of the tracking.",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "custom_faq_accordion_mEBQUw": {
+      "type": "custom-faq-accordion",
+      "blocks": {
+        "faq_yj8Vyq": {
+          "type": "faq",
+          "settings": {
+            "question": "What can Luvo track?",
+            "answer": "Luvo tracks your heart rate, steps, sleep, activity, and stress levels—plus discreet smart notifications."
+          }
+        },
+        "faq_JxkGpW": {
+          "type": "faq",
+          "settings": {
+            "question": "Is Luvo waterproof?",
+            "answer": "Luvo tracks your heart rate, steps, sleep, activity, and stress levels—plus discreet smart notifications."
+          }
+        }
+      },
+      "block_order": [
+        "faq_yj8Vyq",
+        "faq_JxkGpW"
+      ],
+      "name": "Custom FAQ Accordion",
+      "settings": {
+        "heading": "Everything You Need to Know About Luvo",
+        "subheading": "From battery life to compatibility, here are answers to the most common questions about Luvo Smart Ring.",
+        "faq_image": "shopify://shop_images/12.png"
       }
     }
   },
@@ -608,6 +665,7 @@
     "image_with_text_kn9WxK",
     "ss_testimonial_8_pPhRPq",
     "collapsible_content_nyTwxi",
-    "custom_luvo_works_mp4iKQ"
+    "custom_luvo_works_mp4iKQ",
+    "custom_faq_accordion_mEBQUw"
   ]
 }

@@ -1,0 +1,175 @@
+{% schema %}
+{
+  "name": "Custom FAQ Accordion",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Everything You Need to Know About Luvo"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Section Subheading",
+      "default": "From battery life to compatibility, here are answers to the most common questions about Luvo Smart Ring."
+    },
+    {
+      "type": "image_picker",
+      "id": "faq_image",
+      "label": "Left Side Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "textarea",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "Custom FAQ Accordion",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<section class="faq-accordion-section" id="faq-accordion-{{ section.id }}">
+  <div class="faq-container">
+    <div class="faq-left">
+      {% if section.settings.faq_image %}
+        <img src="{{ section.settings.faq_image | img_url: '600x' }}" alt="FAQ Image">
+      {% endif %}
+    </div>
+    <div class="faq-right">
+      <h2 class="faq-title">{{ section.settings.heading }}</h2>
+      {% if section.settings.subheading != blank %}
+        <p class="faq-subtitle">{{ section.settings.subheading }}</p>
+      {% endif %}
+
+      <div class="faq-items">
+        {% for block in section.blocks %}
+          <div class="faq-item" id="faq-{{ section.id }}-{{ forloop.index }}">
+            <button class="faq-question" aria-expanded="false">
+              {{ block.settings.question }}
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>{{ block.settings.answer }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.faq-accordion-section {
+  padding: 60px 20px;
+  background: #111;
+  color: #fff;
+}
+.faq-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+.faq-left img {
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.faq-right {
+  flex: 1;
+  min-width: 300px;
+}
+.faq-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.faq-subtitle {
+  font-size: 16px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+.faq-item {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 15px 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.faq-answer {
+  display: none;
+  padding: 0 10px 15px 10px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+.faq-question.active + .faq-answer {
+  display: block;
+}
+.faq-icon {
+  transition: transform 0.3s ease;
+}
+.faq-question.active .faq-icon {
+  transform: rotate(45deg);
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const faqSections = document.querySelectorAll(".faq-accordion-section");
+
+  faqSections.forEach(section => {
+    const questions = section.querySelectorAll(".faq-question");
+
+    questions.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const expanded = btn.getAttribute("aria-expanded") === "true";
+        
+        // Close all in this section
+        questions.forEach(q => {
+          q.classList.remove("active");
+          q.setAttribute("aria-expanded", "false");
+          q.nextElementSibling.style.display = "none";
+        });
+
+        if (!expanded) {
+          btn.classList.add("active");
+          btn.setAttribute("aria-expanded", "true");
+          btn.nextElementSibling.style.display = "block";
+        }
+      });
+    });
+  });
+});
+</script>
