@@ -575,11 +575,21 @@
             "block_subtext": "Simply slip Luvo on your finger...",
             "block_video": ""
           }
+        },
+        "step_LwVAdG": {
+          "type": "step",
+          "settings": {
+            "tab_title": "Wear the Ring",
+            "block_heading": "What Happens",
+            "block_subtext": "Simply slip Luvo on your finger...",
+            "block_video": ""
+          }
         }
       },
       "block_order": [
         "step_H4HgEC",
-        "step_qg3HpH"
+        "step_qg3HpH",
+        "step_LwVAdG"
       ],
       "name": "Custom Luvo Works",
       "settings": {
