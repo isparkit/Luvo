@@ -1,0 +1,603 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Din krop taler, <strong>LuvoRing</strong> lytter.",
+            "heading_size": "h1"
+          }
+        },
+        "text_qUUHpY": {
+          "type": "text",
+          "settings": {
+            "text": "SMART RINGEN DER TRACKER DIN SUNDHED 24/7",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "KØB NU",
+            "button_link_1": "shopify://products/luvoring",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text_qUUHpY",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/LUNA_Logo_b630aace-d2a3-49e9-8799-4fc5760fc05a.png",
+        "image_overlay_opacity": 40,
+        "image_height": "medium",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_rpktmy": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_84ibFG": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>HVORFOR VÆLGE OS?</strong>",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_84ibFG"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 36
+      }
+    },
+    "ss_feature_1_CwbDnM": {
+      "type": "ss-feature-1",
+      "blocks": {
+        "image_WpfbN8": {
+          "type": "image",
+          "settings": {
+            "feature_title": "",
+            "feature_text": "<p>2-4 DAGES LEVERING</p>",
+            "feature_image": "shopify://shop_images/LUNA_Logo_4.png",
+            "feature_url": "https://section.store/",
+            "hide_image": false
+          }
+        },
+        "image_KAV3wA": {
+          "type": "image",
+          "settings": {
+            "feature_title": "",
+            "feature_text": "<p>DANSK VIRKSOMHED</p>",
+            "feature_image": "shopify://shop_images/LUNA_Logo_9.png",
+            "feature_url": "",
+            "hide_image": false
+          }
+        },
+        "image_kCz4pj": {
+          "type": "image",
+          "settings": {
+            "feature_title": "",
+            "feature_text": "<p>GRATIS FORSENDELSE</p>",
+            "feature_image": "shopify://shop_images/LUNA_Logo_5.png",
+            "feature_url": "",
+            "hide_image": false
+          }
+        }
+      },
+      "block_order": [
+        "image_WpfbN8",
+        "image_KAV3wA",
+        "image_kCz4pj"
+      ],
+      "settings": {
+        "feature_row": 3,
+        "feature_row_mobile": 3,
+        "feature_gap": 20,
+        "feature_gap_mobile": 20,
+        "feature_padding_horizontal": 0,
+        "feature_padding_vertical": 0,
+        "feature_radius": 16,
+        "feature_border_thickness": 0,
+        "feature_shadow": false,
+        "feature_heading_custom": false,
+        "feature_heading_font": "avenir_next_n4",
+        "feature_heading_size": 18,
+        "feature_heading_size_mobile": 12,
+        "feature_heading_height": 130,
+        "feature_heading_mt": 8,
+        "feature_text_custom": false,
+        "feature_text_font": "josefin_sans_n4",
+        "feature_text_size": 18,
+        "feature_text_size_mobile": 12,
+        "feature_text_height": 130,
+        "feature_text_mt": 4,
+        "feature_icon_size": 42,
+        "feature_icon_size_mobile": 42,
+        "feature_bg": "#ffffff",
+        "feature_border_color": "#000000",
+        "feature_shadow_color": "#000000",
+        "feature_heading_color": "#000000",
+        "feature_text_color": "#000000",
+        "feature_icon_color": "#000000",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 16,
+        "padding_bottom": 16,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 120,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "image_with_text_khCVHq": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_3VeBJE": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Følg din sundhed – hele døgnet</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_zcJMkg": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Luvo Ring</strong> kombinerer avanceret teknologi med tidløst design, så du altid kan holde dig opdateret på din krops behov. Optimer dine daglige rutiner ved at tracke din søvn, følge dit aktivitetsniveau og få dybere indsigt i dine vitale sundhedsdata – alt sammen direkte i vores app.</p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_ctRTGB": {
+          "type": "button",
+          "settings": {
+            "button_label": "LÆS MERE",
+            "button_link": "shopify://products/luvoring",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_3VeBJE",
+        "text_zcJMkg",
+        "button_ctRTGB"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/LUNA_Logo_1_65caa354-3eb8-4c9b-af51-ae12004ac7f2.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_kn9WxK": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_p8kcJx": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Smart teknologi til en aktiv livsstil</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_rjkYwz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Synkronisér <strong>Luvo Ring</strong> med din smartphone og få adgang til detaljerede data, notifikationer og personlig feedback. Den er vandafvisende og robust, hvilket gør den ideel til både hverdag og træning.</p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_VMU9E7": {
+          "type": "button",
+          "settings": {
+            "button_label": "KØB NU",
+            "button_link": "shopify://products/luvoring",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_p8kcJx",
+        "text_rjkYwz",
+        "button_VMU9E7"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/LUNA_Logo_3_1214eb39-55e6-4020-b185-b81bfcb8a799.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "ss_testimonial_8_pPhRPq": {
+      "type": "ss-testimonial-8",
+      "blocks": {
+        "slide_BbL6jE": {
+          "type": "slide",
+          "settings": {
+            "stars_count": 5,
+            "heading": "Value for money!",
+            "text": "Var lidt skeptisk i starten pga den billigere pris end andre smart ringe på markedet, men er så glad for jeg gjore det, har ikke fortrudt på noget tidspunkt, så fedt at få mere indblik i ens søvn og stress faktor ! Og appen er nem at bruge for en der ikke er så god til elektronik genrelt.",
+            "author_date": "Sofie H."
+          }
+        },
+        "slide_hRprhN": {
+          "type": "slide",
+          "settings": {
+            "stars_count": 5,
+            "heading": "Uundværlig under træning!",
+            "text": "Virkelig fed smart ring, som er nem at koble op med mobilen. Den er uundværlig for mig under min træning, og så var jeg glad for at der var flere farve muligheder.",
+            "author_date": "Emma"
+          }
+        },
+        "slide_4CxPtw": {
+          "type": "slide",
+          "settings": {
+            "stars_count": 5,
+            "heading": "God kundeservice, hurtigt og præcist",
+            "text": "Jeg bestilte en ring der desværre ikke var den rigtige størrelse, men der var et størrelses Kit med, så jeg kunne finde den rigtige størrelse og så var der god kundeservice og jeg fik hurtigt byttet den til den rigtige størrelse, kan kun anbefale lunaring",
+            "author_date": "Nick B."
+          }
+        },
+        "slide_aFMrAD": {
+          "type": "slide",
+          "settings": {
+            "stars_count": 5,
+            "heading": "Mega fed!",
+            "text": "Luvo Ring er bare mega fed! Stilrent design og smart - elsker at den tracker ens sundhed uden at det ser nørdet ud 👌",
+            "author_date": "Hanan"
+          }
+        },
+        "slide_AyiLXX": {
+          "type": "slide",
+          "settings": {
+            "stars_count": 5,
+            "heading": "Så glad for min Luvo Ring!",
+            "text": "Jeg har brugt ringen lidt over en uge nu og er blevet rigtig glad for den. Det er især mega fedt at få et nærmere indblik i min søvn! Derudover er det et rigtig lækkert design:)",
+            "author_date": "Stine R."
+          }
+        },
+        "slide_3VQULw": {
+          "type": "slide",
+          "settings": {
+            "stars_count": 5,
+            "heading": "God værdi for pengene!",
+            "text": "Har længe kigget efter et billigere alternativ til Auraring, og Luvo Ring lever helt op til forventningerne. Virkelig god kvalitet for pengene og fedt at appen er gratis at bruge! Også god service, at man får tilsendt en størrelsesguide inden køb, så man er sikker på at få den rigtige størrelse 🙌🏼",
+            "author_date": "Anna D."
+          }
+        },
+        "slide_wB4wJd": {
+          "type": "slide",
+          "settings": {
+            "stars_count": 5,
+            "heading": "Mega fedt koncept!",
+            "text": "Mega fedt koncept. Ringen tracker alle de stats jeg har brug for, specielt når jeg løber. Den kobler også op til strava, hvilket er vigtigt da jeg samler alle mine sportslige aktiviteter derunder. Kæmpe fan her!",
+            "author_date": "Muhammed H."
+          }
+        }
+      },
+      "block_order": [
+        "slide_BbL6jE",
+        "slide_hRprhN",
+        "slide_4CxPtw",
+        "slide_aFMrAD",
+        "slide_AyiLXX",
+        "slide_3VQULw",
+        "slide_wB4wJd"
+      ],
+      "settings": {
+        "heading": "HVAD SIGER VORES KUNDER?",
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 40,
+        "heading_size_mobile": 24,
+        "heading_height": 130,
+        "heading_align": "center",
+        "rating_text": "Fremragende",
+        "rating_text_custom": false,
+        "rating_text_font": "josefin_sans_n4",
+        "rating_text_size": 24,
+        "rating_text_size_mobile": 20,
+        "rating_text_height": 130,
+        "rating_text_mt": 16,
+        "rating": 4.3,
+        "rating_hide": false,
+        "rating_text_hide": false,
+        "rating_align": "center",
+        "stars_count": 5,
+        "stars_size": 28,
+        "stars_size_mobile": 24,
+        "stars_align": "center",
+        "text": "",
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 20,
+        "text_size_mobile": 16,
+        "text_height": 130,
+        "text_align": "center",
+        "text_mt": 16,
+        "slider_width": 80,
+        "slider_view": 3,
+        "slider_view_mobile": 1.2,
+        "slider_gap": 20,
+        "slider_gap_mobile": 20,
+        "slider_mt": 36,
+        "card_padding_vertical": 32,
+        "card_padding_vertical_mobile": 24,
+        "card_padding_horizontal": 40,
+        "card_padding_horizontal_mobile": 24,
+        "card_radius": 16,
+        "card_border_thickness": 0,
+        "card_shadow": true,
+        "card_heading_custom": false,
+        "card_heading_font": "josefin_sans_n4",
+        "card_heading_size": 24,
+        "card_heading_size_mobile": 20,
+        "card_heading_height": 130,
+        "card_heading_align": "center",
+        "card_heading_mt": 16,
+        "card_text_custom": false,
+        "card_text_font": "josefin_sans_n4",
+        "card_text_size": 14,
+        "card_text_size_mobile": 14,
+        "card_text_height": 150,
+        "card_text_align": "center",
+        "card_text_mt": 16,
+        "card_text_more": "View More",
+        "card_text_less": "View Less",
+        "card_count_words": 20,
+        "card_author_date_text_custom": false,
+        "card_author_date_text_font": "josefin_sans_n4",
+        "card_author_date_text_size": 16,
+        "card_author_date_text_size_mobile": 16,
+        "card_author_date_text_height": 130,
+        "card_author_date_text_align": "center",
+        "card_author_date_text_mt": 16,
+        "arrow_size": 50,
+        "arrow_size_mobile": 50,
+        "arrow_icon_size": 28,
+        "arrow_icon_size_mobile": 28,
+        "arrow_border_thickness": 0,
+        "arrow_show_desktop": true,
+        "arrow_show_mobile": false,
+        "dots_size": 12,
+        "dots_size_mobile": 12,
+        "dots_show_desktop": false,
+        "dots_show_mobile": false,
+        "button": "",
+        "button_url": "",
+        "button_custom": false,
+        "button_font": "josefin_sans_n4",
+        "button_size": 16,
+        "button_size_mobile": 14,
+        "button_height": 100,
+        "button_align": "center",
+        "button_mt": 16,
+        "button_padding_vertical": 20,
+        "button_padding_horizontal": 16,
+        "button_radius": 8,
+        "button_border_thickness": 0,
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
+        "button_bg_color": "#000000",
+        "button_bg_hover_color": "#000000",
+        "button_border_color": "#000000",
+        "button_border_hover_color": "#000000",
+        "card_bg_color": "#ffffff",
+        "card_border_color": "#000000",
+        "card_shadow_color": "#00b67a",
+        "card_heading_color": "#000000",
+        "card_text_color": "#000000",
+        "card_author_date_text_color": "#000000",
+        "arrow_color": "#000000",
+        "arrow_hover_color": "#000000",
+        "arrow_bg_color": "#ffffff",
+        "arrow_bg_hover_color": "#ffffff",
+        "arrow_border_color": "#ffffff",
+        "arrow_border_hover_color": "#ffffff",
+        "dots_color": "#000000",
+        "heading_color": "#000000",
+        "rating_text_color": "#000000",
+        "stars_bg_color": "#00b67a",
+        "stars_color": "#ffffff",
+        "text_color": "#000000",
+        "background_color": "#ffffff",
+        "background_gradient": "linear-gradient(180deg, rgba(206, 239, 199, 1), rgba(255, 255, 255, 1) 100%)",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": true,
+        "content_width": 120,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "collapsible_content_nyTwxi": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_HNirmh": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Hvilke funktioner tilbyder Luvo Ring?",
+            "icon": "none",
+            "row_content": "<p><strong>Præcis aktivitetsmåling</strong><br/>Luvo Ring sporer din daglige aktivitet og træning med høj nøjagtighed. Den måler puls, forbrændte kalorier, skridt, tilbagelagt afstand og aktivitetsniveau hele dagen. Med 100+ forskellige sportsfunktioner er den din perfekte makker til enhver form for motion.</p><p><strong>Søvntracking</strong><br/>Få et detaljeret indblik i din søvnkvalitet. Luvo Ring måler søvnvarighed, REM-søvn, let søvn, dyb søvn og antallet af opvågninger. Den overvåger også din hjerterytmevariabilitet (HRV) for at hjælpe dig med at forstå og optimere dine søvnmønstre.</p><p><strong>Sundhedsovervågning</strong><br/>Hold styr på dit helbred med appen – dagligt, ugentligt eller månedligt. Luvo Ring måler:</p><ul><li>Hjerterytme</li><li>Blodets iltmætning (SpO2)</li><li>Puls</li><li>Kropstemperatur</li><li>Stressniveau</li></ul><p><strong>Unikke funktioner til kvinder</strong><br/>Luvo Ring er designet til at understøtte kvinders sundhed med funktioner som sporing af menstruationscyklus og overvågning af graviditetsperioden</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_QdcWBz": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Hvordan oplader jeg Luvo Ring, og hvor lang tid holder batteriet?",
+            "icon": "none",
+            "row_content": "<p>Luvo Ring II oplades med den medfølgende oplader. Efter en fuld opladning holder batteriet 5-7 dage takket være et kredsløbsdesign med superlavt strømforbrug. Med det medfølgende opladningsetuiet kan levetiden forlænges helt op til 60 dage.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_pq6hHF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Kan Luvo Ring tåle vand?",
+            "icon": "none",
+            "row_content": "<p>Ja, Luvo Ring er 5 AMT vandtæt og kan bæres når du vasker hænder, under træning og i badet. Dog anbefales det ikke at bruge den under svømning i mere end maks 30 minutter. Svømmer du i saltvand, så husk at vask ringen umiddelbart efter, da det kan have indvirkning på sensorerne.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_7RF93X": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Hvilke smartphones er kompatible med Luvo Ring?",
+            "icon": "none",
+            "row_content": "<p>Luvo Ring fungerer med både iOS og Android. Download vores app i App Store eller Google Play.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_HNirmh",
+        "collapsible_row_QdcWBz",
+        "collapsible_row_pq6hHF",
+        "collapsible_row_7RF93X"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "SPØRGSMÅL? <strong>VI HAR SVAR</strong>",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_luvo_works_mp4iKQ": {
+      "type": "custom-luvo-works",
+      "blocks": {
+        "step_H4HgEC": {
+          "type": "step",
+          "settings": {
+            "tab_title": "Wear the Ring",
+            "block_heading": "What Happens",
+            "block_subtext": "Simply slip Luvo on your finger...",
+            "block_video": ""
+          }
+        },
+        "step_qg3HpH": {
+          "type": "step",
+          "settings": {
+            "tab_title": "Wear the Ring",
+            "block_heading": "What Happens",
+            "block_subtext": "Simply slip Luvo on your finger...",
+            "block_video": ""
+          }
+        }
+      },
+      "block_order": [
+        "step_H4HgEC",
+        "step_qg3HpH"
+      ],
+      "name": "Custom Luvo Works",
+      "settings": {
+        "background_color": "#000000",
+        "section_heading": "How Luvo Works",
+        "section_subtext": "Luvo combines cutting-edge sensors, seamless connectivity, and AI-powered insights—so you can focus on living, while it takes care of the tracking."
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "featured_collection",
+    "rich_text_rpktmy",
+    "ss_feature_1_CwbDnM",
+    "image_with_text_khCVHq",
+    "image_with_text_kn9WxK",
+    "ss_testimonial_8_pPhRPq",
+    "collapsible_content_nyTwxi",
+    "custom_luvo_works_mp4iKQ"
+  ]
+}

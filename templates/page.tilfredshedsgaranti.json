@@ -1,0 +1,216 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "collapsible_content_MDHWHL": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_BxdrjU": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Hvilke funktioner tilbyder Luvo Ring?",
+            "icon": "none",
+            "row_content": "<p><strong>Præcis aktivitetsmåling:<br/></strong>Luvo Ring sporer din daglige aktivitet og træning med høj nøjagtighed. Den måler puls, forbrændte kalorier, skridt, tilbagelagt afstand og aktivitetsniveau hele dagen. Med 100+ forskellige sports funktioner er den din perfekte makker til enhver form for motion.</p><p><strong>Søvntracking:<br/></strong>Få et detaljeret indblik i din søvnkvalitet. Luvo Ring måler søvnvarighed, REM-søvn, let søvn, dyb søvn og antallet af opvågninger. Den overvåger også din hjerterytmevariabilitet (HRV) for at hjælpe dig med at forstå og optimere dine søvnmønstre.</p><p><strong>Sundhedsovervågning:<br/></strong>Hold styr på dit helbred med appen – dagligt, ugentligt eller månedligt. Luvo Ring måler:</p><ul><li>Hjerterytme</li><li>Blodets iltmætning (SpO2)</li><li>Puls</li><li>Kropstemperatur</li><li>Stressniveau</li></ul><p><strong>Unikke funktioner til kvinder:<br/></strong>Luvo Ring er designet til at understøtte kvinders sundhed med funktioner som sporing af menstruationscyklus og overvågning af graviditetsperioden.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_VLHfLe": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Hvordan oplader jeg Luvo Ring, og hvor lang tid holder batteriet?",
+            "icon": "none",
+            "row_content": "<p>Luvo Ring II oplades med den medfølgende oplader. Efter en fuld opladning holder batteriet 4-7 dage takket være et kredsløbsdesign med superlavt strømforbrug. Med det medfølgende opladningsetuiet kan levetiden forlænges helt op til 60 dage. </p><p>Men det afhænger stadig af den daglige brug.<br/></p><ul><li>Ikke-kontinuerlig overvågning giver optimal batterilevetid og indsamler hjerteindikatorer med en lavere frekvens med en batterilevetid på ca. 7 dage.<br/></li><li>Når kontinuerlig overvågning er aktiveret, indsamles hjerteindikatorer med en højere frekvens, og batterilevetiden reduceres til 2,5 dage.<br/><br/>Du kan indstille dette i appen.</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_row_W4Qxad": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Kan Luvo Ring tåle vand?",
+            "icon": "none",
+            "row_content": "<p>Ja; Luvo Ring er 5 AMT vandtæt og kan bæres når du vasker hænder, under træning, i badet og når du svømmer. Dog anbefales det ikke at bruge den under svømning i mere end maks 30 minutter. Svømmer du i saltvand, så husk at vask ringen umiddelbart efter, da det kan have indvirkning på sensorerne.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_97UdEq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Hvilke smartphones er kompatible med Luvo Ring?",
+            "icon": "none",
+            "row_content": "<p>Luvo Ring fungerer med både iOS og Android. Download vores app i App Store eller Google Play.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_piQqCa": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Kan ringen synkroniseres med andre eksterne apps?",
+            "icon": "none",
+            "row_content": "<p>Google Fit understøttes, men er pt. en funktion der opdateres.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ULgaBf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Er der abonnementsgebyr for at få adgang til appen?",
+            "icon": "none",
+            "row_content": "<p>Nej; det vil altid være gratis ved køb af en ring. Den eneste omkostning er engangsbetalingen for selve ringen.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_yXnWEr": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Hvilke enheder er ringen kompatibel med?",
+            "icon": "none",
+            "row_content": "<p>Ringen er kompatibel med de fleste mobile enheder, der kører iOS 11 eller nyere, eller Android 6 eller nyere.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_dEM3gJ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Hvordan forbinder jeg min ring til min telefon?",
+            "icon": "none",
+            "row_content": "<ul><li>Start applikationen på din telefon.</li><li>Appen vil bede dig om tilladelse til at få adgang til din Bluetooth og lokalisering og derefter starte parringsprocessen. Du behøver ikke længere at udføre parringsprocessen i fremtiden.</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_row_kRj6NJ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Hvordan tænder/slukker jeg min ring?",
+            "icon": "none",
+            "row_content": "<p>Det er super simpelt, at du faktisk ikke behøver at gøre noget selv.</p><ul><li>Der er ingen tænd/sluk-knap på ringen, den ved, hvornår du har den på eller ej, og går automatisk i standbytilstand, hvis du ikke har den på.</li><li>Du skal blot parre din ring med appen, så begynder ringen at registrere data.</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_row_eKwV7R": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Kan jeg bære den i fitnesscentret?",
+            "icon": "none",
+            "row_content": "<p>Det anbefales ikke at bruge ringen, når du løfter vægte, da det kan beskadige ringen.</p><p>Det anbefales at bære vores silikone beskytter, da den ellers vil blive ridset hurtigere.</p><p>Ligesom almindelige smykker kan ringen blive ridset hvis den bæres, mens du løfter vægte eller griber fat i stænger, eller når den skraber mod metal, keramik eller sten. Bortset fra at løfte vægte kan du selvfølgelig dyrke andet sport med din ring.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_LpNb4K": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Hvor kan jeg downloade appen?",
+            "icon": "none",
+            "row_content": "<p>Appen til iPhone er tilgængelig i App Store til enheder med iOS 11 eller nyere. Appen til Android er tilgængelig på Google Play til enheder med Android 6 eller nyere.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_FwjLRK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Kan jeg bære min ring i saunaen, ved havet eller i hammam?",
+            "icon": "none",
+            "row_content": "<p>Det anbefales ikke at bære ringen i mere end 30 minutter ved ekstremt høje (over 60 °C) og lave temperaturer (under -20 °C).</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_JMjtXC": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Hvordan oplader jeg min ring?",
+            "icon": "none",
+            "row_content": "<p>Tilslut USB C-opladeren direkte til en USB C-oplader, eller brug det medfølgende USB-kabel.</p><p>Placer blot de magnetiske stifter, der sidder på den flade del af din ring, på opladerens magnetiske stifter.</p><p>Opladerens stifter vil være i kontakt med dem på din ring, så den kan oplades.</p><p>En LED på opladeren tændes for at vise, at ringen oplades.</p><p>Opladeren slukkes, når din ring er fuldt opladet.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_tdgnHX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Hvordan måler jeg mine kropsmålinger?",
+            "icon": "none",
+            "row_content": "<p>Ringen indsamler først de nødvendige kropsmålinger ved hjælp af sine biosensorer (grøn, infrarød og rød optisk pulssensor, 3-akset accelerometer og temperatursensorer). Ringen indeholder en indbygget processor, der behandler dataene og sender dem via Bluetooth til mobilappen og skyen til analyse.</p><p>Ringens analysefunktion bruger maskinlæring til at forstå dine vaner bedre og tilbyde en personlig oplevelse med tilpassede anbefalinger til at forbedre din livsstil.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_zgRNKC": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Hvordan måler jeg min puls?",
+            "icon": "none",
+            "row_content": "<p>Når dit hjerte slår, udvider og sammentrækker dine kapillærer sig i takt med ændringer i blodvolumenet. Den optiske pulssensor (PPG) i din smartring blinker hurtigt med sine LED'er på arterierne på din fingers håndfladeside for at registrere ændringer i blodvolumenet. Din enhed beregner antallet af hjerteslag pr. minut (BPM), som er din puls.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ptLfWt": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Hvordan sporer jeg min søvn?",
+            "icon": "none",
+            "row_content": "<p>Smart ringen sporer din søvn ved hjælp af sammenhængen mellem de data, der indsamles af PPG-sensoren, temperatursensoren og bevægelsessensoren. Din krops biometri ændrer sig under søvnen, og din biometri er i meget specifikke tilstande i hver fase af din søvn.</p><p>På den måde overvåger ringen, om du sover eller ej, og hvilket søvnstadie du befinder dig i. Den sporer mange andre søvnfaktorer, så du kan forstå din søvn og forbedre den på lang sigt.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_nePnTG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Måler den min puls under træning?",
+            "icon": "none",
+            "row_content": "<p>Ja, den måler pulsen under træning og mange andre aktiviteter.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_BxdrjU",
+        "collapsible_row_VLHfLe",
+        "collapsible_row_W4Qxad",
+        "collapsible_row_97UdEq",
+        "collapsible_row_piQqCa",
+        "collapsible_row_ULgaBf",
+        "collapsible_row_yXnWEr",
+        "collapsible_row_dEM3gJ",
+        "collapsible_row_kRj6NJ",
+        "collapsible_row_eKwV7R",
+        "collapsible_row_LpNb4K",
+        "collapsible_row_FwjLRK",
+        "collapsible_row_JMjtXC",
+        "collapsible_row_tdgnHX",
+        "collapsible_row_zgRNKC",
+        "collapsible_row_ptLfWt",
+        "collapsible_row_nePnTG"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Vores FAQ dækker en bred vifte af emner:",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "collapsible_content_MDHWHL"
+  ]
+}
