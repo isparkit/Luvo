@@ -1,7 +1,56 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section class="faq-accordion-section color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding" id="faq-accordion-{{ section.id }}">
+  <div class="faq-container">
+    <div class="faq-left">
+      {% if section.settings.faq_image %}
+        <img src="{{ section.settings.faq_image | img_url: '600x' }}" alt="FAQ Image">
+      {% endif %}
+    </div>
+    <div class="faq-right">
+      <h2 class="faq-title">{{ section.settings.heading }}</h2>
+      {% if section.settings.subheading != blank %}
+        <p class="faq-subtitle">{{ section.settings.subheading }}</p>
+      {% endif %}
+
+      <div class="faq-items">
+        {% for block in section.blocks %}
+          <div class="faq-item" id="faq-{{ section.id }}-{{ forloop.index }}">
+            <button class="faq-question" aria-expanded="false">
+              {{ block.settings.question }}
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>{{ block.settings.answer }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
 {% schema %}
 {
   "name": "Custom FAQ Accordion",
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Schema",
+    },
     {
       "type": "text",
       "id": "heading",
@@ -18,6 +67,26 @@
       "type": "image_picker",
       "id": "faq_image",
       "label": "Left Side Image"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
     }
   ],
   "blocks": [
@@ -48,42 +117,7 @@
 }
 {% endschema %}
 
-<section class="faq-accordion-section" id="faq-accordion-{{ section.id }}">
-  <div class="faq-container">
-    <div class="faq-left">
-      {% if section.settings.faq_image %}
-        <img src="{{ section.settings.faq_image | img_url: '600x' }}" alt="FAQ Image">
-      {% endif %}
-    </div>
-    <div class="faq-right">
-      <h2 class="faq-title">{{ section.settings.heading }}</h2>
-      {% if section.settings.subheading != blank %}
-        <p class="faq-subtitle">{{ section.settings.subheading }}</p>
-      {% endif %}
-
-      <div class="faq-items">
-        {% for block in section.blocks %}
-          <div class="faq-item" id="faq-{{ section.id }}-{{ forloop.index }}">
-            <button class="faq-question" aria-expanded="false">
-              {{ block.settings.question }}
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>{{ block.settings.answer }}</p>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</section>
-
 <style>
-.faq-accordion-section {
-  padding: 60px 20px;
-  background: #111;
-  color: #fff;
-}
 .faq-container {
   display: flex;
   flex-wrap: wrap;
