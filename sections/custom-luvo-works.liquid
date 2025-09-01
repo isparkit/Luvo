@@ -283,16 +283,10 @@
 @media(max-width:768px){
   .luvo-works-section .luvo-works-container .luvo-works-tabs {
     display: flex;
-    flex-wrap: nowrap;                  /* no wrapping on mobile */
-    overflow-x: auto;                   /* allow horizontal scroll */
-    -webkit-overflow-scrolling: touch;  /* smooth on iOS */
-    gap: 12px;
-    padding-bottom: 16px;
-    scroll-snap-type: x mandatory;      /* snap behaviour */
-    scroll-padding-left: 16px;          /* nice padding when centering */
-    scroll-padding-right: 16px;
-    -ms-overflow-style: none;           /* hide IE scrollbar */
-    scrollbar-width: none;  
+    flex-wrap: nowrap;
+    overflow-x: auto;         
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;   
   }
   .luvo-works-section .luvo-works-container .luvo-works-tabs .luvo-works-tab{
     font-size: 14px;
