@@ -26,7 +26,7 @@
         "announcement-bar-0"
       ],
       "settings": {
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-c2ab61a8-106c-4616-9f63-24e75fd78646",
         "show_line_separator": true,
         "show_social": false,
         "auto_rotate": false,
@@ -52,7 +52,7 @@
       "type": "header",
       "settings": {
         "logo_position": "middle-left",
-        "menu": "main-menu",
+        "menu": "header-menu",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
@@ -63,8 +63,8 @@
         "enable_customer_avatar": true,
         "mobile_logo_position": "center",
         "margin_bottom": 0,
-        "padding_top": 20,
-        "padding_bottom": 20
+        "padding_top": 14,
+        "padding_bottom": 14
       }
     }
   },
