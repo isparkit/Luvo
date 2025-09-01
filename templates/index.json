@@ -367,6 +367,7 @@
         "slide_3VQULw",
         "slide_wB4wJd"
       ],
+      "disabled": true,
       "settings": {
         "heading": "HVAD SIGER VORES KUNDER?",
         "heading_custom": false,
@@ -544,6 +545,7 @@
         "collapsible_row_pq6hHF",
         "collapsible_row_7RF93X"
       ],
+      "disabled": true,
       "settings": {
         "caption": "",
         "heading": "SPØRGSMÅL? <strong>VI HAR SVAR</strong>",
