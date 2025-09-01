@@ -58,6 +58,9 @@
       margin-left: 0;
   }
     @media screen and (max-width: 989px) {
+      .section-header .header__icons .header__search {
+        display: none !important;
+     }
       .section-header .header {
           grid-template-areas: "heading left-icons icons";
           padding: 8px 15px;
@@ -79,9 +82,9 @@
           height: 16px !important;
           width: 16px !important;
       }
-      .section-header .header__icon {
-          height: 28px;
-          width: 28px;
+      .section-header .header__icon, .section-header .menu-drawer-container .icon-close {
+          height: 28px !important;
+          width: 28px !important;
       }
       .section-header .header__icon--cart {
           margin-right: 0;

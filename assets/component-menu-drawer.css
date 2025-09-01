@@ -99,9 +99,13 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__menu-item {
-  padding: 1.1rem 3rem;
-  text-decoration: none;
-  font-size: 1.8rem;
+    padding: 1.1rem 3rem;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Gordita-Medium';
+    letter-spacing: 0;
+    line-height: 1.5em !important;
+    color: rgb(var(--color-foreground),0.75) !important;
 }
 
 .menu-drawer summary.menu-drawer__menu-item {
@@ -114,7 +118,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 .menu-drawer__menu-item:hover,
 .menu-drawer__close-button:hover {
   color: rgb(var(--color-foreground));
-  background-color: rgba(var(--color-foreground), 0.04);
+  background-color: transparent;
 }
 
 .menu-drawer__menu-item--active:hover {

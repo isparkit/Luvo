@@ -3,6 +3,7 @@
     align-items: center;
     gap: 16px;
     margin-top: 16px;
+    text-decoration: none;
 }
 .footer .footer-block .contact-info p, .footer .footer-block__details-content .list-menu__item--link, .footer .footer-block__details-content>p, .footer .footer__copyright .copyright__content {
     margin: 0;
