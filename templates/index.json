@@ -648,11 +648,43 @@
             "question": "Is Luvo waterproof?",
             "answer": "Luvo tracks your heart rate, steps, sleep, activity, and stress levels—plus discreet smart notifications."
           }
+        },
+        "faq_QjAUrC": {
+          "type": "faq",
+          "settings": {
+            "question": "How long does the battery last?",
+            "answer": "Luvo tracks your heart rate, steps, sleep, activity, and stress levels—plus discreet smart notifications."
+          }
+        },
+        "faq_Exw7ee": {
+          "type": "faq",
+          "settings": {
+            "question": "Does Luvo support contactless payments?",
+            "answer": "Luvo tracks your heart rate, steps, sleep, activity, and stress levels—plus discreet smart notifications."
+          }
+        },
+        "faq_7PU9X4": {
+          "type": "faq",
+          "settings": {
+            "question": "Does Luvo work with both iOS and Android?",
+            "answer": "Luvo tracks your heart rate, steps, sleep, activity, and stress levels—plus discreet smart notifications."
+          }
+        },
+        "faq_dRGGnF": {
+          "type": "faq",
+          "settings": {
+            "question": "Can Luvo sync with Apple Health or Google Fit?",
+            "answer": "Luvo tracks your heart rate, steps, sleep, activity, and stress levels—plus discreet smart notifications."
+          }
         }
       },
       "block_order": [
         "faq_yj8Vyq",
-        "faq_JxkGpW"
+        "faq_JxkGpW",
+        "faq_QjAUrC",
+        "faq_Exw7ee",
+        "faq_7PU9X4",
+        "faq_dRGGnF"
       ],
       "name": "Custom FAQ Accordion",
       "settings": {
