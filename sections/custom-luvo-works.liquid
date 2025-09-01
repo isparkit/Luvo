@@ -308,6 +308,29 @@
     text-align: center;
   }
 }
+@media (max-width: 768px) {
+  .luvo-works-tabs {
+    display: inline-flex;
+    gap: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: auto-scroll 20s linear infinite;
+  }
+
+  .luvo-works-tab {
+    flex: 0 0 auto;
+  }
+}
+
+@keyframes auto-scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 </style>
 
 <script>
