@@ -9,14 +9,14 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/LUVO_Logo_450_x_250_px_450_x_150_px.png",
-    "logo_width": 140,
+    "logo": "shopify://shop_images/Logo.svg",
+    "logo_width": 95,
     "favicon": "shopify://shop_images/LUNA_Logo_1_fb855fcb-03da-4ae6-bf55-363ef7e02e2b.png",
     "type_header_font": "avenir_next_n4",
     "heading_scale": 115,
     "type_body_font": "avenir_next_n4",
     "body_scale": 100,
-    "page_width": 1200,
+    "page_width": 1230,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
@@ -250,11 +250,11 @@
         "settings": {
           "background": "#ffffff",
           "background_gradient": "",
-          "text": "#121212",
-          "button": "#121212",
+          "text": "#000000",
+          "button": "#000000",
           "button_label": "#ffffff",
           "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
+          "shadow": "#000000"
         }
       },
       "scheme-2": {
@@ -299,6 +299,17 @@
           "button_label": "#3f3047",
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
+        }
+      },
+      "scheme-c2ab61a8-106c-4616-9f63-24e75fd78646": {
+        "settings": {
+          "background": "#1c1c1c",
+          "background_gradient": "",
+          "text": "#e3e3e3",
+          "button": "#1c1c1c",
+          "button_label": "#e3e3e3",
+          "secondary_button_label": "#e3e3e3",
+          "shadow": "#1c1c1c"
         }
       }
     }
