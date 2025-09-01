@@ -17,7 +17,7 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "30 DAGES TILFREDSHEDSGARANTI",
+            "text": "Available for Android & iOS",
             "link": ""
           }
         }
@@ -26,7 +26,7 @@
         "announcement-bar-0"
       ],
       "settings": {
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-c2ab61a8-106c-4616-9f63-24e75fd78646",
         "show_line_separator": true,
         "show_social": false,
         "auto_rotate": false,
@@ -37,6 +37,7 @@
     },
     "ss_announcement_bar_NDEFw9": {
       "type": "ss-announcement-bar",
+      "disabled": true,
       "settings": {
         "insert_css_class_target": ".header, .pageheader, .section-header, #announcement, .toolbar, .header_wrapper",
         "background-color": "#3f3047",
@@ -51,7 +52,7 @@
       "type": "header",
       "settings": {
         "logo_position": "middle-left",
-        "menu": "main-menu",
+        "menu": "header-menu",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
@@ -62,8 +63,8 @@
         "enable_customer_avatar": true,
         "mobile_logo_position": "center",
         "margin_bottom": 0,
-        "padding_top": 20,
-        "padding_bottom": 20
+        "padding_top": 14,
+        "padding_bottom": 14
       }
     }
   },

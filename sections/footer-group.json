@@ -24,34 +24,47 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "image_Lbrh36": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Logo.png",
+            "image_width": 95,
+            "alignment": "",
+            "email": "<p>info@luvoring.dk</p>",
+            "phone": "<p>45436098</p>",
+            "address": "<p>LuvoRing.dk Store Kongensgade 74,3rd th 1264 Copenhagen K</p>"
+          }
+        },
         "brand_information_FBEGbc": {
           "type": "brand_information",
+          "disabled": true,
           "settings": {
-            "show_social": true
+            "show_social": false
           }
         },
         "link_list_4xadQb": {
           "type": "link_list",
           "settings": {
             "heading": "Links",
-            "menu": "footer"
+            "menu": "footer-links"
           }
         },
         "text_6gdNpA": {
           "type": "text",
           "settings": {
-            "heading": "Om os",
-            "subtext": "<p>Vi er et dansk brand, der sætter kvalitet og design i højsædet. Vores mål er at hjælpe dig med at opnå en bedre balance i livet ved at give dig de værktøjer, du har brug for, til at forstå og optimere din sundhed – direkte fra din finger.</p>"
+            "heading": "About",
+            "subtext": "<p>We are a Danish brand that puts quality and design at the forefront. Our goal is to help you achieve a better balance in life by providing you with the tools you need to understand and optimize your health – directly from your finger.</p>"
           }
         }
       },
       "block_order": [
+        "image_Lbrh36",
         "brand_information_FBEGbc",
         "link_list_4xadQb",
         "text_6gdNpA"
       ],
       "settings": {
-        "color_scheme": "scheme-5",
+        "color_scheme": "scheme-1ab87929-c766-459a-9e9f-732581f51200",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": false,
@@ -59,10 +72,10 @@
         "enable_country_selector": false,
         "enable_language_selector": true,
         "payment_enable": true,
-        "show_policy": true,
+        "show_policy": false,
         "margin_top": 0,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 84,
+        "padding_bottom": 60
       }
     }
   },
