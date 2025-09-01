@@ -315,35 +315,30 @@
 document.addEventListener("DOMContentLoaded", function() {
   const tabs = document.querySelectorAll(".luvo-works-tab");
   const contents = document.querySelectorAll(".luvo-works-content");
-  let currentIndex = 0; // by default first tab active
+  let currentIndex = 0;
 
   tabs.forEach((tab, index) => {
     tab.addEventListener("click", function() {
-      if (index === currentIndex) return; // same tab clicked
+      if (index === currentIndex) return;
 
       let targetId = this.getAttribute("data-tab");
       let targetContent = document.getElementById(targetId);
 
-      // remove active + animation classes
       tabs.forEach(t => t.classList.remove("active"));
       contents.forEach(c => {
         c.classList.remove("active", "slide-in-up", "slide-in-down");
       });
 
-      // set new tab active
       this.classList.add("active");
 
-      // direction check
       if (index > currentIndex) {
         targetContent.classList.add("slide-in-up");
       } else {
         targetContent.classList.add("slide-in-down");
       }
 
-      // finally show content
       targetContent.classList.add("active");
 
-      // update currentIndex
       currentIndex = index;
     });
   });
