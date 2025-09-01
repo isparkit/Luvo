@@ -13,6 +13,24 @@
 
 
 <style>
+  @font-face {
+    font-family: 'Gordita-Medium';
+    src: url('https://cdn.shopify.com/s/files/1/0599/3044/3889/files/Gordita-Medium.otf?v=1756465568') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  .announcement-bar .announcement-bar__message span {
+    font-family: 'Gordita-Medium';
+    font-weight: 500;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 150%;
+ }   
+  .announcement-bar .announcement-bar__message.h5 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
   header-drawer {
     justify-self: start;
     margin-left: -1.2rem;
@@ -264,9 +282,15 @@
 
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
           {% if cart == empty %}
-            <span class="svg-wrapper">{{'icon-cart-empty.svg' | inline_asset_content }}</span>
+            {% comment %} {{'icon-cart-empty.svg' | inline_asset_content }} {% endcomment %}
+            <span class="svg-wrapper">
+              {{'custom-icon-cart.svg' | inline_asset_content }}
+            </span>
           {% else %}
-            <span class="svg-wrapper">{{'icon-cart.svg' | inline_asset_content }}</span>
+          {% comment %} {{'icon-cart.svg' | inline_asset_content }} {% endcomment %}
+            <span class="svg-wrapper">
+              {{'custom-icon-cart.svg' | inline_asset_content }}
+            </span>
           {% endif %}
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
         {%- if cart != empty -%}
