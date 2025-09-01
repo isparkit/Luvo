@@ -28,7 +28,10 @@
           "settings": {
             "image": "shopify://shop_images/Logo.png",
             "image_width": 95,
-            "alignment": ""
+            "alignment": "",
+            "email": "<p>info@luvoring.dk</p>",
+            "phone": "<p>45436098</p>",
+            "address": "<p>LuvoRing.dk Store Kongensgade 74,3rd th 1264 Copenhagen K</p>"
           }
         },
         "brand_information_FBEGbc": {
