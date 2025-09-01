@@ -100,6 +100,7 @@
       "block_order": [
         "heading_84ibFG"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -148,6 +149,7 @@
         "image_KAV3wA",
         "image_kCz4pj"
       ],
+      "disabled": true,
       "settings": {
         "feature_row": 3,
         "feature_row_mobile": 3,
@@ -224,6 +226,7 @@
         "text_zcJMkg",
         "button_ctRTGB"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/LUNA_Logo_1_65caa354-3eb8-4c9b-af51-ae12004ac7f2.jpg",
         "height": "adapt",
@@ -271,6 +274,7 @@
         "text_rjkYwz",
         "button_VMU9E7"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/LUNA_Logo_3_1214eb39-55e6-4020-b185-b81bfcb8a799.jpg",
         "height": "adapt",
