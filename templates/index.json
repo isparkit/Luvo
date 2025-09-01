@@ -43,6 +43,7 @@
         "text_qUUHpY",
         "button"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/LUNA_Logo_b630aace-d2a3-49e9-8799-4fc5760fc05a.png",
         "image_overlay_opacity": 40,
