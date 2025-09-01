@@ -1,13 +1,30 @@
-<section class="luvo-works-section" style="background-color: {{ section.settings.background_color }};">
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section class="luvo-works-section section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}">
+  <div class="page-width">
   <div class="luvo-works-container">
 
+    <div class="luvo-works-heading-area">
     {% if section.settings.section_heading != blank %}
-      <h2 class="luvo-works-heading">{{ section.settings.section_heading }}</h2>
+      <h2 class="h2 luvo-works-heading">{{ section.settings.section_heading }}</h2>
     {% endif %}
 
     {% if section.settings.section_subtext != blank %}
       <p class="luvo-works-subtext">{{ section.settings.section_subtext }}</p>
     {% endif %}
+    </div>
 
     <!-- Tabs -->
     <div class="luvo-works-tabs">
@@ -25,26 +42,35 @@
       {% for block in section.blocks %}
         <div id="tab-{{ forloop.index }}" class="luvo-works-content {% if forloop.first %}active{% endif %}">
           <div class="luvo-works-step-text">
-            {% if block.settings.block_heading != blank %}
-              <h3>{{ block.settings.block_heading }}</h3>
+            {% if block.settings.block_heading_one != blank %}
+              <h6 class="block_heading">{{ block.settings.block_heading_one }}</h6>
             {% endif %}
-            {% if block.settings.block_subtext != blank %}
-              <p>{{ block.settings.block_subtext }}</p>
+            {% if block.settings.block_subtext_one != blank %}
+              <h6 class="block_subtext">{{ block.settings.block_subtext_one }}</h6>
+            {% endif %}
+            {% if block.settings.block_heading_two != blank %}
+              <h6 class="block_heading">{{ block.settings.block_heading_two }}</h6>
+            {% endif %}
+            {% if block.settings.block_subtext_two != blank %}
+              <h6 class="block_subtext">{{ block.settings.block_subtext_two }}</h6>
+            {% endif %}
+            {% if block.settings.block_heading_three != blank %}
+              <h6 class="block_heading">{{ block.settings.block_heading_three }}</h6>
+            {% endif %}
+            {% if block.settings.block_subtext_three != blank %}
+              <h6 class="block_subtext">{{ block.settings.block_subtext_three }}</h67>
             {% endif %}
           </div>
 
           <div class="luvo-works-step-media">
-            {% if block.settings.block_video != blank %}
-              <video autoplay muted loop playsinline>
-                <source src="{{ block.settings.block_video }}" type="video/mp4">
-              </video>
-            {% elsif block.settings.block_image != blank %}
+            {% if block.settings.block_image != blank %}
               <img src="{{ block.settings.block_image | img_url: '800x' }}" alt="{{ block.settings.tab_title }}">
             {% endif %}
           </div>
         </div>
       {% endfor %}
     </div>
+  </div>
   </div>
 </section>
 
@@ -53,10 +79,9 @@
   "name": "Custom Luvo Works",
   "settings": [
     {
-      "type": "color",
-      "id": "background_color",
-      "label": "Background color",
-      "default": "#000000"
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Schema",
     },
     {
       "type": "text",
@@ -69,6 +94,26 @@
       "id": "section_subtext",
       "label": "Section Subtext",
       "default": "Luvo combines cutting-edge sensors, seamless connectivity, and AI-powered insights—so you can focus on living, while it takes care of the tracking."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
     }
   ],
   "blocks": [
@@ -84,20 +129,39 @@
         },
         {
           "type": "text",
-          "id": "block_heading",
+          "id": "block_heading_one",
           "label": "Heading",
           "default": "What Happens"
         },
         {
           "type": "textarea",
-          "id": "block_subtext",
+          "id": "block_subtext_one",
           "label": "Subtext",
           "default": "Simply slip Luvo on your finger..."
         },
         {
-          "type": "url",
-          "id": "block_video",
-          "label": "Video URL"
+          "type": "text",
+          "id": "block_heading_two",
+          "label": "Heading",
+          "default": "What Happens"
+        },
+        {
+          "type": "textarea",
+          "id": "block_subtext_two",
+          "label": "Subtext",
+          "default": "Simply slip Luvo on your finger..."
+        },
+        {
+          "type": "text",
+          "id": "block_heading_three",
+          "label": "Heading",
+          "default": "What Happens"
+        },
+        {
+          "type": "textarea",
+          "id": "block_subtext_three",
+          "label": "Subtext",
+          "default": "Simply slip Luvo on your finger..."
         },
         {
           "type": "image_picker",
@@ -118,85 +182,93 @@
 {% endschema %}
 
 <style>
-.luvo-works-section {
-  padding: 60px 20px;
-  color: #fff;
+.luvo-works-section .luvo-works-container .luvo-works-heading-area {
+    max-width: 610px;
+    margin: 0 auto;
+    padding-bottom: 54px;
+    text-align: center;
 }
-.luvo-works-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
+.luvo-works-section .luvo-works-container .luvo-works-heading-area h2 {
+    font-family: 'Gordita-Bold';
+    margin: 0;
+    padding-bottom: 10px;
 }
-.luvo-works-heading {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 10px;
+.luvo-works-section .luvo-works-container .luvo-works-heading-area p {
+    font-family: 'Gordita-Regular';
+    text-align: center;
+    margin: 0;
 }
-.luvo-works-subtext {
+.luvo-works-section .luvo-works-container .luvo-works-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 34px;
+}
+.luvo-works-section .luvo-works-container .luvo-works-tabs .luvo-works-tab {
+  background: transparent;
   font-size: 16px;
-  color: #ccc;
-  margin-bottom: 30px;
-}
-.luvo-works-tabs {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 30px;
-}
-.luvo-works-tab {
-  background: #222;
+  font-family: 'Gordita-Semibold';
   border: none;
   padding: 10px 20px;
   border-radius: 20px;
-  color: #fff;
+  color: #AAAAAA;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.8s;
 }
-.luvo-works-tab.active {
-  background: #fff;
-  color: #000;
+.luvo-works-section .luvo-works-container .luvo-works-tabs .luvo-works-tab.active {
+  background: radial-gradient(50.32% 100% at 50% -20.51%, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+  color: #fff;
+  border: 1px solid rgba(28, 28, 28, 1); 
 }
-.luvo-works-contents {
+.luvo-works-section .luvo-works-container .luvo-works-contents {
   position: relative;
 }
-.luvo-works-content {
+.luvo-works-section .luvo-works-container .luvo-works-contents .luvo-works-content {
   display: none;
-  grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 40px;
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.5s ease;
+  border: 1px solid #1C1C1C;
+  padding: 16px;
+  border-radius: 34px;
+  gap: 16px;
 }
-.luvo-works-content.active {
-  display: grid;
-  opacity: 1;
-  transform: translateY(0);
+.luvo-works-section .luvo-works-container .luvo-works-contents .luvo-works-content.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    align-items: self-end;
 }
-.luvo-works-step-text {
+.luvo-works-section .luvo-works-container .luvo-works-contents .luvo-works-content .luvo-works-step-text {
   text-align: left;
 }
-.luvo-works-step-text h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
+.luvo-works-section .luvo-works-container .luvo-works-contents .luvo-works-content .luvo-works-step-text h6.block_heading {
+    font-family: Gordita-Regular;
+    line-height: 120%;
+    color: #E3E3E3;
+    margin: 0;
+    padding-bottom: 12px;
 }
-.luvo-works-step-text p {
-  font-size: 14px;
-  color: #ddd;
+.luvo-works-section .luvo-works-container .luvo-works-contents .luvo-works-content .luvo-works-step-text h6.block_subtext {
+    font-family: Gordita-Semibold;
+    line-height: 120%;
+    color: #fff;
+    margin: 0;
+    padding-bottom: 34px;
 }
-.luvo-works-step-media img,
-.luvo-works-step-media video {
+.luvo-works-section .luvo-works-container .luvo-works-contents .luvo-works-content .luvo-works-step-media img {
   max-width: 100%;
-  border-radius: 10px;
+  border-radius: 30px;
 }
 
 /* Slide animations */
 .slide-in-up {
-  animation: slideUp 0.5s ease forwards;
+  animation: slideUp 0.9s ease forwards;
 }
 .slide-in-down {
-  animation: slideDown 0.5s ease forwards;
+  animation: slideDown 0.9s ease forwards;
 }
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(50px); }
@@ -209,6 +281,34 @@
 
 /* Mobile responsive */
 @media(max-width:768px){
+.luvo-works-section .luvo-works-container .luvo-works-tabs {
+    overflow-x: auto;
+    display: flex;
+    flex-wrap: nowrap !important;
+    white-space: nowrap;
+    justify-content: flex-start;
+}
+ 
+  .luvo-works-section .luvo-works-container .luvo-works-contents .luvo-works-content .luvo-works-step-media img {
+    width: 100%;
+    border-radius: 30px;
+    position: relative;
+    min-height: 500px;
+  }
+ .luvo-works-section .luvo-works-container .luvo-works-contents .luvo-works-content .luvo-works-step-text {
+    text-align: left;
+    position: absolute;
+    z-index: 1;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+  .luvo-works-section .luvo-works-container .luvo-works-tabs .luvo-works-tab{
+    font-size: 14px;
+  }
+    .luvo-works-section .luvo-works-container .luvo-works-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
   .luvo-works-content {
     grid-template-columns: 1fr;
     text-align: center;
@@ -217,41 +317,37 @@
     text-align: center;
   }
 }
+
 </style>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const tabs = document.querySelectorAll(".luvo-works-tab");
   const contents = document.querySelectorAll(".luvo-works-content");
-  let currentIndex = 0; // by default first tab active
+  let currentIndex = 0;
 
   tabs.forEach((tab, index) => {
     tab.addEventListener("click", function() {
-      if (index === currentIndex) return; // same tab clicked
+      if (index === currentIndex) return;
 
       let targetId = this.getAttribute("data-tab");
       let targetContent = document.getElementById(targetId);
 
-      // remove active + animation classes
       tabs.forEach(t => t.classList.remove("active"));
       contents.forEach(c => {
         c.classList.remove("active", "slide-in-up", "slide-in-down");
       });
 
-      // set new tab active
       this.classList.add("active");
 
-      // direction check
       if (index > currentIndex) {
         targetContent.classList.add("slide-in-up");
       } else {
         targetContent.classList.add("slide-in-down");
       }
 
-      // finally show content
       targetContent.classList.add("active");
 
-      // update currentIndex
       currentIndex = index;
     });
   });
