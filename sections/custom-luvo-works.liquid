@@ -281,6 +281,13 @@
 
 /* Mobile responsive */
 @media(max-width:768px){
+  .luvo-works-section .luvo-works-container .luvo-works-tabs {
+    display: flex;
+    flex-wrap: nowrap;        /* wrapping hatao */
+    overflow-x: auto;         /* horizontal scroll allow */
+    -webkit-overflow-scrolling: touch; /* smooth scrolling iOS ke liye */
+    scrollbar-width: none;    /* Firefox me scrollbar hide */
+  }
   .luvo-works-content {
     grid-template-columns: 1fr;
     text-align: center;
