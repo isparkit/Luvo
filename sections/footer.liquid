@@ -11,7 +11,7 @@
   }
 
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.65 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
@@ -147,12 +147,45 @@
                             loading="lazy"
                             width="{{ block.settings.image.width }}"
                             height="{{ block.settings.image.height }}"
-                          >
+                          >                      
                         </div>
                       {%- else -%}
                         {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                       {%- endif -%}
                     </div>
+                     <div class="contact-info">
+                        {% if  block.settings.email != blank %}
+                          <div class="email-wrapper">
+                            <a class="flex-cls" href="mailto:{{ block.settings.email }}">
+                           <svg width="34" height="35" viewBox="0 0 34 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.973633" width="33" height="33" rx="16.5" stroke="white"/>
+                            <path d="M10.25 13.7236C10.25 13.3258 10.408 12.9443 10.6893 12.663C10.9706 12.3817 11.3522 12.2236 11.75 12.2236H22.25C22.6478 12.2236 23.0294 12.3817 23.3107 12.663C23.592 12.9443 23.75 13.3258 23.75 13.7236V21.2236C23.75 21.6215 23.592 22.003 23.3107 22.2843C23.0294 22.5656 22.6478 22.7236 22.25 22.7236H11.75C11.3522 22.7236 10.9706 22.5656 10.6893 22.2843C10.408 22.003 10.25 21.6215 10.25 21.2236V13.7236Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.25 13.7236L17 18.2236L23.75 13.7236" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            {{ block.settings.email }}
+                            </a>
+                            </div>
+                        {% endif %}
+                        {% if block.settings.phone != blank %}
+                          <div class="phone-wrapper">
+                            <a class="flex-cls" href="tel:{{ block.settings.phone }}">
+                              <svg width="34" height="35" viewBox="0 0 34 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <rect x="0.5" y="0.973633" width="33" height="33" rx="16.5" stroke="white"/>
+                              <path d="M11.75 11.4736H14.75L16.25 15.2236L14.375 16.3486C15.1782 17.9773 16.4964 19.2954 18.125 20.0986L19.25 18.2236L23 19.7236V22.7236C23 23.1215 22.842 23.503 22.5607 23.7843C22.2794 24.0656 21.8978 24.2236 21.5 24.2236C18.5744 24.0458 15.8151 22.8035 13.7426 20.731C11.6701 18.6585 10.4278 15.8992 10.25 12.9736C10.25 12.5758 10.408 12.1943 10.6893 11.913C10.9706 11.6317 11.3522 11.4736 11.75 11.4736Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+
+                              {{ block.settings.phone }}</a></div>
+                        {% endif %}
+                        {% if block.settings.address != blank %}
+                          <div class="address-wrapper flex-cls">
+                           <svg width="34" height="35" viewBox="0 0 34 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="0.5" y="0.973633" width="33" height="33" rx="16.5" stroke="white"/>
+                          <path d="M23.75 10.7236L18.875 24.2236C18.8421 24.2954 18.7893 24.3563 18.7228 24.3989C18.6563 24.4416 18.579 24.4643 18.5 24.4643C18.421 24.4643 18.3437 24.4416 18.2772 24.3989C18.2107 24.3563 18.1579 24.2954 18.125 24.2236L15.5 18.9736L10.25 16.3486C10.1782 16.3157 10.1173 16.2629 10.0747 16.1964C10.032 16.1299 10.0093 16.0526 10.0093 15.9736C10.0093 15.8946 10.032 15.8173 10.0747 15.7508C10.1173 15.6844 10.1782 15.6315 10.25 15.5986L23.75 10.7236Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                            {{ block.settings.address }}
+                            </div>
+                        {% endif %}
+                      </div>
                 {%- endcase -%}
               </div>
             {%- endfor -%}
@@ -424,6 +457,21 @@
             }
           ],
           "default": "center"
+        },
+        {
+          "type": "richtext",
+          "id": "email",
+          "label": "Email"
+        },
+        {
+          "type": "richtext",
+          "id": "phone",
+          "label": "Phone Number"
+        },
+        {
+          "type": "richtext",
+          "id": "address",
+          "label": "Address"
         }
       ]
     }

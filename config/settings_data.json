@@ -109,8 +109,8 @@
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "",
     "brand_description": "<p>NHB Group ApS<br/>Store Kongensgade 74, 3. th<br/>1264 København K<br/>CVR nr.: 45436098</p>",
-    "brand_image": "shopify://shop_images/LUVO_Logo_450_x_250_px_450_x_150_px_2.png",
-    "brand_image_width": 145,
+    "brand_image": "shopify://shop_images/Logo.png",
+    "brand_image_width": 95,
     "social_facebook_link": "https://www.facebook.com/profile.php?id=61569388072351",
     "social_instagram_link": "https://www.instagram.com/lunaring.dk/",
     "social_youtube_link": "",
@@ -306,9 +306,20 @@
           "background": "#1c1c1c",
           "background_gradient": "",
           "text": "#e3e3e3",
-          "button": "#1c1c1c",
-          "button_label": "#e3e3e3",
+          "button": "#e3e3e3",
+          "button_label": "#1c1c1c",
           "secondary_button_label": "#e3e3e3",
+          "shadow": "#1c1c1c"
+        }
+      },
+      "scheme-1ab87929-c766-459a-9e9f-732581f51200": {
+        "settings": {
+          "background": "#1c1c1c",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "button": "#ffffff",
+          "button_label": "#1c1c1c",
+          "secondary_button_label": "#ffffff",
           "shadow": "#1c1c1c"
         }
       }
