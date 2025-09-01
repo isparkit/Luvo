@@ -13,6 +13,11 @@
 {%- endstyle -%}
 
 <section class="faq-accordion-section color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding" id="faq-accordion-{{ section.id }}">
+  <div class="page-width">
+    <h2 class="faq-title">{{ section.settings.heading }}</h2>
+      {% if section.settings.subheading != blank %}
+        <p class="faq-subtitle">{{ section.settings.subheading }}</p>
+      {% endif %}
   <div class="faq-container">
     <div class="faq-left">
       {% if section.settings.faq_image %}
@@ -20,17 +25,13 @@
       {% endif %}
     </div>
     <div class="faq-right">
-      <h2 class="faq-title">{{ section.settings.heading }}</h2>
-      {% if section.settings.subheading != blank %}
-        <p class="faq-subtitle">{{ section.settings.subheading }}</p>
-      {% endif %}
 
       <div class="faq-items">
         {% for block in section.blocks %}
           <div class="faq-item" id="faq-{{ section.id }}-{{ forloop.index }}">
             <button class="faq-question" aria-expanded="false">
               {{ block.settings.question }}
-              <span class="faq-icon">+</span>
+              <span class="faq-icon"></span>
             </button>
             <div class="faq-answer">
               <p>{{ block.settings.answer }}</p>
@@ -39,6 +40,7 @@
         {% endfor %}
       </div>
     </div>
+  </div>
   </div>
 </section>
 
@@ -118,14 +120,13 @@
 {% endschema %}
 
 <style>
-.faq-container {
+ .faq-container {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  max-width: 1200px;
   margin: 0 auto;
   align-items: flex-start;
-}
+} 
 .faq-left img {
   max-width: 400px;
   border-radius: 12px;
@@ -174,12 +175,15 @@
 .faq-icon {
   transition: transform 0.3s ease;
 }
-.faq-question.active .faq-icon {
-  transform: rotate(45deg);
+.faq-question .faq-icon::before {
+  content: "+";
+}
+.faq-question.active .faq-icon::before {
+  content: "-";
 }
 </style>
 
-<script>
+{% comment %} <script>
 document.addEventListener("DOMContentLoaded", function () {
   const faqSections = document.querySelectorAll(".faq-accordion-section");
 
@@ -203,6 +207,43 @@ document.addEventListener("DOMContentLoaded", function () {
           btn.nextElementSibling.style.display = "block";
         }
       });
+    });
+  });
+});
+</script> {% endcomment %}
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const faqSections = document.querySelectorAll(".faq-accordion-section");
+
+  faqSections.forEach(section => {
+    const questions = section.querySelectorAll(".faq-question");
+
+    questions.forEach((btn, index) => {
+      btn.addEventListener("click", () => {
+        const expanded = btn.getAttribute("aria-expanded") === "true";
+        
+        // Close all in this section
+        questions.forEach(q => {
+          q.classList.remove("active");
+          q.setAttribute("aria-expanded", "false");
+          q.nextElementSibling.style.display = "none";
+        });
+
+        if (!expanded) {
+          btn.classList.add("active");
+          btn.setAttribute("aria-expanded", "true");
+          btn.nextElementSibling.style.display = "block";
+        }
+      });
+
+      // First FAQ default open
+      if (index === 0) {
+        btn.classList.add("active");
+        btn.setAttribute("aria-expanded", "true");
+        btn.nextElementSibling.style.display = "block";
+      }
     });
   });
 });
