@@ -43,22 +43,22 @@
         <div id="tab-{{ forloop.index }}" class="luvo-works-content {% if forloop.first %}active{% endif %}">
           <div class="luvo-works-step-text">
             {% if block.settings.block_heading_one != blank %}
-              <p class="block_heading">{{ block.settings.block_heading_one }}</p>
+              <h6 class="block_heading">{{ block.settings.block_heading_one }}</h6>
             {% endif %}
             {% if block.settings.block_subtext_one != blank %}
-              <p class="block_subtext">{{ block.settings.block_subtext_one }}</p>
+              <h6 class="block_subtext">{{ block.settings.block_subtext_one }}</h6>
             {% endif %}
             {% if block.settings.block_heading_two != blank %}
-              <p class="block_heading">{{ block.settings.block_heading_two }}</p>
+              <h6 class="block_heading">{{ block.settings.block_heading_two }}</h6>
             {% endif %}
             {% if block.settings.block_subtext_two != blank %}
-              <p class="block_subtext">{{ block.settings.block_subtext_two }}</p>
+              <h6 class="block_subtext">{{ block.settings.block_subtext_two }}</h6>
             {% endif %}
             {% if block.settings.block_heading_three != blank %}
-              <p class="block_heading">{{ block.settings.block_heading_three }}</p>
+              <h6 class="block_heading">{{ block.settings.block_heading_three }}</h6>
             {% endif %}
             {% if block.settings.block_subtext_three != blank %}
-              <p class="block_subtext">{{ block.settings.block_subtext_three }}</p>
+              <h6 class="block_subtext">{{ block.settings.block_subtext_three }}</h67>
             {% endif %}
           </div>
 
@@ -251,12 +251,12 @@
   font-size: 20px;
   margin-bottom: 10px;
 }
-.luvo-works-step-text p.block_heading {
+.luvo-works-step-text h6.block_heading {
     font-family: Gordita-Regular;
     line-height: 120%;
     color: #E3E3E3;
 }
-.luvo-works-step-text p.block_subtext {
+.luvo-works-step-text h6.block_subtext {
     font-family: Gordita-Semibold;
     line-height: 120%;
     color: #fff;
