@@ -742,6 +742,17 @@
         "padding_top": 124,
         "padding_bottom": 124
       }
+    },
+    "custom_video_banner_iFTjeh": {
+      "type": "custom-video-banner",
+      "name": "Custom Video Banner",
+      "settings": {
+        "bg_video": "",
+        "heading": "Luvo The Future on Your Finger",
+        "subtext": "Experience the perfect blend of technology and elegance. Track health, stay connected, and express your style all with one smart ring.",
+        "btn_text": "Discover Luvo Ring II",
+        "btn_link": "shopify://collections/all"
+      }
     }
   },
   "order": [
@@ -755,6 +766,7 @@
     "ss_testimonial_8_pPhRPq",
     "collapsible_content_nyTwxi",
     "custom_luvo_works_mp4iKQ",
-    "custom_faq_accordion_mEBQUw"
+    "custom_faq_accordion_mEBQUw",
+    "custom_video_banner_iFTjeh"
   ]
 }
