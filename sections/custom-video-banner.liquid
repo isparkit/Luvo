@@ -1,0 +1,146 @@
+{% comment %}
+Section: Video Background Hero
+{% endcomment %}
+<section id="section-{{ section.id }}" class="video-hero">
+  <div class="video-hero__bg">
+    {% if section.settings.bg_video != blank %}
+      <video autoplay muted loop playsinline class="video-hero__video">
+        <source src="{{ section.settings.bg_video }}" type="video/mp4">
+      </video>
+    {% endif %}
+  </div>
+
+  <div class="video-hero__content page-width">
+    {% if section.settings.heading != blank %}
+      <h1 class="video-hero__heading">{{ section.settings.heading }}</h1>
+    {% endif %}
+    {% if section.settings.subtext != blank %}
+      <p class="video-hero__subtext">{{ section.settings.subtext }}</p>
+    {% endif %}
+    {% if section.settings.btn_text != blank %}
+      <a href="{{ section.settings.btn_link }}" class="video-hero__btn">
+        {{ section.settings.btn_text }}
+      </a>
+    {% endif %}
+  </div>
+</section>
+
+<style>
+  /* Parent Section */
+  #section-{{ section.id }}.video-hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    color: #fff;
+  }
+
+  /* Background Video */
+  #section-{{ section.id }} .video-hero__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  #section-{{ section.id }} .video-hero__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Content Wrapper */
+  #section-{{ section.id }} .video-hero__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 600px;
+  }
+
+  #section-{{ section.id }} .video-hero__heading {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  #section-{{ section.id }} .video-hero__subtext {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
+
+  #section-{{ section.id }} .video-hero__btn {
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  #section-{{ section.id }} .video-hero__btn:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  /* Mobile Responsive */
+  @media screen and (max-width: 768px) {
+    #section-{{ section.id }} .video-hero__heading {
+      font-size: 26px;
+    }
+    #section-{{ section.id }} .video-hero__subtext {
+      font-size: 14px;
+    }
+    #section-{{ section.id }} .video-hero__btn {
+      padding: 8px 20px;
+      font-size: 14px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Video Background Hero",
+  "settings": [
+    {
+      "type": "url",
+      "id": "bg_video",
+      "label": "Background Video (MP4 URL)"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Luvo The Future on Your Finger"
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "Experience the perfect blend of technology and elegance. Track health, stay connected, and express your style all with one smart ring."
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text",
+      "default": "Discover Luvo Ring II"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link",
+      "default": "/collections/all"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video Background Hero"
+    }
+  ]
+}
+{% endschema %}
