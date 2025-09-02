@@ -1,4 +1,4 @@
-<section class="video-hero">
+<section class="color-{{ section.settings.color_scheme }} video-hero">
   <div class="video-hero__bg">
     {% if section.settings.bg_video != blank %}
       {{ section.settings.bg_video | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, class: 'video-hero__video' }}
@@ -107,6 +107,11 @@
 {
   "name": "Custom Video Banner",
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Schema",
+    },
     {
       "type": "video",
       "id": "bg_video",
