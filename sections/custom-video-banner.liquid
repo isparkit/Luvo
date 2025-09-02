@@ -1,10 +1,10 @@
-
-<section id="section-{{ section.id }}" class="video-hero">
+{% comment %}
+Section: Video Background Hero (class based CSS)
+{% endcomment %}
+<section class="video-hero">
   <div class="video-hero__bg">
     {% if section.settings.bg_video != blank %}
-      <video autoplay muted loop playsinline class="video-hero__video">
-        <source src="{{ section.settings.bg_video }}" type="video/mp4">
-      </video>
+      {{ section.settings.bg_video | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, class: 'video-hero__video' }}
     {% endif %}
   </div>
 
@@ -25,7 +25,7 @@
 
 <style>
   /* Parent Section */
-  #section-{{ section.id }}.video-hero {
+  .video-hero {
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -34,21 +34,21 @@
   }
 
   /* Background Video */
-  #section-{{ section.id }} .video-hero__bg {
+  .video-hero__bg {
     position: absolute;
     inset: 0;
     z-index: 0;
     overflow: hidden;
   }
 
-  #section-{{ section.id }} .video-hero__video {
+  .video-hero__video {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
   /* Content Wrapper */
-  #section-{{ section.id }} .video-hero__content {
+  .video-hero__content {
     position: relative;
     z-index: 2;
     display: flex;
@@ -58,19 +58,19 @@
     max-width: 600px;
   }
 
-  #section-{{ section.id }} .video-hero__heading {
+  .video-hero__heading {
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 15px;
   }
 
-  #section-{{ section.id }} .video-hero__subtext {
+  .video-hero__subtext {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 25px;
   }
 
-  #section-{{ section.id }} .video-hero__btn {
+  .video-hero__btn {
     display: inline-block;
     background: #fff;
     color: #000;
@@ -81,20 +81,20 @@
     transition: 0.3s;
   }
 
-  #section-{{ section.id }} .video-hero__btn:hover {
+  .video-hero__btn:hover {
     background: #000;
     color: #fff;
   }
 
   /* Mobile Responsive */
   @media screen and (max-width: 768px) {
-    #section-{{ section.id }} .video-hero__heading {
+    .video-hero__heading {
       font-size: 26px;
     }
-    #section-{{ section.id }} .video-hero__subtext {
+    .video-hero__subtext {
       font-size: 14px;
     }
-    #section-{{ section.id }} .video-hero__btn {
+    .video-hero__btn {
       padding: 8px 20px;
       font-size: 14px;
     }
@@ -106,9 +106,9 @@
   "name": "Custom Video Banner",
   "settings": [
     {
-      "type": "url",
+      "type": "video",
       "id": "bg_video",
-      "label": "Background Video (MP4 URL)"
+      "label": "Background Video"
     },
     {
       "type": "text",
