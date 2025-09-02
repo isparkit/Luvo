@@ -9,8 +9,8 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/Logo.svg",
-    "logo_width": 95,
+    "logo": "shopify://shop_images/LUVO_Logo_450_x_250_px_450_x_150_px.png",
+    "logo_width": 140,
     "favicon": "shopify://shop_images/LUNA_Logo_1_fb855fcb-03da-4ae6-bf55-363ef7e02e2b.png",
     "type_header_font": "avenir_next_n4",
     "heading_scale": 115,
@@ -109,8 +109,8 @@
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "",
     "brand_description": "<p>NHB Group ApS<br/>Store Kongensgade 74, 3. th<br/>1264 København K<br/>CVR nr.: 45436098</p>",
-    "brand_image": "shopify://shop_images/Logo.png",
-    "brand_image_width": 95,
+    "brand_image": "shopify://shop_images/LUVO_Logo_450_x_250_px_450_x_150_px_2.png",
+    "brand_image_width": 145,
     "social_facebook_link": "https://www.facebook.com/profile.php?id=61569388072351",
     "social_instagram_link": "https://www.instagram.com/lunaring.dk/",
     "social_youtube_link": "",
@@ -250,11 +250,11 @@
         "settings": {
           "background": "#ffffff",
           "background_gradient": "",
-          "text": "#000000",
-          "button": "#000000",
+          "text": "#121212",
+          "button": "#121212",
           "button_label": "#ffffff",
           "secondary_button_label": "#ffffff",
-          "shadow": "#000000"
+          "shadow": "#121212"
         }
       },
       "scheme-2": {
@@ -301,26 +301,15 @@
           "shadow": "#121212"
         }
       },
-      "scheme-c2ab61a8-106c-4616-9f63-24e75fd78646": {
+      "scheme-79c7934d-9b0d-4f04-8000-4063c37480ab": {
         "settings": {
-          "background": "#1c1c1c",
-          "background_gradient": "",
-          "text": "#e3e3e3",
-          "button": "#e3e3e3",
-          "button_label": "#1c1c1c",
-          "secondary_button_label": "#e3e3e3",
-          "shadow": "#1c1c1c"
-        }
-      },
-      "scheme-1ab87929-c766-459a-9e9f-732581f51200": {
-        "settings": {
-          "background": "#1c1c1c",
+          "background": "#000000",
           "background_gradient": "",
           "text": "#ffffff",
-          "button": "#ffffff",
-          "button_label": "#1c1c1c",
+          "button": "#121212",
+          "button_label": "#ffffff",
           "secondary_button_label": "#ffffff",
-          "shadow": "#1c1c1c"
+          "shadow": "#121212"
         }
       }
     }
