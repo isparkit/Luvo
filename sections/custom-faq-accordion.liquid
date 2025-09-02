@@ -146,15 +146,15 @@
   flex-wrap: wrap;
   gap: 16px;
   margin: 0 auto;
-  align-items: flex-start;
 } 
 .faq-accordion-section .faq-container .faq-left img {
-    max-width: 462px;
-    min-height: 422px;
+    max-width: 457px;
+    height: 100%;
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    object-fit: cover;
 }
-.faq-right {
+.faq-accordion-section .faq-container .faq-right {
   flex: 1;
   min-width: 300px;
 }
@@ -166,6 +166,7 @@
 }
 .faq-accordion-section .faq-container .faq-left{
   line-height: 0;
+  height: auto;
 }
 .faq-accordion-section .faq-container .faq-right .faq-items .faq-item .faq-question {
     font-family: 'Gordita-Medium';
