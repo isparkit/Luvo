@@ -229,36 +229,6 @@
 }
 </style>
 
-{% comment %} <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const faqSections = document.querySelectorAll(".faq-accordion-section");
-
-  faqSections.forEach(section => {
-    const questions = section.querySelectorAll(".faq-question");
-
-    questions.forEach(btn => {
-      btn.addEventListener("click", () => {
-        const expanded = btn.getAttribute("aria-expanded") === "true";
-        
-        // Close all in this section
-        questions.forEach(q => {
-          q.classList.remove("active");
-          q.setAttribute("aria-expanded", "false");
-          q.nextElementSibling.style.display = "none";
-        });
-
-        if (!expanded) {
-          btn.classList.add("active");
-          btn.setAttribute("aria-expanded", "true");
-          btn.nextElementSibling.style.display = "block";
-        }
-      });
-    });
-  });
-});
-</script> {% endcomment %}
-
-
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const faqSections = document.querySelectorAll(".faq-accordion-section");
