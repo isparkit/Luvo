@@ -14,7 +14,7 @@
 
 <section class="faq-accordion-section color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding" id="faq-accordion-{{ section.id }}">
   <div class="page-width">
-    <div>
+    <div class="faq-accordion-heading-area">
     {% if section.settings.heading %}<h2 class="faq-title">{{ section.settings.heading }}</h2>{% endif %}
       {% if section.settings.subheading != blank %}
         <p class="faq-subtitle">{{ section.settings.subheading }}</p>
