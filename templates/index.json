@@ -43,7 +43,54 @@
         "text_qUUHpY",
         "button"
       ],
-      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/LUNA_Logo_b630aace-d2a3-49e9-8799-4fc5760fc05a.png",
+        "image_overlay_opacity": 40,
+        "image_height": "medium",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "image_banner_M4pGBC": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_93w9mV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Din krop taler, <strong>LuvoRing</strong> lytter.",
+            "heading_size": "h1"
+          }
+        },
+        "text_t74ceV": {
+          "type": "text",
+          "settings": {
+            "text": "SMART RINGEN DER TRACKER DIN SUNDHED 24/7",
+            "text_style": "body"
+          }
+        },
+        "buttons_T8XGGb": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "KØB NU",
+            "button_link_1": "shopify://products/luvoring",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_93w9mV",
+        "text_t74ceV",
+        "buttons_T8XGGb"
+      ],
       "settings": {
         "image": "shopify://shop_images/LUNA_Logo_b630aace-d2a3-49e9-8799-4fc5760fc05a.png",
         "image_overlay_opacity": 40,
@@ -699,6 +746,7 @@
   },
   "order": [
     "image_banner",
+    "image_banner_M4pGBC",
     "featured_collection",
     "rich_text_rpktmy",
     "ss_feature_1_CwbDnM",
