@@ -747,7 +747,7 @@
       "type": "custom-video-banner",
       "name": "Custom Video Banner",
       "settings": {
-        "bg_video": "",
+        "bg_video": "shopify://files/videos/Produktvideo 2_1x1_2d8d3507-4c46-4c3d-a1ba-f92dcccfcadc.mov",
         "heading": "Luvo The Future on Your Finger",
         "subtext": "Experience the perfect blend of technology and elegance. Track health, stay connected, and express your style all with one smart ring.",
         "btn_text": "Discover Luvo Ring II",
