@@ -16,10 +16,12 @@
   -webkit-overflow-scrolling: touch;
 }
 .menu-drawer .menu-drawer__inner-container predictive-search {
-  padding: 14px 24px;
+  padding: 14px 24px 0;
 }
 .menu-drawer .menu-drawer__inner-container predictive-search .field:after {
   border-radius: 100px;
+  border: 1px solid #0000001A;
+  box-shadow: none;
 }
 .predictive-search--search-template {
   z-index: 2;
@@ -39,7 +41,7 @@
     top: 100%;
   }
   .menu-drawer .menu-drawer__inner-container .predictive-search--header {
-    top: 90px;
+    top: 75px;
   }
 
   .predictive-search__results-groups-wrapper {

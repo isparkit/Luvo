@@ -1,0 +1,295 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.35 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.35 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="health-app-section color-{{ section.settings.color_scheme }}">
+  <div class="page-width section-{{ section.id }}-padding">
+    <div class="top-content">
+        <div class="top-left-details">
+            {% if section.settings.heading != blank %}
+                <h2>{{ section.settings.heading }}</h2>
+            {% endif %}
+            {% if section.settings.subtext != blank %}
+                <p>{{ section.settings.subtext }}</p>
+            {% endif %}
+        </div>
+      <div class="top-links">
+        {% if section.settings.top_image1 %}
+          {% if section.settings.top_image1 != blank %}
+            <a href="{{ section.settings.top_link1 }}">
+              <img src="{{ section.settings.top_image1 | img_url: 'master' }}" alt="Image">
+            </a>
+          {% endif %}
+        {% endif %}
+        {% if section.settings.top_image2 %}
+          {% if section.settings.top_image2 != blank %}
+            <a href="{{ section.settings.top_link2 }}">
+              <img src="{{ section.settings.top_image2 | img_url: 'master' }}" alt="Image">
+            </a>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="phone-features">
+      {% for block in section.blocks %}
+        {% if block.type == 'phone_feature' %}
+          <div class="phone-feature-item">
+            {% if block.settings.phone_img %}
+              {% if block.settings.phone_img != blank %}
+                <img src="{{ block.settings.phone_img | image_url: width: 287 }}" alt="Phone Image" class="phone-img">
+              {% endif %}
+            {% endif %}
+            <div class="feature-details">
+              <div class="feature-details-img">
+                {% if block.settings.icon %}
+                  {% if block.settings.icon != blank %}
+                    <img class="icon" src="{{ block.settings.icon | image_url: width: 24 }}" alt="Feature Icon">
+                  {% endif %}
+                {% endif %}
+              </div>
+              <div class="feature-details-area">
+                {% if block.settings.title != blank %}
+                  <h4>{{ block.settings.title }}</h4>
+                {% endif %}
+                {% if block.settings.text != blank %}
+                  <p>{{ block.settings.text }}</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Health App",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Schema"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Your Health, In Your Hands"
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Section Subtext",
+      "default": "The Luvo app gives you a complete view of your wellness..."
+    },
+    {
+      "type": "image_picker",
+      "id": "top_image1",
+      "label": "Top Image 1 (e.g. Google Play)"
+    },
+    {
+      "type": "url",
+      "id": "top_link1",
+      "label": "Top Image 1 Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "top_image2",
+      "label": "Top Image 2 (e.g. App Store)"
+    },
+    {
+      "type": "url",
+      "id": "top_link2",
+      "label": "Top Image 2 Link"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "phone_feature",
+      "name": "Phone + Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "phone_img",
+          "label": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Feature Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Feature Title",
+          "default": "Ultra-Lightweight Comfort"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Feature Text",
+          "default": "Designed for 24/7 wear you'll forget it's even there."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Health App",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+.health-app-section .top-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.health-app-section .top-content .top-links {
+    display: flex;
+    gap: 13px;
+}
+.health-app-section .top-content .top-left-details {
+    max-width: 600px;
+    width: 100%;
+}
+.health-app-section .top-content .top-left-details h2 {
+    font-family: 'Gordita-Bold';
+    font-weight: 700;
+    font-size: clamp(24px, calc(2.36vw + 14px), 48px);
+    line-height: 1.2em;
+    letter-spacing: 0;
+    margin: 0;
+}
+.health-app-section .top-content .top-left-details p {
+    font-size: 18px;
+    font-family: 'Gordita-Regular';
+    line-height: 1.5em;
+    letter-spacing: 0;
+    color: rgba(var(--color-foreground), 0.7);
+    margin: 8px 0 32px 0;
+}
+.health-app-section .phone-features {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+.health-app-section .phone-feature-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 34px;
+}
+.health-app-section .phone-feature-item .phone-img {
+    border-width: 1px;
+    padding-top: 24px;
+    padding-right: 24px;
+    padding-left: 24px;
+    border-top-left-radius: 46px;
+    border-top-right-radius: 46px;
+    background: linear-gradient(0deg, #1C1C1C, #1C1C1C);
+}
+.health-app-section .phone-feature-item  .feature-details {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    max-width: 271px;
+}
+.health-app-section .feature-details-area h4 {
+    margin: 0;
+    font-family: 'Gordita-Bold';
+    font-weight: 700;
+    line-height: 1.5em;
+    font-size: 18px;
+    letter-spacing: 0;
+    text-align: left;
+}
+.health-app-section .feature-details-area p {
+    margin: 0;
+    text-align: left;
+    font-size: 14px;
+    font-family: 'Gordita-Regular';
+    line-height: 1.5em;
+    letter-spacing: 0;
+}
+@media screen and (max-width: 1200px) {
+    .health-app-section .phone-feature-item .phone-img {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top | times: 0.45 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.45 | round: 0 }}px;
+    }
+    .health-app-section .feature-details-area h4 {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .health-app-section .top-content .top-left-details p {
+        font-size: 14px;
+    }
+    .health-app-section .phone-feature-item {
+        width: 100%;
+        gap: 14px;
+        align-items: flex-start;
+    }
+    .health-app-section .top-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .health-app-section .top-content .top-left-details p {
+        margin: 8px 0 14px 0;
+    }
+    .health-app-section .phone-features {
+        flex-direction: column;
+        margin-top: 48px;
+    }
+    .health-app-section .phone-feature-item .feature-details {
+        max-width: 100%;
+    }
+    .health-app-section .phone-features {
+        gap: 34px;
+    }
+}
+</style>

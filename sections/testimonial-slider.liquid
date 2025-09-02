@@ -1,0 +1,259 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.4 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.4 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section
+  id="section-{{ section.id }}"
+  class="color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding luvo-testimonials-section"
+>
+  <div class="main-testimonial">
+    <div class="luvo-testimonials-left">
+      <h2>{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.subtext }}</p>
+    </div>
+
+    <div class="luvo-testimonials-right">
+      <div class="swiper luvo-testimonials-swiper">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="swiper-slide">
+              <div class="luvo-testimonial-card">
+                {% if block.settings.image_wrap != blank %}
+                  <img src="{{ block.settings.image_wrap | img_url:'master' }}">
+                {% endif %}
+                <h5>{{ block.settings.tittle_wrap }}</h5>
+                <p>{{ block.settings.quote }}</p>
+                <div class="author">– {{ block.settings.author }}, {{ block.settings.role }}</div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% javascript %}
+  var swiper = new Swiper('.luvo-testimonials-swiper', {
+    loop: true,
+    slidesPerView: 1.04,
+    speed: 600,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 2.7,
+      }
+    }
+  });
+{% endjavascript %}
+
+<!-- Swiper CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+{% schema %}
+{
+  "name": "Luvo Testimonials",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Schema"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "What People Are Saying About Luvo"
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "From fitness enthusiasts to style icons, people everywhere are discovering why Luvo is the future of wearable tech."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_wrap",
+          "label": "Star Image"
+        },
+        {
+          "type": "text",
+          "id": "tittle_wrap",
+          "label": "Tittle"
+        },
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Quote",
+          "default": "I used to wear a bulky smartwatch, but Luvo feels so natural..."
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author",
+          "default": "James R."
+        }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "Luvo Testimonials",
+      "category": "Testimonials"
+    }
+  ]
+}
+{% endschema %}
+<style>
+.luvo-testimonials-section .main-testimonial {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding-left: max((calc(100% - 1130px)/ 2), 50px);
+}
+.luvo-testimonials-section .luvo-testimonials-left {
+    flex: 1;
+    max-width: 367px;
+}
+.luvo-testimonials-section .luvo-testimonials-left h2 {
+    font-size: 34px;
+    font-family: 'Gordita-Bold';
+    font-weight: 700;
+    line-height: 1.2em;
+    letter-spacing: 0;
+    margin-bottom: 14px;
+    margin-top: 0;
+}
+.luvo-testimonials-section .luvo-testimonials-left p {
+    font-family: 'Gordita-Regular';
+    font-weight: 400;
+    font-size: 18px;
+    color: rgba(var(--color-foreground), 0.7);
+    line-height: 1.2em;
+    letter-spacing: 0;
+}
+.luvo-testimonials-section .luvo-testimonials-right {
+    flex: 2;
+    overflow: hidden;
+}
+.luvo-testimonials-section .luvo-testimonial-card {
+    background: #FFFFFF;
+    padding: 34px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #E3E3E3;
+    border-right: 0;
+    min-height: 381px;
+}
+.luvo-testimonials-section .luvo-testimonial-card img {
+    max-width: 126px;
+}
+.luvo-testimonials-section .luvo-testimonial-card h5 {
+    font-size: 16px;
+    font-family: 'Gordita-Medium';
+    font-weight: 500;
+    line-height: 1.5em;
+    letter-spacing: 0;
+    color: #555555;
+    margin: 8px 0 0;
+}
+.luvo-testimonials-section .luvo-testimonial-card p {
+    font-size: 20px;
+    font-family: 'Gordita-Medium';
+    font-weight: 500;
+    line-height: 1.5em;
+    letter-spacing: 0;
+    margin: 24px 0;
+}
+.luvo-testimonials-section .luvo-testimonial-card .author {
+    font-family: 'Gordita-Regular-Italic';
+    font-weight: 400;
+    font-size: 18px;
+    color: rgba(var(--color-foreground), 0.7);
+    line-height: 1.5em;
+    letter-spacing: 0;
+    margin-top: auto;
+}
+@media screen and (max-width: 767px) {
+    .luvo-testimonials-section .luvo-testimonial-card {
+        padding: 25px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .luvo-testimonials-section .main-testimonial {
+        display: block;
+        padding: 0 15px;
+    }
+    .luvo-testimonials-section .luvo-testimonials-left {
+        max-width: 100%;
+        text-align: center;
+    }
+    .luvo-testimonials-section .luvo-testimonials-left h2 {
+        font-size: 24px;
+        max-width: 225px;
+        margin: 0 auto;
+    }
+    .luvo-testimonials-section .luvo-testimonials-left p {
+        font-size: 14px;
+    }
+    .luvo-testimonials-section .luvo-testimonial-card {
+        margin-top: 34px;
+        padding: 24px;
+    }
+    .luvo-testimonials-section .luvo-testimonial-card h5, .luvo-testimonials-section .luvo-testimonial-card .author {
+        font-size: 14px;
+    }
+    .luvo-testimonials-section .luvo-testimonial-card p {
+        font-size: 16px;
+    }
+    .luvo-testimonials-section .luvo-testimonial-card {
+        min-height: 296px;
+    }
+}
+</style>

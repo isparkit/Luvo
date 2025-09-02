@@ -1,3 +1,29 @@
+.menu-drawer .menu-drawer__inner-container .search__button .svg-wrapper>svg {
+    height: auto;
+    width: 16px;
+}
+.menu-drawer .menu-drawer__inner-container .search__input.field__input {
+    padding: 11px 14px !important;
+}
+.menu-drawer .menu-drawer__inner-container input.search__input.field__input::placeholder, .menu-drawer .menu-drawer__inner-container .predictive-search__item--term {
+    font-family: 'Gordita-Regular';
+    font-size: 14px;
+    letter-spacing: 0;
+    color: #717171;
+    opacity: 1;
+}
+.menu-drawer__navigation {
+    padding-top: 10px !important;
+}
+.predictive-search__heading, .predictive-search__item-heading {
+    font-family: 'Gordita-Regular';
+}
+.menu-drawer .menu-drawer__inner-container .search-modal__form label.field__label {
+    display: none;
+}
+.menu-drawer .menu-drawer__inner-container .field__input:focus {
+    box-shadow: none;
+}
 .header__icon--menu {
   position: initial;
 }

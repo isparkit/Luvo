@@ -368,6 +368,7 @@
         "slide_3VQULw",
         "slide_wB4wJd"
       ],
+      "disabled": true,
       "settings": {
         "heading": "HVAD SIGER VORES KUNDER?",
         "heading_custom": false,
@@ -561,6 +562,18 @@
         "padding_bottom": 36
       }
     },
+    "main_video_banner_tQGWci": {
+      "type": "main-video-banner",
+      "name": "Custom Video Banner",
+      "settings": {
+        "color_scheme": "scheme-4",
+        "bg_video": "shopify://files/videos/Produktvideo 1_1x1.mov",
+        "heading": "Luvo The Future on Your Finger",
+        "subtext": "Experience the perfect blend of technology and elegance. Track health, stay connected, and express your style all with one smart ring.",
+        "btn_text": "Discover Luvo Ring II",
+        "btn_link": "shopify://collections/all"
+      }
+    },
     "custom_luvo_works_mp4iKQ": {
       "type": "custom-luvo-works",
       "blocks": {
@@ -625,44 +638,189 @@
       ],
       "name": "Custom Luvo Works",
       "settings": {
-        "color_scheme": "scheme-c2ab61a8-106c-4616-9f63-24e75fd78646",
+        "color_scheme": "scheme-4",
         "section_heading": "How Luvo Works",
         "section_subtext": "Luvo combines cutting-edge sensors, seamless connectivity, and AI-powered insights—so you can focus on living, while it takes care of the tracking.",
         "padding_top": 124,
         "padding_bottom": 124
       }
     },
-    "custom_faq_accordion_mEBQUw": {
+    "testimonial_slider_jaerty": {
+      "type": "testimonial-slider",
+      "blocks": {
+        "testimonial_7qhr8q": {
+          "type": "testimonial",
+          "settings": {
+            "image_wrap": "shopify://shop_images/Frame_105.svg",
+            "tittle_wrap": "Smart ring benefits.",
+            "quote": "“I used to wear a bulky smartwatch, but Luvo feels so natural. I forget it’s even there—and yet it gives me everything I need.”",
+            "author": "– James R., Tech Enthusiast"
+          }
+        },
+        "testimonial_GDBCrw": {
+          "type": "testimonial",
+          "settings": {
+            "image_wrap": "shopify://shop_images/Frame_105.svg",
+            "tittle_wrap": "advantages of smart rings.",
+            "quote": "\"Switching from a clunky smartwatch to Luvo was a game changer. It feels so light that I often forget I'm wearing it, features I need.\"",
+            "author": "– Jamie R., Gadget Lover"
+          }
+        },
+        "testimonial_BUNMdV": {
+          "type": "testimonial",
+          "settings": {
+            "image_wrap": "shopify://shop_images/Frame_105.svg",
+            "tittle_wrap": "perks of using a smart ring.",
+            "quote": "\"After ditching my bulky smartwatch for Luvo, I feel like I’m wearing nothing at all. It’s incredibly comfortable connected.\"",
+            "author": "– Jamie R., Gadget Lover"
+          }
+        },
+        "testimonial_hzCr34": {
+          "type": "testimonial",
+          "settings": {
+            "image_wrap": "shopify://shop_images/Frame_105.svg",
+            "tittle_wrap": "Smart ring benefits.",
+            "quote": "“I used to wear a bulky smartwatch, but Luvo feels so natural. I forget it’s even there—and yet it gives me everything I need.”",
+            "author": "– James R., Tech Enthusiast"
+          }
+        },
+        "testimonial_Ym8imd": {
+          "type": "testimonial",
+          "settings": {
+            "image_wrap": "shopify://shop_images/Frame_105.svg",
+            "tittle_wrap": "advantages of smart rings.",
+            "quote": "\"Switching from a clunky smartwatch to Luvo was a game changer. It feels so light that I often forget I'm wearing it, features I need.\"",
+            "author": "– Jamie R., Gadget Lover"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_7qhr8q",
+        "testimonial_GDBCrw",
+        "testimonial_BUNMdV",
+        "testimonial_hzCr34",
+        "testimonial_Ym8imd"
+      ],
+      "name": "Luvo Testimonials",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "heading": "What People Are Saying About Luvo",
+        "subtext": "From fitness enthusiasts to style icons, people everywhere are discovering why Luvo is the future of wearable tech.",
+        "padding_top": 124,
+        "padding_bottom": 124
+      }
+    },
+    "health_app_section_GDM8pW": {
+      "type": "health-app-section",
+      "blocks": {
+        "phone_feature_DHkbMW": {
+          "type": "phone_feature",
+          "settings": {
+            "phone_img": "shopify://shop_images/Feature_1_1.png",
+            "icon": "shopify://shop_images/Vector.svg",
+            "title": "Ultra-Lightweight Comfort",
+            "text": "Designed for 24/7 wear you’ll forget it’s even there."
+          }
+        },
+        "phone_feature_NjPUhi": {
+          "type": "phone_feature",
+          "settings": {
+            "phone_img": "shopify://shop_images/Feature_2_1.png",
+            "icon": "shopify://shop_images/Group.svg",
+            "title": "Activiteiten tracking",
+            "text": "Designed for 24/7 wear you’ll forget it’s even there."
+          }
+        },
+        "phone_feature_gmxYEb": {
+          "type": "phone_feature",
+          "settings": {
+            "phone_img": "shopify://shop_images/Feature_3_1.png",
+            "icon": "shopify://shop_images/Vector_1.svg",
+            "title": "Slaapanalyse",
+            "text": "Designed for 24/7 wear you’ll forget it’s even there."
+          }
+        }
+      },
+      "block_order": [
+        "phone_feature_DHkbMW",
+        "phone_feature_NjPUhi",
+        "phone_feature_gmxYEb"
+      ],
+      "name": "Custom Health App",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "heading": "Your Health, In Your Hands",
+        "subtext": "The Luvo app gives you a complete view of your wellness track activity, monitor sleep, analyze heart rate, and set personalized goals, all from a beautifully designed dashboard.",
+        "top_image1": "shopify://shop_images/Badge_1.svg",
+        "top_link1": "#",
+        "top_image2": "shopify://shop_images/Badge.svg",
+        "top_link2": "#",
+        "padding_top": 152,
+        "padding_bottom": 152
+      }
+    },
+    "custom_faq_accordion_CGChxY": {
       "type": "custom-faq-accordion",
       "blocks": {
-        "faq_yj8Vyq": {
+        "faq_rDV8rA": {
           "type": "faq",
           "settings": {
             "question": "What can Luvo track?",
             "answer": "Luvo tracks your heart rate, steps, sleep, activity, and stress levels—plus discreet smart notifications."
           }
         },
-        "faq_JxkGpW": {
+        "faq_emBfhh": {
           "type": "faq",
           "settings": {
             "question": "Is Luvo waterproof?",
             "answer": "Luvo tracks your heart rate, steps, sleep, activity, and stress levels—plus discreet smart notifications."
           }
+        },
+        "faq_DFGUtA": {
+          "type": "faq",
+          "settings": {
+            "question": "How long does the battery last?",
+            "answer": "Luvo tracks your heart rate, steps, sleep, activity, and stress levels—plus discreet smart notifications."
+          }
+        },
+        "faq_ULwTX7": {
+          "type": "faq",
+          "settings": {
+            "question": "Does Luvo support contactless payments?",
+            "answer": "Luvo tracks your heart rate, steps, sleep, activity, and stress levels—plus discreet smart notifications."
+          }
+        },
+        "faq_myKEwH": {
+          "type": "faq",
+          "settings": {
+            "question": "Does Luvo work with both iOS and Android?",
+            "answer": "Luvo tracks your heart rate, steps, sleep, activity, and stress levels—plus discreet smart notifications."
+          }
+        },
+        "faq_faiqGT": {
+          "type": "faq",
+          "settings": {
+            "question": "Can Luvo sync with Apple Health or Google Fit?",
+            "answer": "Luvo tracks your heart rate, steps, sleep, activity, and stress levels—plus discreet smart notifications."
+          }
         }
       },
       "block_order": [
-        "faq_yj8Vyq",
-        "faq_JxkGpW"
+        "faq_rDV8rA",
+        "faq_emBfhh",
+        "faq_DFGUtA",
+        "faq_ULwTX7",
+        "faq_myKEwH",
+        "faq_faiqGT"
       ],
-      "disabled": true,
       "name": "Custom FAQ Accordion",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-1ab87929-c766-459a-9e9f-732581f51200",
         "heading": "Everything You Need to Know About Luvo",
         "subheading": "From battery life to compatibility, here are answers to the most common questions about Luvo Smart Ring.",
-        "faq_image": "shopify://shop_images/12.png",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "faq_image": "shopify://shop_images/faq_1.png",
+        "padding_top": 124,
+        "padding_bottom": 124
       }
     }
   },
@@ -675,7 +833,10 @@
     "image_with_text_kn9WxK",
     "ss_testimonial_8_pPhRPq",
     "collapsible_content_nyTwxi",
+    "main_video_banner_tQGWci",
     "custom_luvo_works_mp4iKQ",
-    "custom_faq_accordion_mEBQUw"
+    "testimonial_slider_jaerty",
+    "health_app_section_GDM8pW",
+    "custom_faq_accordion_CGChxY"
   ]
 }
