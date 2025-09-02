@@ -160,9 +160,9 @@
   flex: 1;
   min-width: 300px;
 }
-.faq-item {
+{% comment %} .faq-item {
   border-bottom: 1px solid rgba(255,255,255,0.1);
-}
+} {% endcomment %}
  .faq-accordion-section .faq-container .faq-right .faq-items .faq-item .faq-question{
   font-family: 'Gordita-Medium';
   font-weight: 500; 
@@ -170,6 +170,8 @@
   background: none;
   color; #E3E3E3;
   padding: 15px;
+  display: flex;
+  justify-content: space-between;
 }
 {% comment %} .faq-question {
   font-family: 'Gordita-Medium';
