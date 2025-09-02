@@ -29,7 +29,10 @@
           "settings": {
             "image": "shopify://shop_images/Logo.png",
             "image_width": 95,
-            "alignment": ""
+            "alignment": "",
+            "email": "",
+            "phone": "",
+            "address": ""
           }
         },
         "brand_information_FBEGbc": {
@@ -61,7 +64,7 @@
         "text_6gdNpA"
       ],
       "settings": {
-        "color_scheme": "scheme-1ab87929-c766-459a-9e9f-732581f51200",
+        "color_scheme": "scheme-79c7934d-9b0d-4f04-8000-4063c37480ab",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": false,
