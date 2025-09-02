@@ -1,29 +1,32 @@
 <section class="color-{{ section.settings.color_scheme }} video-hero">
   <div class="video-hero__bg">
     {% if section.settings.bg_video != blank %}
-      {{ section.settings.bg_video | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, class: 'video-hero__video' }}
+      {{
+        section.settings.bg_video
+        | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, class: 'video-hero__video'
+      }}
     {% endif %}
   </div>
- 
-  <div class="page-width">
-  <div class="video-hero__content">
-    <div class="video-text-area">
-    {% if section.settings.heading != blank %}
-      <h1 class="video-hero__heading">{{ section.settings.heading }}</h1>
-    {% endif %}
-    {% if section.settings.subtext != blank %}
-      <h6 class="video-hero__subtext">{{ section.settings.subtext }}</h6>
-    {% endif %}
-    {% if section.settings.btn_text != blank %}
-      <a href="{{ section.settings.btn_link }}" class="video-hero__btn">
-        {{ section.settings.btn_text }}
-      </a>
-    {% endif %}
+
+  <div class="page-widthh">
+    <div class="video-hero__content">
+      <div class="video-text-area">
+        {% if section.settings.heading != blank %}
+          <h1 class="video-hero__heading">{{ section.settings.heading }}</h1>
+        {% endif %}
+        {% if section.settings.subtext != blank %}
+          <h6 class="video-hero__subtext">{{ section.settings.subtext }}</h6>
+        {% endif %}
+        {% if section.settings.btn_text != blank %}
+          <a href="{{ section.settings.btn_link }}" class="button">
+            {{ section.settings.btn_text }}
+          </a>
+        {% endif %}
+      </div>
     </div>
   </div>
-  </div>
 </section>
- 
+
 <style>
   .video-hero {
     position: relative;
@@ -32,60 +35,42 @@
     overflow: hidden;
     color: #fff;
   }
- 
   .video-hero .video-hero__video {
     width: 100%;
-    height: 700px;
+    height: 100dvh;
     object-fit: cover;
   }
- 
   .video-hero .video-hero__content {
     position: absolute;
-    bottom: 30px;
-    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: max((calc(100% - 1130px) / 2), 50px);
   }
- 
   .video-hero .video-text-area {
     text-align: left;
-    max-width: 430px;
+    max-width: 445px;
   }
- 
-  .video-hero .video-hero__content.page-width {
-    position: absolute;
-    max-width: 600px;
-    bottom: 0;
-}
   .video-hero .video-hero__heading {
     font-family: 'Gordita-Bold';
     font-size: 54px;
     font-weight: 700;
+    line-height: 1.2em;
+    letter-spacing: 0;
     margin: 0;
   }
- 
   .video-hero .video-hero__subtext {
     font-family: 'Gordita-Medium';
     font-weight: 500;
     line-height: 1.5em;
     letter-spacing: 0;
-    margin: 0;
+    margin: 8px 0 42px;
   }
- 
-  .video-hero .video-hero__btn {
-    display: inline-block;
-    background: #fff;
-    color: #000;
-    padding: 10px 25px;
-    border-radius: 25px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: 0.3s;
+  .video-hero .video-hero__content .button {
+    border-radius: 100px;
   }
- 
-  .video-hero .video-hero__btn:hover {
-    background: #000;
-    color: #fff;
+  .video-hero .video-hero__content .button:after {
+    display: none;
   }
- 
   /* Mobile Responsive */
   @media screen and (max-width: 768px) {
     .video-hero .video-hero__heading {
@@ -94,13 +79,9 @@
     .video-hero .video-hero__subtext {
       font-size: 14px;
     }
-    .video-hero .video-hero__btn {
-      padding: 8px 20px;
-      font-size: 14px;
-    }
   }
 </style>
- 
+
 {% schema %}
 {
   "name": "Custom Video Banner",
@@ -108,7 +89,7 @@
     {
       "type": "color_scheme",
       "id": "color_scheme",
-      "label": "Color Schema",
+      "label": "Color Schema"
     },
     {
       "type": "video",
