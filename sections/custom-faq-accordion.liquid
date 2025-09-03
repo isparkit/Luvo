@@ -1,7 +1,7 @@
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.3 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.3 | round: 0 }}px;
   }
  
   @media screen and (min-width: 750px) {
@@ -228,10 +228,6 @@
 }
 
 @media (max-width:767px) {
-  .faq-accordion-section{
-    padding-top: 54px;
-    padding-bottom: 54px;
-  }
   .faq-accordion-section .faq-container .faq-right .faq-items .faq-item .faq-question {
     font-size: 14px;
   }

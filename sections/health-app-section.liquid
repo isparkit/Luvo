@@ -1,7 +1,7 @@
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.35 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.35 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.6 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.4 | round: 0 }}px;
   }
 
   @media screen and (min-width: 750px) {
@@ -257,10 +257,6 @@
     }
 }
 @media screen and (max-width: 1024px) {
-    .section-{{ section.id }}-padding {
-        padding-top: {{ section.settings.padding_top | times: 0.45 | round: 0 }}px;
-        padding-bottom: {{ section.settings.padding_bottom | times: 0.45 | round: 0 }}px;
-    }
     .health-app-section .feature-details-area h4 {
         font-size: 16px;
     }

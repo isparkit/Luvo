@@ -1,0 +1,189 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.3 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.3 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="logo-banner-wrapper color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="main-banner-image">
+      <div class="custom-banner-section">
+        <div class="banner-wrapper">
+          <div class="banner-bg"></div>
+          <div class="banner-content">
+            <h2>{{ section.settings.heading }}</h2>
+            <p>{{ section.settings.subtext }}</p>
+            {% if section.settings.button_text != blank %}
+              <a href="{{ section.settings.button_link }}" class="banner-btn button">
+                {{ section.settings.button_text }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Logo Banner",
+  "tag": "section",
+  "class": "custom-logo-banner-cls",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_bg",
+      "label": "Desktop Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_bg",
+      "label": "Mobile Background Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Ready to Upgrade Your Lifestyle?"
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Sub Content",
+      "default": "Join thousands already stepping into the future of wearable tech. Sleek, powerful, and always with you—Luvo is more than a ring, it's a lifestyle."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Discover Luvo Ring II"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Logo Banner",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .custom-logo-banner-cls .custom-banner-section {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .custom-logo-banner-cls .banner-wrapper {
+    position: relative;
+    width: 100%;
+    height: 350px;
+  }
+  .custom-logo-banner-cls .banner-bg {
+    width: 100%;
+    height: 100%;
+    background-image: url({{ section.settings.desktop_bg | img_url: 'master' }});
+    background-size: cover;
+    background-position: center;
+  }
+  .custom-logo-banner-cls .banner-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 570px;
+    padding-left: 64px;
+  }
+  .custom-logo-banner-cls div{
+      display:block !important;
+  }
+  .custom-logo-banner-cls .banner-content h2 {
+    font-family: 'Gordita-Bold';
+    padding-bottom: 8px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0;
+    line-height: 1.2em;
+  }
+  .custom-logo-banner-cls .banner-content p {
+    font-family: 'Gordita-Regular';
+    font-weight: 400;
+    color: rgba(var(--color-foreground), 0.7);
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 1.4em;
+    margin: 0;
+  }
+  .custom-logo-banner-cls .banner-btn {
+    display: inline-block;
+    font-family: Gordita-Semibold;
+    font-weight: 600;
+    border-radius: 100px;
+    text-decoration: none;
+    border: 1px solid #1A141E;
+    padding: 12px 18px 12px 18px;
+    letter-spacing: 0;
+    line-height: 1.2em;
+    margin-top: 34px;
+    font-size: 16px
+  }
+  .custom-logo-banner-cls .button:after {
+    display: none;
+  }
+  @media (max-width: 767px) {
+    .custom-logo-banner-cls .banner-bg {
+      background-image: url({{ section.settings.mobile_bg | img_url: 'master' }});
+    }
+    .custom-logo-banner-cls .banner-wrapper {
+        height: 500px;
+    } 
+    .custom-logo-banner-cls .banner-content {
+        top: 48px;
+        transform: unset;
+        max-width: 100%;
+        padding: 0 24px;
+    }
+    .custom-logo-banner-cls .banner-content p, .custom-logo-banner-cls .banner-btn {
+        font-size: 14px;
+    }
+  }
+</style>
