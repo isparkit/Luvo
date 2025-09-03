@@ -822,6 +822,68 @@
         "padding_top": 124,
         "padding_bottom": 124
       }
+    },
+    "collapsible_content_AW8Mkr": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_48rpca": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Række, der kan skjules",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_NVPJwR": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Række, der kan skjules",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_nykHPN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Række, der kan skjules",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_kyGX6K": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Række, der kan skjules",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_48rpca",
+        "collapsible_row_NVPJwR",
+        "collapsible_row_nykHPN",
+        "collapsible_row_kyGX6K"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Indhold, der kan skjules",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -837,6 +899,7 @@
     "custom_luvo_works_mp4iKQ",
     "testimonial_slider_jaerty",
     "health_app_section_GDM8pW",
-    "custom_faq_accordion_CGChxY"
+    "custom_faq_accordion_CGChxY",
+    "collapsible_content_AW8Mkr"
   ]
 }
