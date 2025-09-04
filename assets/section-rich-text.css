@@ -1,3 +1,22 @@
+
+.rich-text h2.rich-text__heading {
+    font-family: 'Gordita-Bold';
+    font-weight: 700;
+    line-height: 1.5em;
+    letter-spacing: 0;
+}
+.rich-text .rich-text__text p {
+    font-family: 'Gordita-Regular';
+    font-weight: 400;
+    line-height: 1.5em;
+    letter-spacing: 0;
+    font-size: 18px;
+    max-width: 610px;
+    margin: auto;
+}
+.rich-text .rich-text__text {
+    margin-top: 8px;
+}
 .rich-text {
   z-index: 1;
 }
@@ -83,4 +102,16 @@
 
 .rich-text__blocks.right .rich-text__buttons {
   justify-content: flex-end;
+}
+@media screen and (max-width: 767px) {
+  .rich-text .rich-text__text p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+  .rich-text .rich-text__wrapper {
+    padding: 0;
+  }
+  .rich-text .rich-text__blocks {
+    margin-bottom: 30px;
+  }
 }

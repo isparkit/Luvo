@@ -1,6 +1,6 @@
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.6 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.3 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.4 | round: 0 }}px;
   }
 
@@ -20,7 +20,7 @@
                 <h2>{{ section.settings.heading }}</h2>
             {% endif %}
             {% if section.settings.subtext != blank %}
-                <p>{{ section.settings.subtext }}</p>
+                <h6>{{ section.settings.subtext }}</h6>
             {% endif %}
         </div>
       <div class="top-links">
@@ -60,7 +60,7 @@
               </div>
               <div class="feature-details-area">
                 {% if block.settings.title != blank %}
-                  <h4>{{ block.settings.title }}</h4>
+                  <h6>{{ block.settings.title }}</h6>
                 {% endif %}
                 {% if block.settings.text != blank %}
                   <p>{{ block.settings.text }}</p>
@@ -197,9 +197,9 @@
     letter-spacing: 0;
     margin: 0;
 }
-.health-app-section .top-content .top-left-details p {
-    font-size: 18px;
+.health-app-section .top-content .top-left-details h6 {
     font-family: 'Gordita-Regular';
+    font-weight: 400;
     line-height: 1.5em;
     letter-spacing: 0;
     color: rgba(var(--color-foreground), 0.7);
@@ -233,14 +233,14 @@
     gap: 14px;
     max-width: 271px;
 }
-.health-app-section .feature-details-area h4 {
+.health-app-section .feature-details-area h6 {
     margin: 0;
     font-family: 'Gordita-Bold';
     font-weight: 700;
     line-height: 1.5em;
-    font-size: 18px;
     letter-spacing: 0;
     text-align: left;
+    color: rgba(var(--color-foreground));
 }
 .health-app-section .feature-details-area p {
     margin: 0;
@@ -254,11 +254,6 @@
     .health-app-section .phone-feature-item .phone-img {
         max-width: 100%;
         width: 100%;
-    }
-}
-@media screen and (max-width: 1024px) {
-    .health-app-section .feature-details-area h4 {
-        font-size: 16px;
     }
 }
 @media screen and (max-width: 767px) {
@@ -279,13 +274,13 @@
     }
     .health-app-section .phone-features {
         flex-direction: column;
-        margin-top: 48px;
+        margin-top: 30px;
     }
     .health-app-section .phone-feature-item .feature-details {
         max-width: 100%;
     }
     .health-app-section .phone-features {
-        gap: 34px;
+        gap: 24px;
     }
 }
 </style>

@@ -20,7 +20,7 @@
           <div class="banner-bg"></div>
           <div class="banner-content">
             <h2>{{ section.settings.heading }}</h2>
-            <p>{{ section.settings.subtext }}</p>
+            <h6>{{ section.settings.subtext }}</h6>
             {% if section.settings.button_text != blank %}
               <a href="{{ section.settings.button_link }}" class="banner-btn button">
                 {{ section.settings.button_text }}
@@ -144,19 +144,18 @@
     letter-spacing: 0;
     line-height: 1.2em;
   }
-  .custom-logo-banner-cls .banner-content p {
+  .custom-logo-banner-cls .banner-content h6 {
     font-family: 'Gordita-Regular';
     font-weight: 400;
     color: rgba(var(--color-foreground), 0.7);
-    font-size: 18px;
     letter-spacing: 0;
     line-height: 1.4em;
     margin: 0;
   }
   .custom-logo-banner-cls .banner-btn {
     display: inline-block;
-    font-family: Gordita-Semibold;
-    font-weight: 600;
+    font-family: 'Gordita-Medium';
+    font-weight: 500;
     border-radius: 100px;
     text-decoration: none;
     border: 1px solid #1A141E;
@@ -170,6 +169,11 @@
     display: none;
   }
   @media (max-width: 767px) {
+    .custom-logo-banner-cls .banner-btn {
+      font-size: 14px;
+      padding: 10px 18px;
+      line-height: normal;
+    }
     .custom-logo-banner-cls .banner-bg {
       background-image: url({{ section.settings.mobile_bg | img_url: 'master' }});
     }
@@ -181,9 +185,6 @@
         transform: unset;
         max-width: 100%;
         padding: 0 24px;
-    }
-    .custom-logo-banner-cls .banner-content p, .custom-logo-banner-cls .banner-btn {
-        font-size: 14px;
     }
   }
 </style>

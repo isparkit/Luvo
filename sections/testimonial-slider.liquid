@@ -19,7 +19,7 @@
   <div class="main-testimonial">
     <div class="luvo-testimonials-left">
       <h2>{{ section.settings.heading }}</h2>
-      <p>{{ section.settings.subtext }}</p>
+      <h6>{{ section.settings.subtext }}</h6>
     </div>
 
     <div class="luvo-testimonials-right">
@@ -33,7 +33,7 @@
                 {% endif %}
                 <h5>{{ block.settings.tittle_wrap }}</h5>
                 <p>{{ block.settings.quote }}</p>
-                <div class="author">– {{ block.settings.author }}, {{ block.settings.role }}</div>
+                <div class="author">{{ block.settings.author }}, {{ block.settings.role }}</div>
               </div>
             </div>
           {% endfor %}
@@ -169,13 +169,13 @@
     margin-bottom: 14px;
     margin-top: 0;
 }
-.luvo-testimonials-section .luvo-testimonials-left p {
+.luvo-testimonials-section .luvo-testimonials-left h6 {
     font-family: 'Gordita-Regular';
     font-weight: 400;
-    font-size: 18px;
     color: rgba(var(--color-foreground), 0.7);
     line-height: 1.2em;
     letter-spacing: 0;
+    margin: 0;
 }
 .luvo-testimonials-section .luvo-testimonials-right {
     flex: 2;
@@ -226,6 +226,9 @@
     }
 }
 @media screen and (max-width: 767px) {
+    .luvo-testimonials-section .luvo-testimonials-left h6 {
+      margin-top: 8px;
+    }
     .luvo-testimonials-section .luvo-testimonial-card {
         padding: 25px;
     }
@@ -246,7 +249,7 @@
         font-size: 14px;
     }
     .luvo-testimonials-section .luvo-testimonial-card {
-        margin-top: 34px;
+        margin-top: 30px;
         padding: 24px;
     }
     .luvo-testimonials-section .luvo-testimonial-card h5, .luvo-testimonials-section .luvo-testimonial-card .author {

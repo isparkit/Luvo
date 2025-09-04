@@ -66,7 +66,7 @@
         "subtext": "More than just a ring Luvo keeps you connected, healthy, and in style. Here’s what makes it special.",
         "ring_image": "shopify://shop_images/image_8.png",
         "padding_top": 100,
-        "padding_bottom": 100
+        "padding_bottom": 152
       }
     },
     "custom_luvo_works_mp4iKQ": {
@@ -90,12 +90,12 @@
           "settings": {
             "tab_title": "Track Your Body",
             "block_heading_one": "01. What Happens:",
-            "block_subtext_one": "Simply slip Luvo on your finger—its lightweight and ergonomic design ensures comfort all day.",
+            "block_subtext_one": "Built-in sensors continuously monitor your heart rate, sleep, activity, and stress levels throughout the",
             "block_heading_two": "02. Why It Matters:",
-            "block_subtext_two": "Unlike bulky wearables, Luvo blends seamlessly with your lifestyle you’ll forget you’re even wearing.",
+            "block_subtext_two": "Get real-time, accurate health data without lifting a finger—Luvo does the work in the background.",
             "block_heading_three": "03. Visual Idea:",
-            "block_subtext_three": "Close-up shot of the ring on a hand, with a glow effect highlighting comfort and elegance.",
-            "block_image": "shopify://shop_images/luvo_image.png"
+            "block_subtext_three": "Exploded 3D view of the ring showing sensors + animated waves (like heartbeat or motion lines).",
+            "block_image": "shopify://shop_images/image_5.png"
           }
         },
         "step_E7x69b": {
@@ -103,12 +103,12 @@
           "settings": {
             "tab_title": "Sync Instantly",
             "block_heading_one": "01. What Happens:",
-            "block_subtext_one": "Simply slip Luvo on your finger—its lightweight and ergonomic design ensures comfort all day.",
+            "block_subtext_one": "Luvo connects to your smartphone via Bluetooth. All your data syncs securely to the Luvo App in real-time.",
             "block_heading_two": "02. Why It Matters:",
-            "block_subtext_two": "Unlike bulky wearables, Luvo blends seamlessly with your lifestyle you’ll forget you’re even wearing.",
+            "block_subtext_two": "No complicated setup—just open the app and see your latest health and activity stats right away.",
             "block_heading_three": "03. Visual Idea:",
-            "block_subtext_three": "Close-up shot of the ring on a hand, with a glow effect highlighting comfort and elegance.",
-            "block_image": "shopify://shop_images/luvo_image.png"
+            "block_subtext_three": "Animation of data flowing from ring → phone screen → cloud.",
+            "block_image": "shopify://shop_images/image_6.png"
           }
         },
         "step_x4DKn4": {
@@ -116,12 +116,12 @@
           "settings": {
             "tab_title": "Get Smart Insights",
             "block_heading_one": "01. What Happens:",
-            "block_subtext_one": "Simply slip Luvo on your finger—its lightweight and ergonomic design ensures comfort all day.",
+            "block_subtext_one": "The Luvo App uses AI-powered analytics to transform your raw data into personalized insights—like sleep quality scores, wellness trends, and daily recommendations.",
             "block_heading_two": "02. Why It Matters:",
-            "block_subtext_two": "Unlike bulky wearables, Luvo blends seamlessly with your lifestyle you’ll forget you’re even wearing.",
+            "block_subtext_two": "You don’t just get numbers—you get actionable advice to improve your health, productivity, and lifestyle.",
             "block_heading_three": "03. Visual Idea:",
-            "block_subtext_three": "Close-up shot of the ring on a hand, with a glow effect highlighting comfort and elegance.",
-            "block_image": "shopify://shop_images/luvo_image.png"
+            "block_subtext_three": "App dashboard mockup showing graphs, trends, and wellness tips.",
+            "block_image": "shopify://shop_images/image_7.png"
           }
         }
       },
@@ -137,7 +137,66 @@
         "section_heading": "How Luvo Works",
         "section_subtext": "Luvo combines cutting-edge sensors, seamless connectivity, and AI-powered insights—so you can focus on living, while it takes care of the tracking.",
         "padding_top": 100,
-        "padding_bottom": 100
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_igMUry": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_wYbncy": {
+          "type": "heading",
+          "settings": {
+            "heading": "Designed for Every Style",
+            "heading_size": "h2"
+          }
+        },
+        "text_DX9FTx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Crafted with premium materials and a minimalist design, Luvo is more than wearable tech—it’s a timeless accessory that fits every lifestyle.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_wYbncy",
+        "text_DX9FTx"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "image_banner_GfzjU3": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/image_4.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "top-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "unique_class": "custom-image-banner",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "custom_liquid_Pq6hM8": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "scheme-4",
+        "padding_top": 48,
+        "padding_bottom": 0
       }
     },
     "testimonial_slider_jaerty": {
@@ -338,6 +397,9 @@
     "main_video_banner_tQGWci",
     "homepage_product_info_fVJWkG",
     "custom_luvo_works_mp4iKQ",
+    "rich_text_igMUry",
+    "image_banner_GfzjU3",
+    "custom_liquid_Pq6hM8",
     "testimonial_slider_jaerty",
     "health_app_section_GDM8pW",
     "custom_faq_accordion_CGChxY",

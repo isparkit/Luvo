@@ -35,6 +35,9 @@
     overflow: hidden;
     color: #fff;
   }
+  .video-hero .video-hero__bg {
+    line-height: 0;
+  }
   .video-hero .video-hero__video {
     width: 100%;
     height: 100dvh;
@@ -53,7 +56,6 @@
   .video-hero .video-hero__heading {
     font-family: 'Gordita-Bold';
     font-size: 54px;
-    font-weight: 700;
     line-height: 1.2em;
     letter-spacing: 0;
     margin: 0;
@@ -82,12 +84,19 @@
   @media screen and (max-width: 989px) {
     .video-hero .video-hero__content {
       padding-left: 15px;
+      padding-right: 15px;
     }
   }
   @media screen and (max-width: 768px) {
+    .video-hero .video-hero__video {
+      height: 80dvh;
+    }
+    .video-hero {
+      min-height: 80vh;
+    }
     .video-hero .video-hero__content {
       top: unset;
-      bottom: 54px;
+      bottom: 40px;
       transform: unset;
     }
     .video-hero .video-hero__heading {

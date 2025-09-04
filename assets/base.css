@@ -3599,37 +3599,37 @@ details-disclosure > details {
 /* Font family CSS */
 @font-face {
     font-family: 'Gordita-Bold';
-    src: url('https://cdn.shopify.com/s/files/1/0599/3044/3889/files/Gordita-Black.otf?v=1756465568') format('opentype');
-    font-weight: 700;
+    src: url('https://cdn.shopify.com/s/files/1/0599/3044/3889/files/Gordita-Bold.otf?v=1756465568') format('opentype');
+    font-weight: 700 !important;
     font-style: normal;
 }
-@font-face {
+/* @font-face {
     font-family: 'Gordita-Semibold';
     src: url('https://cdn.shopify.com/s/files/1/0599/3044/3889/files/Gordita-Bold.otf?v=1756465568') format('opentype');
     font-weight: 600;
     font-style: normal;
-}
+} */
 @font-face {
     font-family: 'Gordita-Medium';
     src: url('https://cdn.shopify.com/s/files/1/0599/3044/3889/files/Gordita-Medium.otf?v=1756465568') format('opentype');
-    font-weight: 500;
+    font-weight: 500 !important;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gordita-Regular';
     src: url('https://cdn.shopify.com/s/files/1/0599/3044/3889/files/Gordita-Regular.otf?v=1756465568') format('opentype');
-    font-weight: 400;
+    font-weight: 400 !important;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gordita-Regular-Italic';
     src: url('https://cdn.shopify.com/s/files/1/0599/3044/3889/files/Gordita-Regular_Italic.otf?v=1756465568') format('opentype');
-    font-weight: 400;
+    font-weight: 400 !important;
     font-style: normal;
 }
 
 h2,.h2 {
-  font-size: clamp(24px, 1.27vw + 14px, 34px);
+  font-size: clamp(24px, 1.27vw + 16px, 34px);
 }
  
 h5,.h5 {
