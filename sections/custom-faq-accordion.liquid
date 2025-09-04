@@ -122,6 +122,20 @@
 {% endschema %}
  
 <style>
+.faq-accordion-section {
+    position: relative;
+}
+.faq-accordion-section:after {
+    content: '';
+    position: absolute;
+    border-radius: 500px;
+    background: #fff;
+    filter: blur(300px);
+    width: 500px;
+    height: 250px;
+    top: -126px;
+    left: -96px;
+}
 .faq-accordion-section .faq-accordion-heading-area {
     text-align: center;
     margin: 0 auto;
@@ -228,6 +242,12 @@
 }
 
 @media (max-width:767px) {
+  .faq-accordion-section:after {
+    border-radius: 284px;
+    top: -72px;
+    width: 300px;
+    height: 200px;
+  }
   .faq-accordion-section .faq-container .faq-right .faq-items .faq-item {
     padding: 14px;
     margin-bottom: 16px;
