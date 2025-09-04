@@ -244,6 +244,19 @@
   .faq-accordion-section .faq-container .faq-left, .faq-accordion-section .faq-container .faq-right {
     width: 50%;
   }
+  .faq-accordion-section .faq-container .faq-right {
+    flex: 1;
+    min-width: unset;
+    max-width: 100%;
+}
+
+.faq-accordion-section .faq-container {
+    flex-wrap: nowrap;
+}
+
+.faq-accordion-section .faq-container .faq-left img {
+    max-width: 100%;
+}
 }
 @media (max-width:767px) {
   .faq-accordion-section:after {
