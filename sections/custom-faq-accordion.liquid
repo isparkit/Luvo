@@ -1,9 +1,9 @@
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.3 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.3 | round: 0 }}px;
   }
-
+ 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -11,8 +11,15 @@
     }
   }
 {%- endstyle -%}
-
+ 
 <section class="faq-accordion-section color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding" id="faq-accordion-{{ section.id }}">
+  <div class="page-width">
+    <div class="faq-accordion-heading-area">
+    {% if section.settings.heading %}<h2 class="faq-title">{{ section.settings.heading }}</h2>{% endif %}
+      {% if section.settings.subheading != blank %}
+        <p class="faq-subtitle">{{ section.settings.subheading }}</p>
+      {% endif %}
+    </div>
   <div class="faq-container">
     <div class="faq-left">
       {% if section.settings.faq_image %}
@@ -20,28 +27,25 @@
       {% endif %}
     </div>
     <div class="faq-right">
-      <h2 class="faq-title">{{ section.settings.heading }}</h2>
-      {% if section.settings.subheading != blank %}
-        <p class="faq-subtitle">{{ section.settings.subheading }}</p>
-      {% endif %}
-
+ 
       <div class="faq-items">
         {% for block in section.blocks %}
           <div class="faq-item" id="faq-{{ section.id }}-{{ forloop.index }}">
             <button class="faq-question" aria-expanded="false">
               {{ block.settings.question }}
-              <span class="faq-icon">+</span>
+              <span class="faq-icon"></span>
             </button>
             <div class="faq-answer">
-              <p>{{ block.settings.answer }}</p>
+              <h6>{{ block.settings.answer }}</h6>
             </div>
           </div>
         {% endfor %}
       </div>
     </div>
   </div>
+  </div>
 </section>
-
+ 
 {% schema %}
 {
   "name": "Custom FAQ Accordion",
@@ -49,7 +53,7 @@
     {
       "type": "color_scheme",
       "id": "color_scheme",
-      "label": "Color Schema",
+      "label": "Color Schema"
     },
     {
       "type": "text",
@@ -72,7 +76,7 @@
       "type": "range",
       "id": "padding_top",
       "min": 0,
-      "max": 100,
+      "max": 160,
       "step": 4,
       "unit": "px",
       "label": "t:sections.all.padding.padding_top",
@@ -82,7 +86,7 @@
       "type": "range",
       "id": "padding_bottom",
       "min": 0,
-      "max": 100,
+      "max": 160,
       "step": 4,
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
@@ -116,93 +120,183 @@
   ]
 }
 {% endschema %}
-
+ 
 <style>
-.faq-container {
+.faq-accordion-section {
+    position: relative;
+}
+.faq-accordion-section:after {
+    content: '';
+    position: absolute;
+    border-radius: 500px;
+    background: #fff;
+    filter: blur(300px);
+    width: 500px;
+    height: 250px;
+    top: -126px;
+    left: -96px;
+}
+.faq-accordion-section .faq-accordion-heading-area {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 730px;
+}
+.faq-accordion-section .faq-accordion-heading-area h2 {
+    font-family: 'Gordita-Bold';
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2em;
+    padding-bottom: 8px;
+}
+.faq-accordion-section .faq-accordion-heading-area p {
+    font-family: 'Gordita-Regular';
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.2em;
+    padding-bottom: 54px;
+}
+ .faq-accordion-section .faq-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  max-width: 1200px;
+  gap: 16px;
   margin: 0 auto;
-  align-items: flex-start;
 }
-.faq-left img {
-  max-width: 400px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+.faq-accordion-section .faq-container .faq-left img {
+    max-width: 457px;
+    height: 100%;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    object-fit: cover;
 }
-.faq-right {
+.faq-accordion-section .faq-container .faq-right {
   flex: 1;
   min-width: 300px;
 }
-.faq-title {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 10px;
+.faq-accordion-section .faq-container .faq-right .faq-items .faq-item {
+    border: 1px solid #393939;
+    margin-bottom: 8px;
+    padding: 16px;
+    border-radius: 12px;
 }
-.faq-subtitle {
-  font-size: 16px;
-  margin-bottom: 20px;
-  opacity: 0.8;
+.faq-accordion-section .faq-container .faq-left{
+  line-height: 0;
+  height: auto;
 }
-.faq-item {
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+.faq-accordion-section .faq-container .faq-right .faq-items .faq-item .faq-question {
+    font-family: 'Gordita-Medium';
+    font-weight: 500;
+    width: 100%;
+    background: none;
+    color: #E3E3E3;
+    display: flex;
+    justify-content: space-between;
+    border: 0;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 16px;
+    line-height: 1.2em;
+    letter-spacing: 0;
+    cursor: pointer;
+    text-align: left;
 }
-.faq-question {
-  width: 100%;
-  background: none;
-  border: none;
-  text-align: left;
-  padding: 15px 10px;
-  font-size: 18px;
-  font-weight: 500;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-}
-.faq-answer {
+.faq-accordion-section .faq-container .faq-right .faq-items .faq-item .faq-answer {
   display: none;
-  padding: 0 10px 15px 10px;
-  font-size: 16px;
   opacity: 0.9;
 }
-.faq-question.active + .faq-answer {
+.faq-accordion-section .faq-container .faq-right .faq-items .faq-item .faq-answer h6 {
+    margin: 0;
+    font-family: 'Gordita-Medium';
+    font-weight: 500;
+    line-height: 1.3em;
+    letter-spacing: 0;
+    padding-top: 10px;
+    color: #fff;
+    font-size: clamp(16px, .57vw + 11.8px, 18px);
+}
+.faq-accordion-section .faq-container .faq-right .faq-items .faq-item .faq-question.active + .faq-answer {
   display: block;
 }
 .faq-icon {
   transition: transform 0.3s ease;
 }
-.faq-question.active .faq-icon {
-  transform: rotate(45deg);
+.faq-accordion-section .faq-container .faq-right .faq-items .faq-item .faq-question .faq-icon::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url('https://cdn.shopify.com/s/files/1/0599/3044/3889/files/plus.svg?v=1756809855');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.faq-accordion-section .faq-container .faq-right .faq-items .faq-item .faq-question.active .faq-icon::before {
+   content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url('https://cdn.shopify.com/s/files/1/0599/3044/3889/files/minus.svg?v=1756809855');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.faq-items .faq-item:nth-last-child(1) {
+    margin-bottom: 0 !important;
+}
+
+@media (max-width:767px) {
+  .faq-accordion-section:after {
+    border-radius: 284px;
+    top: -72px;
+    width: 300px;
+    height: 200px;
+  }
+  .faq-accordion-section .faq-container .faq-right .faq-items .faq-item {
+    padding: 14px;
+    margin-bottom: 16px;
+  }
+  .faq-accordion-section .faq-accordion-heading-area p {
+    padding-bottom: 30px;
+  }
+  .faq-accordion-section .faq-container .faq-right .faq-items .faq-item .faq-question {
+    font-size: 14px;
+  }
+  .faq-accordion-section .faq-container .faq-left img {
+    width: 100%;
+    max-width: unset;
+    min-height: 344px;
+  }
 }
 </style>
-
+ 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const faqSections = document.querySelectorAll(".faq-accordion-section");
-
+ 
   faqSections.forEach(section => {
     const questions = section.querySelectorAll(".faq-question");
-
-    questions.forEach(btn => {
+ 
+    questions.forEach((btn, index) => {
       btn.addEventListener("click", () => {
         const expanded = btn.getAttribute("aria-expanded") === "true";
-        
+       
         // Close all in this section
         questions.forEach(q => {
           q.classList.remove("active");
           q.setAttribute("aria-expanded", "false");
           q.nextElementSibling.style.display = "none";
         });
-
+ 
         if (!expanded) {
           btn.classList.add("active");
           btn.setAttribute("aria-expanded", "true");
           btn.nextElementSibling.style.display = "block";
         }
       });
+ 
+      // First FAQ default open
+      if (index === 0) {
+        btn.classList.add("active");
+        btn.setAttribute("aria-expanded", "true");
+        btn.nextElementSibling.style.display = "block";
+      }
     });
   });
 });

@@ -1,7 +1,7 @@
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.3 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.3 | round: 0 }}px;
   }
 
   @media screen and (min-width: 750px) {
@@ -183,18 +183,24 @@
 
 <style>
 .luvo-works-section .luvo-works-container .luvo-works-heading-area {
-    max-width: 610px;
+    max-width: 502px;
     margin: 0 auto;
     padding-bottom: 54px;
     text-align: center;
 }
 .luvo-works-section .luvo-works-container .luvo-works-heading-area h2 {
     font-family: 'Gordita-Bold';
+    font-weight: 700;
+    line-height: 1.2em;
+    letter-spacing: 0;
     margin: 0;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
 }
 .luvo-works-section .luvo-works-container .luvo-works-heading-area p {
     font-family: 'Gordita-Regular';
+    font-weight: 400;
+    line-height: 1.2em;
+    letter-spacing: 0;
     text-align: center;
     margin: 0;
 }
@@ -208,7 +214,9 @@
 .luvo-works-section .luvo-works-container .luvo-works-tabs .luvo-works-tab {
   background: transparent;
   font-size: 16px;
-  font-family: 'Gordita-Semibold';
+  font-family: 'Gordita-Medium';
+  line-height: 1.2em;
+  letter-spacing: 0;
   border: none;
   padding: 10px 20px;
   border-radius: 20px;
@@ -239,21 +247,29 @@
     display: flex;
     opacity: 1;
     transform: translateY(0);
-    align-items: self-end;
+    align-items: center;
 }
 .luvo-works-section .luvo-works-container .luvo-works-contents .luvo-works-content .luvo-works-step-text {
   text-align: left;
+  width: 50%;
+}
+.luvo-works-section .luvo-works-step-media {
+    width: 50%;
 }
 .luvo-works-section .luvo-works-container .luvo-works-contents .luvo-works-content .luvo-works-step-text h6.block_heading {
     font-family: Gordita-Regular;
-    line-height: 120%;
+    font-weight: 400;
+    line-height: 1.2em;
+    letter-spacing: 0;
     color: #E3E3E3;
     margin: 0;
     padding-bottom: 12px;
 }
 .luvo-works-section .luvo-works-container .luvo-works-contents .luvo-works-content .luvo-works-step-text h6.block_subtext {
-    font-family: Gordita-Semibold;
-    line-height: 120%;
+    font-family: 'Gordita-Medium';
+    font-weight: 500;
+    line-height: 1.2em;
+    letter-spacing: 0;
     color: #fff;
     margin: 0;
     padding-bottom: 34px;
@@ -263,7 +279,7 @@
   border-radius: 30px;
 }
 
-/* Slide animations */
+
 .slide-in-up {
   animation: slideUp 0.9s ease forwards;
 }
@@ -279,14 +295,41 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Mobile responsive */
+
 @media(max-width:768px){
+  .luvo-works-section .luvo-works-container .luvo-works-contents .luvo-works-content {
+    padding: 8px;
+  }
+  .luvo-works-section .luvo-works-step-media, .luvo-works-section .luvo-works-container .luvo-works-contents .luvo-works-content .luvo-works-step-text {
+    width: 100%;
+}
+  .luvo-works-section {
+    overflow: hidden;
+}
+  .luvo-works-section .luvo-works-container .luvo-works-heading-area {
+    padding-bottom: 30px;
+}
+.luvo-works-section .luvo-works-container .luvo-works-tabs {
+  padding-bottom: 24px;
+}
+  .luvo-works-section .luvo-works-container .luvo-works-contents .luvo-works-content .luvo-works-step-text h6.block_subtext {
+    padding-bottom: 16px;
+    font-size: 16px;
+  }
+.luvo-works-section .block_subtext:nth-last-child(1) {
+    padding-bottom: 0 !important;
+}
 .luvo-works-section .luvo-works-container .luvo-works-tabs {
     overflow-x: auto;
     display: flex;
     flex-wrap: nowrap !important;
     white-space: nowrap;
     justify-content: flex-start;
+    border: 1px solid #FFFFFF1A;
+    padding: 4px;
+    border-radius: 100px 0 0 100px;
+    margin-right: -20px;
+    margin-bottom: 24px;
 }
  
   .luvo-works-section .luvo-works-container .luvo-works-contents .luvo-works-content .luvo-works-step-media img {
@@ -299,8 +342,9 @@
     text-align: left;
     position: absolute;
     z-index: 1;
-    padding-left: 10px;
-    padding-right: 20px;
+    padding: 16px;
+    max-width: 90%;
+    bottom: 16px;
 }
   .luvo-works-section .luvo-works-container .luvo-works-tabs .luvo-works-tab{
     font-size: 14px;

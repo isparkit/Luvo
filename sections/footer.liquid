@@ -136,6 +136,7 @@
                     <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
                       {%- if block.settings.image != blank -%}
                         {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
+                         <a href="{{ routes.root_url }}" class="footer_link">
                         <div
                           class="footer-block__image-wrapper"
                           style="max-width: min(100%, {{ block.settings.image_width }}px);"
@@ -149,6 +150,7 @@
                             height="{{ block.settings.image.height }}"
                           >                      
                         </div>
+                        </a>
                       {%- else -%}
                         {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                       {%- endif -%}

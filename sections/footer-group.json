@@ -11,16 +11,6 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "custom_liquid_kBabrr": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "settings": {
-        "custom_liquid": "<style>\n  /* Styling for the footer section */\n  .footer-section-abc123 {\n    display: flex;\n    flex-direction: column;\n    align-items: center; /* Keep the payment icons centered */\n    margin-top: -10px; /* Adjusted for alignment */\n  }\n\n  /* Styling for the payment icons list */\n  .payment-icons-xyz789 {\n    list-style-type: none;\n    display: flex;\n    gap: 5px; /* Added gap between payment icons */\n    padding: 0;\n    margin-top: 30px;  /* Increased margin-top to move payment icons further down */\n    justify-content: center; /* Keep payment icons centered */\n  }\n\n  /* Styling for Trustpilot section */\n  .trustpilot-logo {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    gap: 6px; /* Space between elements */\n    margin-top: -10px;\n    width: 100%;\n  }\n\n  /* \"Fremragende\" text */\n  .trustpilot-text {\n    font-size: 14px;\n    font-weight: normal;\n    color: black;\n    line-height: 1;\n    text-align: center;\n  }\n\n  /* Trustpilot 4.5 stars */\n  .trustpilot-stars {\n    width: 100px; /* Adjusted size */\n    height: auto;\n    display: block;\n  }\n\n  /* Trustpilot logo */\n  .trustpilot-logo img {\n    display: block;\n    height: auto;\n  }\n\n  /* One-star Trustpilot logo */\n  .trustpilot-one-star {\n    width: 70px; /* Adjusted size */\n  }\n\n  /* Remove underline from the link */\n  a {\n    text-decoration: none;\n  }\n\n  /* Adjustments for smaller screens */\n  @media screen and (max-width: 900px) {\n    .trustpilot-logo {\n      gap: 4px; /* Reduce space between elements */\n    }\n\n    .trustpilot-text {\n      font-size: 12px; /* Smaller text */\n    }\n\n    .trustpilot-stars {\n      width: 90px; /* Smaller stars */\n    }\n\n    .trustpilot-one-star {\n      width: 55px; /* Increased size for mobile */\n    }\n  }\n</style>\n\n<!-- Wrap the entire content in a clickable anchor tag -->\n<a href=\"https://dk.trustpilot.com/review/lunaring.dk\" target=\"_blank\">\n  <div class=\"footer-section-abc123\">\n    <!-- Payment Icons Section -->\n    <ul class=\"inline-list payment-icons-xyz789\">\n      {% assign enabled_payment_types = 'mobilepay,visa,dankort,master,anyday,google_pay,apple_pay,paypal,' | remove: ' ' | split: ',' %}\n      {% for type in enabled_payment_types %}\n        <li class=\"icon--payment-pqr456\">\n          {{ type | payment_type_svg_tag }}\n        </li>\n      {% endfor %}\n    </ul>\n\n    <!-- Trustpilot Logo, \"Fremragende\" Text, and Stars Section -->\n    <div class=\"trustpilot-logo\">\n      <span class=\"trustpilot-text\">Fremragende</span>\n\n      <!-- Clickable 4.5 Stars -->\n      <a href=\"https://dk.trustpilot.com/review/bodyflex.dk\" target=\"_blank\">\n        <img class=\"trustpilot-stars\" src=\"https://cdn.trustpilot.net/brand-assets/4.1.0/stars/stars-4.5.svg\" alt=\"Trustpilot 4.5 stars\">\n      </a>\n\n      <!-- Clickable One-Star Trustpilot Logo -->\n      <a href=\"https://dk.trustpilot.com/review/lunaring.dk\" target=\"_blank\">\n        <img class=\"trustpilot-one-star\" src=\"https://1000logos.net/wp-content/uploads/2022/10/Trustpilot-Logo-500x281.png\" alt=\"Trustpilot logo\">\n      </a>\n    </div>\n\n    <!-- Description Tabs Section -->\n    <div class=\"description-tabs\">\n      <!-- Your description tabs code goes here -->\n    </div>\n  </div>\n</a>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -74,13 +64,12 @@
         "payment_enable": true,
         "show_policy": false,
         "margin_top": 0,
-        "padding_top": 84,
-        "padding_bottom": 60
+        "padding_top": 44,
+        "padding_bottom": 24
       }
     }
   },
   "order": [
-    "custom_liquid_kBabrr",
     "footer"
   ]
 }
