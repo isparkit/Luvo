@@ -528,6 +528,21 @@
         "padding_top": 100,
         "padding_bottom": 100
       }
+    },
+    "custom_logo_bg_banner_7PxzXt": {
+      "type": "custom-logo-bg-banner",
+      "name": "Custom Logo Banner",
+      "settings": {
+        "color_scheme": "scheme-a5c4e3d6-256a-49fb-bc96-834321234a87",
+        "desktop_bg": "shopify://shop_images/Frame_62_8e34e68d-f69e-4f49-bdbf-ba96339f427f.png",
+        "mobile_bg": "shopify://shop_images/Frame_63_6ec0a704-198b-4a49-af71-530d06a874da.png",
+        "heading": "Ready to Upgrade Your Lifestyle?",
+        "subtext": "Join thousands already stepping into the future of wearable tech. Sleek, powerful, and always with you—Luvo is more than a ring, it’s a lifestyle.",
+        "button_text": "Discover Luvo Ring II",
+        "button_link": "shopify://collections/all",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
     }
   },
   "order": [
@@ -536,6 +551,7 @@
     "ss_feature_1_XNTWNn",
     "ss_comparison_table_2_PkLyht",
     "testimonial_slider_GLby4z",
-    "custom_faq_accordion_NjPxhb"
+    "custom_faq_accordion_NjPxhb",
+    "custom_logo_bg_banner_7PxzXt"
   ]
 }
