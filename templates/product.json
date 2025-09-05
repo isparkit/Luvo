@@ -464,6 +464,70 @@
         "padding_top": 100,
         "padding_bottom": 100
       }
+    },
+    "custom_faq_accordion_NjPxhb": {
+      "type": "custom-faq-accordion",
+      "blocks": {
+        "faq_NQbBmg": {
+          "type": "faq",
+          "settings": {
+            "question": "What can Luvo track?",
+            "answer": "Luvo tracks your heart rate, steps, sleep, activity, and stress levels—plus discreet smart notifications."
+          }
+        },
+        "faq_f7YQc6": {
+          "type": "faq",
+          "settings": {
+            "question": "Is Luvo waterproof?",
+            "answer": "Luvo tracks your heart rate, steps, sleep, activity, and stress levels—plus discreet smart notifications."
+          }
+        },
+        "faq_eCGT77": {
+          "type": "faq",
+          "settings": {
+            "question": "How long does the battery last?",
+            "answer": "Luvo tracks your heart rate, steps, sleep, activity, and stress levels—plus discreet smart notifications."
+          }
+        },
+        "faq_6K7mQi": {
+          "type": "faq",
+          "settings": {
+            "question": "Does Luvo support contactless payments?",
+            "answer": "Luvo tracks your heart rate, steps, sleep, activity, and stress levels—plus discreet smart notifications."
+          }
+        },
+        "faq_hKqTNw": {
+          "type": "faq",
+          "settings": {
+            "question": "Does Luvo work with both iOS and Android?",
+            "answer": "Luvo tracks your heart rate, steps, sleep, activity, and stress levels—plus discreet smart notifications."
+          }
+        },
+        "faq_bJnPcD": {
+          "type": "faq",
+          "settings": {
+            "question": "Can Luvo sync with Apple Health or Google Fit?",
+            "answer": "Luvo tracks your heart rate, steps, sleep, activity, and stress levels—plus discreet smart notifications."
+          }
+        }
+      },
+      "block_order": [
+        "faq_NQbBmg",
+        "faq_f7YQc6",
+        "faq_eCGT77",
+        "faq_6K7mQi",
+        "faq_hKqTNw",
+        "faq_bJnPcD"
+      ],
+      "name": "Custom FAQ Accordion",
+      "settings": {
+        "color_scheme": "scheme-1ab87929-c766-459a-9e9f-732581f51200",
+        "heading": "Everything You Need to Know About Luvo",
+        "subheading": "From battery life to compatibility, here are answers to the most common questions about Luvo Smart Ring.",
+        "faq_image": "shopify://shop_images/faq_1.png",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
     }
   },
   "order": [
@@ -471,6 +535,7 @@
     "related-products",
     "ss_feature_1_XNTWNn",
     "ss_comparison_table_2_PkLyht",
-    "testimonial_slider_GLby4z"
+    "testimonial_slider_GLby4z",
+    "custom_faq_accordion_NjPxhb"
   ]
 }
