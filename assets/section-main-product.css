@@ -26,7 +26,7 @@
 .product .swatch-input__input.visually-disabled:not(:active):not(:checked)+.swatch-input__label {
     padding: 6px;
 }
-.product .product__info-wrapper .product-form__input label {
+.product .product__info-wrapper .product-form__input.product-form__input--pill label {
     background: #EDEDED;
     border: 1px solid #C6C6C6;
     border-radius: 12px;
@@ -37,7 +37,79 @@
     font-weight: 400;
     line-height: 1em;
     letter-spacing: 0;
+    overflow: hidden;
+    position: relative;
 }
+.product .product-form__input--pill input[type=radio]:checked+label {
+    background-color: #1C1C1C !important;
+    color: #FFFFFF !important;
+}
+.product .product-form__input--pill input[type=radio].disabled:checked+label, .product-form__input--pill input[type=radio]:disabled:checked+label {
+    color: rgba(var(--color-background),.6) !important;
+}
+.product-form__input--pill input[type=radio]:disabled+label, .product-form__input--pill input[type=radio].disabled+label {
+    border-color: rgba(var(--color-foreground),.1) !important;
+    color: rgba(var(--color-foreground),.6) !important;
+    text-decoration: none !important;
+}
+.product .product__info-wrapper .price .price-item--sale {
+    margin: 0 1.3rem 0 0;
+    font-family: 'Gordita-Bold';
+    line-height: 1.5em;
+    letter-spacing: 0;
+    font-size: clamp(24px,1.27vw + 16px,34px);
+}
+.product .product__info-wrapper .price .price-item--regular {
+    color: #000000B2;
+    font-family: 'Gordita-Regular';
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: 1.5em;
+}
+.product .product__info-wrapper .anyday-header {
+    font-family: 'Gordita-Regular';
+}
+.product .product__info-wrapper .product__inventory {
+    font-family: 'Gordita-Regular';
+    font-size: clamp(14px,.19vw + 13px,20px);
+    letter-spacing: 0;
+    line-height: 1em;
+    gap: 8px;
+}
+.product .product__info-wrapper .product-form__submit {
+    background: #1C1C1C;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+    color: #FFFFFF;
+    font-family: 'Gordita-Medium';
+    font-size: clamp(14px,.57vw + 11.8px,18px);
+    font-weight: 500;
+    line-height: 1.5em;
+    letter-spacing: 0;
+}
+.product .product__info-wrapper .product-form__submit.button::after{
+  display: none;
+}
+.product .product__info-wrapper .badge-container .badge{
+    border-radius: 100px !important;
+}
+.product .product__info-wrapper .badge-container .badge-content-title {
+  font-size: 14px !important;
+}
+.product .product-form__input--pill input[type=radio].disabled+label::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://cdn.shopify.com/s/files/1/0599/3044/3889/files/Line_7.svg?v=1757321688');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+ 
+
 
 product-info {
   display: block;
@@ -103,13 +175,13 @@ product-info {
 
 @media screen and (min-width: 990px) {
   .product--large:not(.product--no-media) .product__media-wrapper {
-    max-width: 65%;
+    max-width: 60%;
     width: calc(65% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 
   .product--large:not(.product--no-media) .product__info-wrapper {
     padding: 0 0 0 2.4rem;
-    max-width: 35%;
+    max-width: 40%;
     width: calc(35% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 
@@ -700,6 +772,15 @@ a.product__text {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .product--large:not(.product--no-media) .product__info-wrapper, .product--large:not(.product--no-media) .product__media-wrapper {
+    max-width: 100%;
+  }
+  .product .product__info-wrapper .product-form__input.product-form__input--pill label {
+    min-width: 160px;
+    padding: 15px 10px;
+  }
+}
 @media screen and (max-width: 749px) {
   .product--thumbnail .is-active .product__modal-opener:not(.product__modal-opener--image),
   .product--thumbnail_slider .is-active .product__modal-opener:not(.product__modal-opener--image) {
@@ -1051,8 +1132,8 @@ a.product__text {
 
   .thumbnail-list.slider--tablet-up .thumbnail-list__item.slider__slide {
     width: calc(20% - 0.8rem);
-    min-width: 200px;
-    max-height: 145px;
+    min-width: 180px;
+    max-height: 130px;
   }
 }
 
@@ -1367,6 +1448,9 @@ a.product__text {
 }
 
 @media screen and (max-width: 749px) {
+  .product-form__input--pill input[type=radio]+label {
+    margin: 0 .5rem .2rem 0 !important;
+  }
   .product-media-container.media-fit-cover {
     display: flex;
     align-self: stretch;
