@@ -502,6 +502,13 @@ a.product__text {
 }
 
 @media screen and (max-width: 749px) {
+  .product .product__info-wrapper .price .price-item--regular {
+    font-size: 16px;
+  }
+  .product .product__info-wrapper .price .price-item--sale {
+    font-size: clamp(22px, 1.27vw + 16px, 34px);
+    margin: 0 1rem 0 0;
+  }
   .product__media-list {
     margin-left: -2.5rem;
     margin-bottom: 3rem;
@@ -782,6 +789,10 @@ a.product__text {
   }
 }
 @media screen and (max-width: 749px) {
+  .product .product__info-wrapper .product-form__input.product-form__input--pill label {
+      min-width: 150px;
+      padding: 13px 7px;
+  }
   .product--thumbnail .is-active .product__modal-opener:not(.product__modal-opener--image),
   .product--thumbnail_slider .is-active .product__modal-opener:not(.product__modal-opener--image) {
     display: none;
@@ -828,7 +839,11 @@ a.product__text {
 .product-media-modal__content .deferred-media {
   width: 100%;
 }
-
+@media screen and (max-width: 365px) {
+  .product .product__info-wrapper .product-form__input.product-form__input--pill label {
+    min-width: 141px;
+}
+}
 @media screen and (min-width: 750px) {
   .product-media-modal__content {
     padding: 2rem 11rem;
@@ -1110,6 +1125,7 @@ a.product__text {
     padding: 0.5rem;
     flex: 1;
     scroll-padding-left: 0.5rem;
+    overflow-y: hidden;
   }
 
   .product__media-wrapper .slider-mobile-gutter .slider-button {

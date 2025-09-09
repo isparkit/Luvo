@@ -1,7 +1,7 @@
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
-    padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
+    padding-top: {{ section.settings.padding_top | times: 0.3 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_top | times: 0.3 | round: 0 }}px;
   }
 
   @media screen and (min-width: 750px) {
@@ -10,35 +10,69 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  .product-video-section .product-video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid #0000001A;
+  }
+  .product-video-section .product-video-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+   .product-video-section .video-wrapper {
+    line-height: 0;
+    text-align: center;
+  }
+  .product-video-section .product-video-title {
+    margin: 16px 0 0;
+    font-family: 'Gordita-Medium';
+    font-weight: 500;
+    text-align: center;
+    color: rgba(var(--color-foreground));
+  }
+  @media screen and (max-width: 600px) {
+    .product-video-section .product-video-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+    .product-video-block {
+        flex: 0 0 auto;
+        width: 80%;
+    }
+    .product-video-section .product-video-title {
+        margin: 16px 0 5px;
+    }
+  }
 {%- endstyle -%}
 
 <div class="color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding page-width">
-  <div class="insight-video-grid">
-    {% for block in section.blocks %}
-      <div class="insight-video-block">
-        <div class="video-wrapper">
-          {% if block.settings.video %}
-            {{
-              block.settings.video
-              | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, class: 'insight-video'
-            }}
-          {% else %}
-            <div class="video-placeholder">No video selected</div>
+    <div class="product-video-grid">
+      {% for block in section.blocks %}
+        <div class="product-video-block">
+          <div class="video-wrapper">
+            {% if block.settings.video != blank %}
+              {{
+                block.settings.video
+                | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, class: 'product-video'
+              }}
+            {% endif %}
+          </div>
+          {% if block.settings.title != blank %}
+            <p class="product-video-title">{{ block.settings.title }}</p>
           {% endif %}
         </div>
-        {% if block.settings.title %}
-          <p class="insight-video-title">{{ block.settings.title }}</p>
-        {% endif %}
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
-</div>
 
 {% schema %}
 {
   "name": "Product Video Grid",
   "tag": "section",
-  "class": "insight-video-section",
+  "class": "product-video-section",
   "settings": [
     {
       "type": "color_scheme",

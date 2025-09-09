@@ -13,6 +13,7 @@
   assign content_width = section.settings.content_width
 
   assign heading = section.settings.heading
+  assign description_text = section.settings.description_text
   assign heading_size = section.settings.heading_size
   assign heading_color = section.settings.heading_color
   assign heading_custom = section.settings.heading_custom
@@ -93,7 +94,42 @@
 {% endcapture %}
 
 {%- style -%}
-
+  .custom-product-compare-cls .ring-img-cls {
+    position: relative;
+  }
+  .custom-product-compare-cls .ring-img-cls::before {
+      content: "";
+      display: block;
+      background-image: url("{{ section.settings.ring_image | image_url }}");
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 116px;
+      height: 94px;
+      top: auto;
+      position: absolute;
+      bottom: 78px;
+      opacity: 50%;
+  }
+  .custom-product-compare-cls .ring-img-cls.active::before {
+      opacity: 1;
+      width: 160px;
+      height: 134px;
+  }
+  .custom-product-compare-cls .custom-second {
+    background: #E3E3E3;
+    position: relative;
+  }
+  .custom-product-compare-cls .custom-second::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 15px;
+        left: 0;
+        bottom: -15px;
+        background-color: #E3E3E3;
+        border-bottom-left-radius: 24px;
+        border-bottom-right-radius: 24px;
+  }
   {{ heading_font | font_face: font_display: 'swap' }}
   {{ table_heading_font | font_face: font_display: 'swap' }}
   
@@ -152,7 +188,7 @@
     padding: {{ table_heading_padding_vertical_mobile }}px {{ table_heading_padding_horizontal_mobile }}px;
   }
 
-  .product-other-grid-header-{{ section.id }} .product-other-item-{{ section.id }}.active {
+  .product-other-grid-header-{{ section.id }} .product-other-item-{{ section.id }} {
     border-top-left-radius: {{ table_column_active_radius }}px;
     border-top-right-radius: {{ table_column_active_radius }}px;
   }
@@ -274,6 +310,18 @@
     height: 100%;
   }
 
+  .custom-product-compare-cls h6.product-other-des-cls {
+    max-width: 496px;
+    margin: auto;
+    text-align: center;
+    margin-top: 8px;
+    line-height: 1.2em;
+    letter-spacing: 0;
+    color: #393939;
+    font-family: 'Gordita-Medium';
+    font-weight: 500;
+  }
+
   @media(min-width: 350px) {
     .product-other-grid-{{ section.id }} {
       {% if third_heading != blank %}
@@ -285,6 +333,25 @@
   }
   @media(min-width: 768px) {
 
+    .custom-product-compare-cls .custom-product-item h3 {
+        position: relative;
+        overflow: hidden;
+    }
+    .custom-product-compare-cls .custom-product-item h3:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: #000;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 50%;
+      margin-left: 18px;
+    }
+    .custom-product-compare-cls .custom-second::after{
+      height: 25px;
+      bottom: -25px;
+    }
     .section-{{ section.id }} {
       margin-top: {{ margin_top }}px;
       margin-bottom: {{ margin_bottom }}px;
@@ -302,7 +369,8 @@
       {% if third_heading != blank %}
         grid-template-columns: 30% 22% 24% 24%;
       {% else %}
-        grid-template-columns: 40% 28% 32%;
+        grid-template-columns: 6fr 2fr 2fr;
+        gap: 24px;
       {% endif %}
     }
 
@@ -320,6 +388,8 @@
 
     .product-other-grid-header-{{ section.id }} .product-other-item-{{ section.id }} h3 {
       font-size: {{ table_heading_size }}px;
+      font-family: 'Gordita-Medium';
+      font-weight: 500;
     }
 
     .product-other-grid-rows-{{ section.id }} .product-other-item-{{ section.id }} {
@@ -341,7 +411,49 @@
     }
     
   }
-  
+   @media(max-width: 767px) {
+    .section-{{ section.id }}-settings {
+      padding-top: {{ padding_top | times: 0.6 | round: 0 }}px;
+      padding-bottom: {{ padding_bottom | times: 0.3 | round: 0 }}px;
+    }
+      .custom-product-compare-cls .custom-second::after, .product-other-grid-rows-{{ section.id }} .product-other-item-{{ section.id }}.active::after{
+          border-bottom-left-radius: 14px;
+          border-bottom-right-radius: 14px;
+    }
+      .product-other-grid-header-{{ section.id }} .product-other-item-{{ section.id }} {
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+      }
+      .product-other-body-{{ section.id }} {
+        margin-top: {{ table_mt | times: 0.6 | round: 0 }}px;
+      }
+    .product-other-grid-{{ section.id }} {
+        grid-template-columns: 50% 25% 25%;
+    }
+    .custom-product-compare-cls .ring-img-cls::before {
+      width: 70px;
+      height: 55px;
+      bottom: 22px;
+    }
+    .custom-product-compare-cls .ring-img-cls {
+        padding: 20px 4px 4px;
+    }
+    .custom-product-compare-cls .ring-img-cls.active::before {
+        width: 90px;
+        height: 72px;
+    }
+    .custom-product-compare-cls .ring-img-cls h3, .custom-product-compare-cls .custom-product-item h3 {
+      font-size: 14px !important;
+    }
+   }
+   @media(max-width: 375px) {
+    .custom-product-compare-cls .ring-img-cls::before {
+      bottom: 20px;
+    } 
+    .custom-product-compare-cls .ring-img-cls h3 {
+      font-size: 12px !important;
+    }
+}
 {%- endstyle -%}
 
 {% unless full_width %}
@@ -355,9 +467,14 @@
 {% if heading_custom %}
   <style>
     .product-other-heading-{{ section.id }} {
-      font-family: {{ heading_font.family }}, {{ heading_font.fallback_families }};
-      font-weight: {{ heading_font.weight }};
+      /* font-family: {{ heading_font.family }}, {{ heading_font.fallback_families }};
+      font-weight: {{ heading_font.weight }}; */
       font-style: {{ heading_font.style }};
+      font-weight: 700;
+      font-family: 'Gordita-Bold';
+      font-size: clamp(24px, 1.27vw + 16px, 34px);
+      line-height: 1.2em;
+      letter-spacing: 0;
     }
   </style>
 {% endif %}
@@ -375,36 +492,44 @@
 {% if table_row_heading_custom %}
   <style>
     .product-other-grid-rows-{{ section.id }} .product-other-item-{{ section.id }}:first-child h3 {
-      font-family: {{ table_row_heading_font.family }}, {{ table_row_heading_font.fallback_families }};
-      font-weight: {{ table_row_heading_font.weight }};
+      /* font-family: {{ table_row_heading_font.family }}, {{ table_row_heading_font.fallback_families }};
+      font-weight: {{ table_row_heading_font.weight }}; */
       font-style: {{ table_row_heading_font.style }};
+      font-family: 'Gordita-Medium';
+      font-weight: 500;
+      font-style: normal;
+      line-height: 1.5em;
+      letter-spacing: 0;
     }
   </style>
 {% endif %}
 
-<div class="section-{{ section.id }} product-other-{{ section.id }}" style="background-color:{{ background_color }}; background-image: {{ background_gradient }};">
+<div class="section-{{ section.id }} product-other-{{ section.id }} custom-product-compare-cls" style="background-color:{{ background_color }}; background-image: {{ background_gradient }};">
     <div class="section-{{ section.id }}-settings ">
       {% if heading != blank %}
         <h2 class="product-other-heading-{{ section.id }}">{{ heading }}</h2>
       {% endif %}
+      {% if description_text != blank %}
+        <h6 class="product-other-des-cls">{{ description_text }}</h6>
+      {% endif %}
       <div class="product-other-body-{{ section.id }}">
         <div class="product-other-grid-{{ section.id }} product-other-grid-header-{{ section.id }}">
           <div class="product-other-item-{{ section.id }}"></div>
-          <div class="product-other-item-{{ section.id }} {% if table_column_active == "1" %}active{% endif %}">
+          <div class="ring-img-cls product-other-item-{{ section.id }} {% if table_column_active == "1" %}active{% endif %}">
             <h3>{{ first_heading }}</h3>
           </div>
-          <div class="product-other-item-{{ section.id }} {% if table_column_active == "2" %}active{% endif %}">
+          <div class="custom-second ring-img-cls product-other-item-{{ section.id }} {% if table_column_active == "2" %}active{% endif %}">
             <h3>{{ second_heading }}</h3>
           </div>
           {% if third_heading != blank %}
-            <div class="product-other-item-{{ section.id }} {% if table_column_active == "3" %}active{% endif %}">
+            <div class="ring-img-cls product-other-item-{{ section.id }} {% if table_column_active == "3" %}active{% endif %}">
               <h3>{{ third_heading }}</h3>
             </div>
           {% endif %}
         </div>
         {% for block in section.blocks %}
           <div class="product-other-grid-{{ section.id }} product-other-grid-rows-{{ section.id }}">
-            <div class="product-other-item-{{ section.id }}">
+            <div class="custom-product-item product-other-item-{{ section.id }}">
               <h3>{{ block.settings.row_heading }}</h3>
             </div>
             <div class="product-other-item-{{ section.id }} {% if table_column_active == "1" %}active{% endif %}">
@@ -418,7 +543,7 @@
                 {% endif %}
               </div>
             </div>
-            <div class="product-other-item-{{ section.id }} {% if table_column_active == "2" %}active{% endif %}">
+            <div class="custom-second product-other-item-{{ section.id }} {% if table_column_active == "2" %}active{% endif %}">
               <div class="product-other-icon-{{ section.id }} icon-{{ block.settings.second_icon }}-{{ section.id }}">
                 {% if block.settings.second_icon == "yes" %}
                   {{ icon_yes }}
@@ -461,6 +586,12 @@
         "id": "heading",
         "label": "Heading",
         "default": "Product vs others"
+      },
+      {
+        "type": "text",
+        "id": "description_text",
+        "label": "Description",
+        "default": "Description"
       },
       {
         "type": "checkbox",
@@ -522,7 +653,7 @@
         "type": "range",
         "id": "table_mt",
         "min": 0,
-        "max": 100,
+        "max": 200,
         "step": 2,
         "unit": "px",
         "label": "Table Margin top",
@@ -842,7 +973,7 @@
         "label": "Table Icon Size",
         "default": 32
       },
-            {
+      {
         "type": "range",
         "id": "table_icon_size_mobile",
         "min": 10,
@@ -851,6 +982,11 @@
         "unit": "px",
         "label": "Table Icon Size - Mobile",
         "default": 20
+      },
+      {
+        "type": "image_picker",
+        "id": "ring_image",
+        "label": "Ring Image"
       },
       {
         "type": "header",
@@ -1002,11 +1138,11 @@
         "type": "range",
         "id": "content_width",
         "min": 0,
-        "max": 400,
-        "step": 10,
+        "max": 200,
+        "step": 4,
         "unit": "rem",
         "label": "Section content width",
-        "default": 150
+        "default": 124
       },
       {
         "type": "range",
