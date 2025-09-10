@@ -1,4 +1,4 @@
-<div id="mobile-sticky-bar" class="mobile-sticky-bar">
+{% comment %} <div id="mobile-sticky-bar" class="mobile-sticky-bar">
   <div class="sticky-bar__content">
     <img
       src="{{ product.featured_image | image_url: width: 100 }}"
@@ -41,50 +41,69 @@
             display: none !important;
         }
 </style>
-{% comment %} <script>
 
-    document.addEventListener("DOMContentLoaded", () => {
-        const stickyBtn = document.querySelector(".sticky-bar__button");
-        
-        if (stickyBtn) {
-            stickyBtn.addEventListener("click", () => {
-            const submitBtn = stickyBtn.closest("form")?.querySelector(".product-form__submit");
-        
-            if (submitBtn) {
-                submitBtn.click();
-            }
-            });
-        }
-        });
-</script> {% endcomment %}
+
+ {% endcomment %}
+
+ <div id="mobile-sticky-bar" class="mobile-sticky-bar">
+  <div class="sticky-bar__content">
+    <img
+      src="{{ product.featured_image | image_url: width: 100 }}"
+      alt="{{ product.title }}"
+      class="sticky-bar__image"
+    >
+
+    <div class="sticky-bar__info">
+      <div class="sticky-bar__title">{{ product.title }}</div>
+
+      <div class="sticky-bar__price">
+        {% if product.selected_or_first_available_variant.compare_at_price
+            > product.selected_or_first_available_variant.price
+        %}
+          <span class="compare-price">
+            {{ product.selected_or_first_available_variant.compare_at_price | money }}
+          </span>
+        {% endif %}
+        <span class="actual-price">
+          {{ product.selected_or_first_available_variant.price | money }}
+        </span>
+      </div>
+    </div>
+
+    <button type="button" class="sticky-bar__button">
+      {{ 'products.product.add_to_cart' | t }}
+    </button>
+  </div>
+</div>
+
+<style>
+  .mobile-sticky-bar .sticky-bar__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    padding: 10px 20px;
+    background-color: #000;
+  }
+  @media screen and (min-width: 768px) {
+    .mobile-sticky-bar {
+      display: none !important;
+    }
+  }
+</style>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const stickyBar = document.getElementById("mobile-sticky-bar");
-    const stickyBtn = stickyBar?.querySelector(".sticky-bar__button");
-    const productForm = document.querySelector("form.product-form");
-    const mainAddBtn = productForm?.querySelector(".product-form__submit");
+    const stickyBtn = document.querySelector(".sticky-bar__button");
 
-    function isInViewport(el) {
-      const rect = el.getBoundingClientRect();
-      return rect.top >= 0 && rect.bottom <= window.innerHeight;
-    }
-
-    function toggleStickyBar() {
-      if (!mainAddBtn || !stickyBar) return;
-      const visible = isInViewport(mainAddBtn);
-      stickyBar.style.display = visible ? "none" : "block";
-    }
-
-    if (stickyBtn && productForm) {
+    if (stickyBtn) {
       stickyBtn.addEventListener("click", () => {
-        productForm.requestSubmit();
+        const productFormComponent = document.querySelector("product-form");
+
+        if (productFormComponent && typeof productFormComponent.submitForm === "function") {
+          productFormComponent.submitForm();
+        }
       });
     }
-
-    toggleStickyBar();
-    window.addEventListener("scroll", toggleStickyBar);
-    window.addEventListener("resize", toggleStickyBar);
   });
 </script>
-
