@@ -48,32 +48,18 @@
 </style>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const stickyBar = document.getElementById("mobile-sticky-bar");
-    const stickyBtn = stickyBar?.querySelector(".sticky-bar__button");
-    const productForm = document.querySelector("form.product-form");
-    const mainAddBtn = productForm?.querySelector(".product-form__submit");
-
-    function isInViewport(el) {
-      const rect = el.getBoundingClientRect();
-      return rect.top >= 0 && rect.bottom <= window.innerHeight;
-    }
-
-    function toggleStickyBar() {
-      if (!mainAddBtn || !stickyBar) return;
-      const visible = isInViewport(mainAddBtn);
-      stickyBar.style.display = visible ? "none" : "block";
-    }
-
-    if (stickyBtn && productForm) {
-      stickyBtn.addEventListener("click", () => {
-        productForm.requestSubmit();
-      });
-    }
-
-    toggleStickyBar();
-    window.addEventListener("scroll", toggleStickyBar);
-    window.addEventListener("resize", toggleStickyBar);
-  });
+ document.addEventListener("DOMContentLoaded", () => {
+  const stickyBtn = document.querySelector(".sticky-bar__button");
+ 
+  if (stickyBtn) {
+    stickyBtn.addEventListener("click", () => {
+      const submitBtn = stickyBtn.closest("form")?.querySelector(".product-form__submit");
+ 
+      if (submitBtn) {
+        submitBtn.click();
+      }
+    });
+  }
+});
 </script>
 
