@@ -29,7 +29,7 @@
   </div>
 </div>
 <style>
-    #mobile-sticky-bar .sticky-bar__content {
+    .mobile-sticky-bar .sticky-bar__content {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -37,4 +37,8 @@
       padding: 10px 20px;
       background-color: #000;
     }
+    @media screen and (min-width: 750px) {
+        .mobile-sticky-bar {
+            display: none !important;
+        }
 </style>
