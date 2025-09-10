@@ -22,7 +22,7 @@
             <h2>{{ section.settings.heading }}</h2>
             <h6>{{ section.settings.subtext }}</h6>
             {% if section.settings.button_text != blank %}
-              <a href="{{ section.settings.button_link }}" class="banner-btn button">
+              <a href="{{ section.settings.button_link }}" class="banner-btn">
                 {{ section.settings.button_text }}
               </a>
             {% endif %}
@@ -159,19 +159,21 @@
     border-radius: 100px;
     text-decoration: none;
     border: 1px solid #1A141E;
-    padding: 12px 18px 12px 18px;
+    padding: 12px 18px;
     letter-spacing: 0;
     line-height: 1.2em;
     margin-top: 34px;
-    font-size: 16px
+    font-size: 16px;
+    background: #fff;
+    color: #000;
   }
+  .custom-logo-banner-cls .button:before,
   .custom-logo-banner-cls .button:after {
     display: none;
   }
   @media (max-width: 767px) {
     .custom-logo-banner-cls .banner-btn {
       font-size: 14px;
-      padding: 12px 18px;
       line-height: normal;
     }
     .custom-logo-banner-cls .banner-bg {
@@ -181,7 +183,7 @@
         height: 500px;
     } 
     .custom-logo-banner-cls .banner-content {
-        top: 48px;
+        top: 70px;
         transform: unset;
         max-width: 100%;
         padding: 0 24px;

@@ -38,6 +38,8 @@
             </div>
           {% endfor %}
         </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
       </div>
     </div>
   </div>
@@ -48,9 +50,13 @@
     loop: true,
     slidesPerView: 1.04,
     speed: 600,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
+    // autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: false,
+    // },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
     breakpoints: {
       768: {
@@ -231,6 +237,28 @@
     }
 }
 @media screen and (max-width: 767px) {
+    .luvo-testimonials-section .swiper-button-prev {
+        left: 0;
+        right: auto;
+    }
+    .luvo-testimonials-section .swiper-button-next {
+        right: 0;
+        left: auto;
+    }
+     .luvo-testimonials-section .swiper-button-prev, .luvo-testimonials-section .swiper-button-next {
+        display: flex;
+        color: #000;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #000;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background: #fff;
+    }
+    .swiper-button-next:after, .swiper-button-prev:after {
+      font-size: 18px;
+    }
     .luvo-testimonials-section .luvo-testimonials-left h6 {
       margin-top: 8px;
     }
@@ -265,6 +293,7 @@
     }
     .luvo-testimonials-section .luvo-testimonial-card {
         min-height: 296px;
+        padding: 20px 48px;
     }
 }
 </style>

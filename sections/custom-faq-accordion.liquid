@@ -198,6 +198,7 @@
     letter-spacing: 0;
     cursor: pointer;
     text-align: left;
+    align-items: center;
 }
 .faq-accordion-section .faq-container .faq-right .faq-items .faq-item .faq-answer {
   display: none;
@@ -257,6 +258,14 @@
   }
 }
 @media (max-width:767px) {
+  .faq-accordion-section .faq-container .faq-right .faq-items .faq-item .faq-question .faq-icon::before {
+    width: 16px;
+    height: 16px;
+  }
+  .faq-accordion-section .faq-container .faq-right .faq-items .faq-item .faq-question.active .faq-icon::before {
+    width: 16px;
+    height: 7px;
+  }
   .faq-accordion-section .faq-container .faq-left, .faq-accordion-section .faq-container .faq-right {
     width: 100%;
   }
