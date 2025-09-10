@@ -42,3 +42,18 @@
             display: none !important;
         }
 </style>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const stickyBtn = document.querySelector(".sticky-bar__button");
+    
+    if (stickyBtn) {
+        stickyBtn.addEventListener("click", () => {
+        const submitBtn = stickyBtn.closest("form")?.querySelector(".product-form__submit");
+    
+        if (submitBtn) {
+            submitBtn.click();
+        }
+        });
+    }
+    });
+</script>
