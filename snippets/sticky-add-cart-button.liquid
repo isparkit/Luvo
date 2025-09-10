@@ -60,41 +60,20 @@
 </script> {% endcomment %}
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const stickyBar = document.getElementById("mobile-sticky-bar");
-    const stickyAddBtn = stickyBar?.querySelector(".sticky-bar__button");
-    const mainAddBtn = document.querySelector('form.product-form button[type="submit"]');
+    document.addEventListener("DOMContentLoaded", () => {
+    const stickyBtn = document.querySelector(".sticky-bar__button");
 
-    function isElementInViewport(el) {
-      if (!el) return false;
-      const rect = el.getBoundingClientRect();
-      return rect.top >= 0 && rect.bottom <= window.innerHeight;
+    if (stickyBtn) {
+        stickyBtn.addEventListener("click", () => {
+        // Find the real product form
+        const productForm = document.querySelector("form.product-form");
+
+        if (productForm) {
+            // Submit the form the same way the main button does
+            productForm.requestSubmit();
+        }
+        });
     }
+    });
 
-    function toggleStickyBarVisibility() {
-      if (!mainAddBtn || !stickyBar) return;
-
-      const isMainBtnVisible = isElementInViewport(mainAddBtn);
-      if (!isMainBtnVisible && window.innerWidth < 768) {
-        stickyBar.style.display = "block";
-      } else {
-        stickyBar.style.display = "none";
-      }
-    }
-
-    // Handle click on sticky button to trigger the main add to cart button
-    if (stickyAddBtn && mainAddBtn) {
-      stickyAddBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-        mainAddBtn.click();
-      });
-    }
-
-    // Initial check
-    toggleStickyBarVisibility();
-
-    // Recheck on scroll and resize
-    window.addEventListener("scroll", toggleStickyBarVisibility);
-    window.addEventListener("resize", toggleStickyBarVisibility);
-  });
 </script>
