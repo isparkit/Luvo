@@ -12,9 +12,55 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  .page_app-info .custom-page-cls.page-width--narrow, .page_contact .custom-page-cls.page-width--narrow,
+  .page_about-us .custom-page-cls.page-width--narrow{
+      max-width: 100%;
+  }
+  .page_contact .custom-page-cls.page-width--narrow, .page_about-us .custom-page-cls.page-width--narrow {
+    padding: 0;
+  }
+  .page_app-info .custom-page-cls h1.main-page-title, .page_contact .custom-page-cls h1.main-page-title,
+  .page_about-us .custom-page-cls h1.main-page-title {
+    text-align: center;
+    background: #1C1C1C;
+    color: #fff;
+    font-size: clamp(28px, 2vw + 16px,54px);
+    padding: 20px 0;
+    font-family: 'Gordita-Bold';
+    line-height: 1.2em;
+    letter-spacing: 0;
+  }
+  .page_contact .custom-page-cls h1.main-page-title,
+  .page_about-us .custom-page-cls h1.main-page-title {
+    margin: 0;
+  }
+  .page_contact .custom-page-cls.page-width--narrow .rte {
+    display: none;
+  }
+  .page_app-info .rte {
+    max-width: 625px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .page_app-info .rte p {
+    font-family: 'Gordita-Regular';
+    font-weight: 400;
+    line-height: 1.5em;
+    letter-spacing: 0;
+    font-size: clamp(16px, 0.38vw + 13px, 20px);
+    color: rgba(var(--color-foreground));
+  }
+  @media screen and (max-width: 989px) {
+    .page_app-info .custom-page-cls.page-width--narrow {
+      padding: 0;
+    }
+   .page_app-info .custom-page-cls .rte {
+      padding: 0 2rem 30px;
+    }
+  }
 {%- endstyle -%}
 
-<div class="page-width page-width--narrow section-{{ section.id }}-padding">
+<div class="custom-page-cls page-width page-width--narrow section-{{ section.id }}-padding">
   <h1 class="main-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
     {{ page.title | escape }}
   </h1>
