@@ -106,7 +106,7 @@
     "badge_position": "bottom left",
     "badge_corner_radius": 40,
     "sale_badge_color_scheme": "scheme-4",
-    "sold_out_badge_color_scheme": "scheme-3",
+    "sold_out_badge_color_scheme": "scheme-4",
     "brand_headline": "",
     "brand_description": "<p>NHB Group ApS<br/>Store Kongensgade 74, 3. th<br/>1264 København K<br/>CVR nr.: 45436098</p>",
     "brand_image": "shopify://shop_images/Logo.png",

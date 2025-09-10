@@ -24,9 +24,12 @@
           "type": "title",
           "settings": {}
         },
-        "price": {
-          "type": "price",
-          "settings": {}
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
         },
         "custom_liquid_JUr479": {
           "type": "custom_liquid",
@@ -34,12 +37,13 @@
             "custom_liquid": "<div id='ss-trust-badges-3'></div>"
           }
         },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
         },
         "inventory_LkU66t": {
           "type": "inventory",
@@ -48,10 +52,6 @@
             "inventory_threshold": 10,
             "show_inventory_quantity": false
           }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {}
         },
         "buy_buttons_fTzTtc": {
           "type": "buy_buttons",
@@ -64,13 +64,13 @@
           "type": "shopify://apps/contribe/blocks/badge/7835e295-c05a-4506-91c6-e852ba4d1ffa",
           "settings": {
             "font": "inherit",
-            "font_header_color": "#3f3047",
-            "font_body_color": "#3f3047",
+            "font_header_color": "#1a141e",
+            "font_body_color": "#1a141e",
             "background": "#ffffff",
             "icon_background": "#ffffff",
-            "icon_color": "#3f3047",
+            "icon_color": "#1a141e",
             "icon": "give-love",
-            "border": "1px solid #3F3047",
+            "border": "1px solid #1A141E",
             "horizontal_alignment": "center",
             "width": "100%",
             "custom_title": "",
@@ -88,6 +88,7 @@
         },
         "collapsible_tab_xYqCwg": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "STØRRELSESGUIDE",
             "icon": "none",
@@ -97,6 +98,7 @@
         },
         "collapsible_tab_D3VD3n": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "BESKRIVELSE",
             "icon": "none",
@@ -106,6 +108,7 @@
         },
         "collapsible_tab_xhJ3LT": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "SPECIFIKATIONER",
             "icon": "none",
@@ -115,6 +118,7 @@
         },
         "collapsible_tab_YnzWDD": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "TILFREDSHEDSGARANTI",
             "icon": "none",
@@ -124,6 +128,7 @@
         },
         "collapsible_tab_xzFz7M": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "FRAGT OG LEVERING",
             "icon": "none",
@@ -141,11 +146,11 @@
       "block_order": [
         "vendor",
         "title",
-        "price",
-        "custom_liquid_JUr479",
         "variant_picker",
-        "inventory_LkU66t",
+        "custom_liquid_JUr479",
         "quantity_selector",
+        "price",
+        "inventory_LkU66t",
         "buy_buttons_fTzTtc",
         "contribe_badge_AYpzcH",
         "custom_liquid_xBDPNV",
@@ -165,11 +170,14 @@
         "gallery_layout": "thumbnail_slider",
         "media_position": "left",
         "image_zoom": "none",
-        "mobile_thumbnails": "show",
+        "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 12
+        "show_video_popup": true,
+        "video_button_text": "View 3D",
+        "pop_up_video": "shopify://files/videos/Pop Up Video.mp4",
+        "padding_top": 32,
+        "padding_bottom": 64
       }
     },
     "related-products": {
@@ -198,9 +206,9 @@
           "type": "image",
           "settings": {
             "feature_title": "",
-            "feature_text": "<p>2-4 DAGES LEVERING</p>",
-            "feature_image": "shopify://shop_images/LUNA_Logo_4.png",
-            "feature_url": "https://section.store/",
+            "feature_text": "<p>2-3 Day Delivery</p>",
+            "feature_image": "shopify://shop_images/Group_1.svg",
+            "feature_url": "",
             "hide_image": false
           }
         },
@@ -208,8 +216,8 @@
           "type": "image",
           "settings": {
             "feature_title": "",
-            "feature_text": "<p>DANSK VIRKSOMHED</p>",
-            "feature_image": "shopify://shop_images/LUNA_Logo_9.png",
+            "feature_text": "<p>Danish Business</p>",
+            "feature_image": "shopify://shop_images/Vector_2.svg",
             "feature_url": "",
             "hide_image": false
           }
@@ -218,8 +226,8 @@
           "type": "image",
           "settings": {
             "feature_title": "",
-            "feature_text": "<p>GRATIS FORSENDELSE</p>",
-            "feature_image": "shopify://shop_images/LUNA_Logo_5.png",
+            "feature_text": "<p>Free Shipping</p>",
+            "feature_image": "shopify://shop_images/Group_2.svg",
             "feature_url": "",
             "hide_image": false
           }
@@ -233,46 +241,91 @@
       "settings": {
         "feature_row": 3,
         "feature_row_mobile": 3,
-        "feature_gap": 20,
-        "feature_gap_mobile": 20,
+        "feature_gap": 84,
+        "feature_gap_mobile": 6,
         "feature_padding_horizontal": 0,
         "feature_padding_vertical": 0,
-        "feature_radius": 16,
+        "feature_radius": 0,
         "feature_border_thickness": 0,
         "feature_shadow": false,
-        "feature_heading_custom": false,
+        "feature_heading_custom": true,
         "feature_heading_font": "figtree_n4",
         "feature_heading_size": 18,
-        "feature_heading_size_mobile": 14,
-        "feature_heading_height": 130,
-        "feature_heading_mt": 8,
+        "feature_heading_size_mobile": 12,
+        "feature_heading_height": 150,
+        "feature_heading_mt": 0,
         "feature_text_custom": false,
         "feature_text_font": "josefin_sans_n4",
         "feature_text_size": 18,
-        "feature_text_size_mobile": 12,
-        "feature_text_height": 130,
-        "feature_text_mt": 4,
-        "feature_icon_size": 42,
-        "feature_icon_size_mobile": 42,
-        "feature_bg": "#ffffff",
-        "feature_border_color": "#000000",
-        "feature_shadow_color": "#000000",
-        "feature_heading_color": "#000000",
-        "feature_text_color": "#000000",
-        "feature_icon_color": "#000000",
-        "background_color": "#ffffff",
+        "feature_text_size_mobile": 18,
+        "feature_text_height": 150,
+        "feature_text_mt": 0,
+        "feature_icon_size": 40,
+        "feature_icon_size_mobile": 30,
+        "feature_bg": "#1c1c1c",
+        "feature_border_color": "#1c1c1c",
+        "feature_shadow_color": "#1c1c1c",
+        "feature_heading_color": "#ffffff",
+        "feature_text_color": "#ffffff",
+        "feature_icon_color": "#ffffff",
+        "background_color": "#1c1c1c",
         "background_gradient": "",
-        "border_color": "#000000",
-        "margin_top": 24,
+        "border_color": "#1c1c1c",
+        "margin_top": 0,
         "margin_bottom": 0,
-        "padding_top": 16,
-        "padding_bottom": 16,
+        "padding_top": 64,
+        "padding_bottom": 64,
         "padding_horizontal": 5,
         "padding_horizontal_mobile": 1.5,
         "full_width": false,
-        "content_width": 120,
+        "content_width": 124,
         "border_thickness": 0,
         "lazy": true
+      }
+    },
+    "product_video_grid_zYcrbg": {
+      "type": "product-video-grid",
+      "blocks": {
+        "video_4daUcA": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/video 1.mp4",
+            "title": "Body Temperature Monitoring"
+          }
+        },
+        "video_ntHnTP": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/video 2.mp4",
+            "title": "Sleep Monitoring"
+          }
+        },
+        "video_VR7fLp": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/video 3.mp4",
+            "title": "Smart Activity Tracking"
+          }
+        },
+        "video_WhCaph": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/video 4.mp4",
+            "title": "Smart Touch Control"
+          }
+        }
+      },
+      "block_order": [
+        "video_4daUcA",
+        "video_ntHnTP",
+        "video_VR7fLp",
+        "video_WhCaph"
+      ],
+      "name": "Product Video Grid",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 100,
+        "padding_bottom": 52
       }
     },
     "ss_comparison_table_2_PkLyht": {
@@ -281,7 +334,7 @@
         "item_X887Uw": {
           "type": "item",
           "settings": {
-            "row_heading": "Tidsløst & Minimalistisk design",
+            "row_heading": "Adjustable Brightness & Color",
             "first_icon": "yes",
             "second_icon": "no",
             "third_icon": "yes"
@@ -290,7 +343,7 @@
         "item_UgYUXE": {
           "type": "item",
           "settings": {
-            "row_heading": "Komfort i fokus",
+            "row_heading": "Larger Size (18”)",
             "first_icon": "yes",
             "second_icon": "no",
             "third_icon": "yes"
@@ -299,7 +352,7 @@
         "item_E8bBMT": {
           "type": "item",
           "settings": {
-            "row_heading": "Lang batterilevetid",
+            "row_heading": "Professional Build Quality",
             "first_icon": "yes",
             "second_icon": "no",
             "third_icon": "no"
@@ -308,7 +361,7 @@
         "item_TpAGHb": {
           "type": "item",
           "settings": {
-            "row_heading": "Funktionalitet uden unødvendig kompleksitet",
+            "row_heading": "Sturdy Tripod & Phone Holder",
             "first_icon": "yes",
             "second_icon": "no",
             "third_icon": "no"
@@ -317,7 +370,7 @@
         "item_FpgAFi": {
           "type": "item",
           "settings": {
-            "row_heading": "Prisvenlig og tilgængelig",
+            "row_heading": "3-Year Warranty",
             "first_icon": "yes",
             "second_icon": "no",
             "third_icon": "no"
@@ -326,7 +379,7 @@
         "item_dgbBAx": {
           "type": "item",
           "settings": {
-            "row_heading": "Dansk kvalitet og stil",
+            "row_heading": "Complete Kit (case, stand, etc)",
             "first_icon": "yes",
             "second_icon": "no",
             "third_icon": "no"
@@ -342,61 +395,65 @@
         "item_dgbBAx"
       ],
       "settings": {
-        "heading": "LunaRing vs andre",
+        "heading": "Everything You Need to Know About Luvo",
+        "description_text": "From battery life to compatibility, here are answers to the most common questions about Luvo Smart Ring.",
         "heading_custom": true,
         "heading_font": "figtree_n4",
-        "heading_size": 40,
-        "heading_height": 100,
+        "heading_size": 34,
+        "heading_height": 120,
         "heading_align": "center",
-        "table_mt": 50,
-        "table_radius": 10,
-        "table_border_thickness": 3,
+        "table_mt": 100,
+        "table_radius": 0,
+        "table_border_thickness": 0,
         "table_column_active": "1",
-        "table_column_active_radius": 10,
-        "first_heading": "Lunaring",
-        "second_heading": "Andre",
+        "table_column_active_radius": 24,
+        "first_heading": "Luvo Ring",
+        "second_heading": "Other Ring",
         "third_heading": "",
         "table_heading_custom": false,
         "table_heading_font": "figtree_n4",
-        "table_heading_size": 24,
-        "table_heading_size_mobile": 10,
+        "table_heading_size": 26,
+        "table_heading_size_mobile": 18,
         "table_heading_height": 100,
         "table_heading_align": "center",
         "table_heading_padding_horizontal": 20,
         "table_heading_padding_horizontal_mobile": 4,
-        "table_heading_padding_vertical": 20,
+        "table_heading_padding_vertical": 50,
         "table_heading_padding_vertical_mobile": 10,
-        "table_row_padding_horizontal": 20,
+        "table_row_padding_horizontal": 0,
         "table_row_padding_horizontal_mobile": 4,
-        "table_row_padding_vertical": 20,
+        "table_row_padding_vertical": 26,
         "table_row_padding_vertical_mobile": 10,
         "table_row_heading_custom": true,
         "table_row_heading_font": "figtree_n4",
-        "table_row_heading_size": 26,
-        "table_row_heading_size_mobile": 10,
+        "table_row_heading_size": 24,
+        "table_row_heading_size_mobile": 18,
         "table_row_heading_height": 100,
-        "table_row_heading_align": "center",
-        "table_icon_size": 32,
+        "table_row_heading_align": "left",
+        "table_icon_yes": "shopify://shop_images/Group_3.svg",
+        "table_icon_no": "shopify://shop_images/Vector_3.svg",
+        "table_icon_size": 30,
         "table_icon_size_mobile": 20,
-        "heading_color": "#ffffff",
-        "table_border_color": "#ffffff",
-        "table_heading_color": "#ffffff",
-        "table_heading_active_color": "#121212",
-        "table_column_active_bg_color": "#ffffff",
-        "table_row_heading_color": "#ffffff",
-        "table_icon_color": "#ffffff",
-        "table_icon_active_color": "#121212",
-        "background_color": "#3f3047",
+        "ring_image": "shopify://shop_images/image_8.png",
+        "heading_color": "#000000",
+        "table_border_color": "#000000",
+        "table_heading_color": "#000000",
+        "table_heading_active_color": "#ffffff",
+        "table_column_active_bg_color": "#393939",
+        "table_row_heading_color": "#000000",
+        "table_icon_color": "#000000",
+        "table_icon_active_color": "#ffffff",
+        "background_color": "#ffffff",
         "background_gradient": "",
         "border_color": "#000000",
         "margin_top": 0,
         "margin_bottom": 0,
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "padding_top": 52,
+        "padding_bottom": 100,
         "padding_horizontal": 5,
         "padding_horizontal_mobile": 1.5,
         "full_width": false,
-        "content_width": 150,
+        "content_width": 124,
         "border_thickness": 0
       }
     },
@@ -549,6 +606,7 @@
     "main",
     "related-products",
     "ss_feature_1_XNTWNn",
+    "product_video_grid_zYcrbg",
     "ss_comparison_table_2_PkLyht",
     "testimonial_slider_GLby4z",
     "custom_faq_accordion_NjPxhb",

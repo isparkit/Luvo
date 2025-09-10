@@ -27,8 +27,8 @@
 
   {%- style -%}
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+      padding-top: {{ section.settings.padding_top | times: 0.47 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.47 | round: 0 }}px;
     }
 
     @media screen and (min-width: 750px) {
@@ -98,7 +98,7 @@
                 </p>
               {%- when 'title' -%}
                 <div class="product__title" {{ block.shopify_attributes }}>
-                  <h1>{{ product.title | escape }}</h1>
+                  <h2>{{ product.title | escape }}</h2>
                   <a href="{{ product.url }}" class="product__title">
                     <h2 class="h1">
                       {{ product.title | escape }}
@@ -2235,6 +2235,23 @@
       "id": "enable_video_looping",
       "default": false,
       "label": "t:sections.main-product.settings.enable_video_looping.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_video_popup",
+      "label": "Show Video Popup",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "video_button_text",
+      "label": "Video Button Text",
+      "default": "View 3D"
+    },
+    {
+      "type": "video",
+      "id": "pop_up_video",
+      "label": "Video"
     },
     {
       "type": "header",

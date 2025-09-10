@@ -1,0 +1,132 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.3 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_top | times: 0.3 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  .product-video-section .product-video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid #0000001A;
+  }
+  .product-video-section .product-video-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+   .product-video-section .video-wrapper {
+    line-height: 0;
+    text-align: center;
+  }
+  .product-video-section .product-video-title {
+    margin: 16px 0 0;
+    font-family: 'Gordita-Medium';
+    font-weight: 500;
+    text-align: center;
+    color: rgba(var(--color-foreground));
+  }
+  @media screen and (max-width: 600px) {
+    .product-video-section .product-video-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+    .product-video-block {
+        flex: 0 0 auto;
+        width: 80%;
+    }
+    .product-video-section .product-video-title {
+        margin: 16px 0 5px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding page-width">
+    <div class="product-video-grid">
+      {% for block in section.blocks %}
+        <div class="product-video-block">
+          <div class="video-wrapper">
+            {% if block.settings.video != blank %}
+              {{
+                block.settings.video
+                | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, class: 'product-video'
+              }}
+            {% endif %}
+          </div>
+          {% if block.settings.title != blank %}
+            <p class="product-video-title">{{ block.settings.title }}</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+{% schema %}
+{
+  "name": "Product Video Grid",
+  "tag": "section",
+  "class": "product-video-section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Schema"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "video",
+      "name": "Video Block",
+      "settings": [
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Product Video Grid"
+    }
+  ]
+}
+{% endschema %}
