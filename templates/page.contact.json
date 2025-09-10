@@ -16,19 +16,52 @@
         "padding_bottom": 36
       }
     },
+    "image_with_text_EDAhnd": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_izBM6A": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Har du spørgsmål, eller har du brug for hjælp? Vi er her for at assistere dig!<br/>Uanset om du har brug for vejledning til din Luvo Smart Ring, har spørgsmål om din ordre, eller blot ønsker at lære mere, er du altid velkommen til at kontakte os via nedenstående kontaktformular.</p><p>Vi bestræber os på at besvare alle henvendelser hurtigst muligt og glæder os til at hjælpe dig!</p><p><strong>Du kan forvente svar i løbet af 3 hverdage på e-mail.</strong></p><p><em><strong>* </strong></em><em>Vedrører din henvendelse samarbejder, B2B eller anden forretningsrelateret forespørgsel, bedes du kontakte os direkte på info@luvoring.dk. Support relaterede spørgsmål sendt til denne e-mail, vil ikke blive besvaret. </em></p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "text_izBM6A"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/image_5.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "unique_class": "custom-image-text-cls",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "form": {
       "type": "contact-form",
       "settings": {
-        "heading": "",
+        "heading": "Get in touch",
         "heading_size": "h1",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "color_scheme": "scheme-2",
+        "padding_top": 44,
+        "padding_bottom": 44
       }
     }
   },
   "order": [
     "main",
+    "image_with_text_EDAhnd",
     "form"
   ]
 }
