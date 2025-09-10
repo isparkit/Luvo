@@ -8,7 +8,7 @@
     {% endif %}
   </div>
 
-  <div class="page-widthh">
+  <div class="page-width">
     <div class="video-hero__content">
       <div class="video-text-area">
         {% if section.settings.heading != blank %}
@@ -47,7 +47,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    padding-left: max((calc(100% - 1130px) / 2), 50px);
+    {% comment %} padding-left: max((calc(100% - 1130px) / 2), 50px); {% endcomment %}
   }
   .video-hero .video-text-area {
     text-align: left;
