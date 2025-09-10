@@ -42,7 +42,8 @@
             display: none !important;
         }
 </style>
-<script>
+{% comment %} <script>
+
     document.addEventListener("DOMContentLoaded", () => {
         const stickyBtn = document.querySelector(".sticky-bar__button");
         
@@ -56,4 +57,44 @@
             });
         }
         });
+</script> {% endcomment %}
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const stickyBar = document.getElementById("mobile-sticky-bar");
+    const stickyAddBtn = stickyBar?.querySelector(".sticky-bar__button");
+    const mainAddBtn = document.querySelector('form.product-form button[type="submit"]');
+
+    function isElementInViewport(el) {
+      if (!el) return false;
+      const rect = el.getBoundingClientRect();
+      return rect.top >= 0 && rect.bottom <= window.innerHeight;
+    }
+
+    function toggleStickyBarVisibility() {
+      if (!mainAddBtn || !stickyBar) return;
+
+      const isMainBtnVisible = isElementInViewport(mainAddBtn);
+      if (!isMainBtnVisible && window.innerWidth < 768) {
+        stickyBar.style.display = "block";
+      } else {
+        stickyBar.style.display = "none";
+      }
+    }
+
+    // Handle click on sticky button to trigger the main add to cart button
+    if (stickyAddBtn && mainAddBtn) {
+      stickyAddBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        mainAddBtn.click();
+      });
+    }
+
+    // Initial check
+    toggleStickyBarVisibility();
+
+    // Recheck on scroll and resize
+    window.addEventListener("scroll", toggleStickyBarVisibility);
+    window.addEventListener("resize", toggleStickyBarVisibility);
+  });
 </script>
