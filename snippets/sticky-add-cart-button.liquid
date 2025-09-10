@@ -1,51 +1,6 @@
-{% comment %} <div id="mobile-sticky-bar" class="mobile-sticky-bar">
-  <div class="sticky-bar__content">
-    <img
-      src="{{ product.featured_image | image_url: width: 100 }}"
-      alt="{{ product.title }}"
-      class="sticky-bar__image"
-    >
-
-    <div class="sticky-bar__info">
-      <div class="sticky-bar__title">{{ product.title }}</div>
-
-      <div class="sticky-bar__price">
-        {% if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}
-          <span class="compare-price">
-            {{ product.selected_or_first_available_variant.compare_at_price | money }}
-          </span>
-        {% endif %}
-        <span class="actual-price">
-          {{ product.selected_or_first_available_variant.price | money }}
-        </span>
-      </div>
-    </div>
-
-    <button type="button" class="sticky-bar__button">
-      {{ 'products.product.add_to_cart' | t }}
-    </button>
-  </div>
-</div>
-
-<style>
-    .mobile-sticky-bar .sticky-bar__content {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      color: #fff;
-      padding: 10px 20px;
-      background-color: #000;
-    }
-    @media screen and (min-width: 768px) {
-        .mobile-sticky-bar {
-            display: none !important;
-        }
-</style>
 
 
- {% endcomment %}
-
- <div id="mobile-sticky-bar" class="mobile-sticky-bar">
+ <div i="mobile-sticky-bar" class="mobile-sticky-bar">
   <div class="sticky-bar__content">
     <img
       src="{{ product.featured_image | image_url: width: 100 }}"
