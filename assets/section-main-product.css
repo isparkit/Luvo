@@ -3,6 +3,7 @@
     border: 1px solid #0000001A;
     background: #ffffff;
     border-radius: 12px;
+    padding: 0;
 }
 .product .product__info-wrapper .product-form__input .form__label{
     color: rgba(var(--color-foreground));
