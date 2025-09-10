@@ -60,20 +60,14 @@
 </script> {% endcomment %}
 
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
     const stickyBtn = document.querySelector(".sticky-bar__button");
+    const productForm = document.querySelector("form.product-form");
 
-    if (stickyBtn) {
-        stickyBtn.addEventListener("click", () => {
-        // Find the real product form
-        const productForm = document.querySelector("form.product-form");
-
-        if (productForm) {
-            // Submit the form the same way the main button does
-            productForm.requestSubmit();
-        }
-        });
+    if (stickyBtn && productForm) {
+      stickyBtn.addEventListener("click", () => {
+        productForm.requestSubmit(); // triggers cart drawer behavior
+      });
     }
-    });
-
+  });
 </script>
