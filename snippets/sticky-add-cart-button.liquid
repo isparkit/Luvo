@@ -1,6 +1,6 @@
 
 
- <div i="mobile-sticky-bar" class="mobile-sticky-bar">
+ <div id="mobile-sticky-bar" class="mobile-sticky-bar">
   <div class="sticky-bar__content">
     <img
       src="{{ product.featured_image | image_url: width: 100 }}"
@@ -49,16 +49,31 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const stickyBtn = document.querySelector(".sticky-bar__button");
+    const stickyBar = document.getElementById("mobile-sticky-bar");
+    const stickyBtn = stickyBar?.querySelector(".sticky-bar__button");
+    const productForm = document.querySelector("form.product-form");
+    const mainAddBtn = productForm?.querySelector(".product-form__submit");
 
-    if (stickyBtn) {
+    function isInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return rect.top >= 0 && rect.bottom <= window.innerHeight;
+    }
+
+    function toggleStickyBar() {
+      if (!mainAddBtn || !stickyBar) return;
+      const visible = isInViewport(mainAddBtn);
+      stickyBar.style.display = visible ? "none" : "block";
+    }
+
+    if (stickyBtn && productForm) {
       stickyBtn.addEventListener("click", () => {
-        const productFormComponent = document.querySelector("product-form");
-
-        if (productFormComponent && typeof productFormComponent.submitForm === "function") {
-          productFormComponent.submitForm();
-        }
+        productForm.requestSubmit();
       });
     }
+
+    toggleStickyBar();
+    window.addEventListener("scroll", toggleStickyBar);
+    window.addEventListener("resize", toggleStickyBar);
   });
 </script>
+
