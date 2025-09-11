@@ -53,15 +53,17 @@
       {% for block in section.blocks %}
         <div class="product-video-block">
           <div class="video-wrapper">
-            <video
-              class="product-video"
-              src="{{ block.settings.video_url }}"
-              autoplay
-              loop
-              muted
-              playsinline
-              preload="auto"
-            ></video>
+             {% if block.settings.video_url != blank %}
+              <video
+                class="product-video"
+                src="{{ block.settings.video_url }}"
+                autoplay
+                loop
+                muted
+                playsinline
+                preload="auto"
+              ></video>
+             {% endif %}
           </div>
           {% if block.settings.title != blank %}
             <p class="product-video-title">{{ block.settings.title }}</p>
