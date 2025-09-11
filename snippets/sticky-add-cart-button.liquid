@@ -48,18 +48,29 @@
 </style>
 
 <script>
- document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const stickyBtn = document.querySelector(".sticky-bar__button");
- 
+
   if (stickyBtn) {
-    stickyBtn.addEventListener("click", () => {debugger;
-      const submitBtn = stickyBtn.closest("form")?.querySelector(".product-form__submit");
- 
-      if (submitBtn) {
-        submitBtn.click();
+    stickyBtn.addEventListener("click", () => {
+      debugger;
+
+      // Find the product form on the page
+      const productForm = document.querySelector(".product-form");
+
+      if (productForm) {
+        const submitBtn = productForm.querySelector(".product-form__submit");
+        if (submitBtn) {
+          submitBtn.click();
+        } else {
+          console.warn("No .product-form__submit found inside .product-form");
+        }
+      } else {
+        console.warn("No .product-form found on the page");
       }
     });
   }
 });
+
 </script>
 
