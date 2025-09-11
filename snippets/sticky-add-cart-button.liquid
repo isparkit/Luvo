@@ -85,7 +85,7 @@
 }
 .mobile-sticky-bar .sticky-bar__content-info {
     display: flex;
-    gap: 5px;
+    gap: 10px;
     align-items: center;
     justify-content: flex-start;
 }
@@ -94,6 +94,19 @@
       display: none !important;
     }
   }
+   @media screen and (max-width: 480px) {
+    .mobile-sticky-bar .sticky-bar__info > * {
+      font-size: 14px !important;
+    }
+    .mobile-sticky-bar .sticky-bar__button {
+      font-size: 12px;
+    }
+  }
+   @media screen and (max-width: 390px) {
+     .mobile-sticky-bar .sticky-bar__info > * {
+      font-size: 13px !important;
+    }
+   }
 </style>
 
 <script>

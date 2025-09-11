@@ -78,6 +78,7 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 
 .drawer__heading {
   margin: 0 0 1rem;
+  font-family: 'Gordita-Medium';
 }
 
 .drawer__close {
@@ -220,6 +221,7 @@ cart-drawer-items {
 
 .cart-drawer .cart-items thead {
   margin-bottom: 0.5rem;
+  font-family: 'Gordita-Regular';
 }
 
 .cart-drawer .cart-items thead th:first-child,
@@ -302,6 +304,8 @@ cart-drawer-items {
 
 .cart-drawer .totals {
   justify-content: space-between;
+  font-family: 'Gordita-Regular';
+  margin-bottom: 12px;
 }
 
 .cart-drawer .price {
@@ -323,8 +327,12 @@ cart-drawer-items {
 
 .cart-drawer .cart__checkout-button {
   max-width: none;
+  font-family: 'Gordita-Regular';
+  border-radius: 100px;
 }
-
+.cart-drawer .cart__checkout-button.button:after {
+  display: none;
+}
 .drawer__footer .cart__dynamic-checkout-buttons {
   max-width: 100%;
 }
