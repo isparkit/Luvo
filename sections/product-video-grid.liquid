@@ -67,6 +67,19 @@
       {% endfor %}
     </div>
   </div>
+  <script>
+    const video = document.querySelector('.product-video-block:nth-child(2) video');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio >= 0.1) { // 10% visible
+      video.load();
+      observer.disconnect();
+    }
+  });
+}, { threshold: [0.1] });
+observer.observe(video);
+
+  </script>
 {% schema %}
 {
   "name": "Product Video Grid",
