@@ -10,19 +10,21 @@
 .kaching-bundles .kaching-bundles__block-title:before, .kaching-bundles .kaching-bundles__block-title:after {
   display: none;
 }
-.kaching-bundles .kaching-bundles__bar-title {
-  font-family: 'Gordita-Medium';
+.kaching-bundles .kaching-bundles__bar-title,
+.kaching-bundles .kaching-bundles__bar-price,
+.kaching-bundles .kaching-bundles__bar--selected .kaching-bundles__upsell__text,
+.kaching-bundles .kaching-bundles__bar-most-popular__content {
+  font-family: 'Gordita-Medium' !important;
   font-weight: 500 !important;
 }
-.kaching-bundles .kaching-bundles__bar-subtitle {
+.kaching-bundles .kaching-bundles__bar-subtitle,
+.kaching-bundles .kaching-bundles__bar-variant-select span,
+.kaching-bundles .kaching-bundles__bar-full-price {
     font-family: 'Gordita-Regular';
     font-weight: 400 !important;
 }
 .kaching-bundles .kaching-bundles__upsell {
     padding: 10px 16px !important;
-}
-.kaching-bundles .kaching-bundles__bar--selected .kaching-bundles__upsell__text {
-    font-family: 'Gordita-Medium';
 }
 /* kaching-bundles app design end */
 
