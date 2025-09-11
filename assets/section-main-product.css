@@ -21,6 +21,9 @@
 .kaching-bundles .kaching-bundles__upsell {
     padding: 10px 16px !important;
 }
+.kaching-bundles .kaching-bundles__bar--selected .kaching-bundles__upsell__text {
+    font-family: 'Gordita-Medium';
+}
 /* kaching-bundles app design end */
 
 
