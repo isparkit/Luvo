@@ -9,6 +9,11 @@
 .kaching-bundles .kaching-bundles__bar-container * {
     padding-bottom: 0 !important;
 }
+.kaching-bundles .kaching-bundles__block-title:before, .kaching-bundles .kaching-bundles__block-title:after {
+  display: none;
+}
+
+
 .product .product__media-wrapper .product__media-list .product__media-item, .product .product__media-wrapper .thumbnail-list.slider--tablet-up .thumbnail-list__item.slider__slide {
     border: 1px solid #0000001A;
     background: #ffffff;
