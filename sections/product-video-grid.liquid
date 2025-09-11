@@ -54,42 +54,10 @@
         <div class="product-video-block">
           <div class="video-wrapper">
             {% if block.settings.video != blank %}
-              {% comment %} {{
+              {{
                 block.settings.video
                 | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, preload: 'auto', class: 'product-video', loading: 'eager'
-              }}             {% endcomment %}
-  {% assign video = block.settings.video %}
-      
-      {% if video != blank %}
-        {% assign source = video.sources | first %}
-        
-        {% if source.url %}
-          <video
-            class="product-video"
-            src="{{ source.url }}"
-            autoplay
-            loop
-            muted
-            playsinline
-            preload="auto"
-          ></video>
-        {% elsif video.original_source.url %}
-          <video
-            class="product-video"
-            src="{{ video.original_source.url }}"
-            autoplay
-            loop
-            muted
-            playsinline
-            preload="auto"
-          ></video>
-        {% else %}
-          <p style="color: red;">Video has no sources or URL. Please re-upload.</p>
-        {% endif %}
-
-      {% else %}
-        <p style="color: orange;">No video selected for this block.</p>
-      {% endif %}
+              }}
             {% endif %}
           </div>
           {% if block.settings.title != blank %}
