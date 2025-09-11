@@ -6,7 +6,7 @@
     padding: 0;
 }
 .product .product__modal-opener {
-    height: 100%;
+    height: 100% !important;
 }
 .product .product__info-wrapper .product-form__input .form__label{
     color: rgba(var(--color-foreground));
