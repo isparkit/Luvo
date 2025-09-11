@@ -1,6 +1,7 @@
 
 .kaching-bundles .kaching-bundles__block-title {
     margin-bottom: 0 !important;
+    font-family: 'Gordita-Bold';
 }
 .kaching-bundles .kaching-bundles__block.kaching-bundles__block--loaded {
     margin-top: 6px !important;
