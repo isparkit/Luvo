@@ -12,7 +12,7 @@
       <div class="sticky-bar__title p">{{ product.title }}</div>
 
       <div class="sticky-bar__price">
-        <span class="actual-price">
+        <span class="price">
           {{ product.selected_or_first_available_variant.price | money }}
         </span>
         {% if product.selected_or_first_available_variant.compare_at_price
