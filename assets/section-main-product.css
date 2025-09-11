@@ -5,6 +5,9 @@
     border-radius: 12px;
     padding: 0;
 }
+.product .product__modal-opener {
+    height: 100%;
+}
 .product .product__info-wrapper .product-form__input .form__label{
     color: rgba(var(--color-foreground));
     font-family: 'Gordita-Medium';
