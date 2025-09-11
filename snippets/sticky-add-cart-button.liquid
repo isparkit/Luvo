@@ -40,47 +40,59 @@
     padding: 10px 20px;
     background-color: #000;
   }
-  .mobile-sticky-bar .sticky-bar__content img{
-    border-radius:5px;
+  .mobile-sticky-bar .sticky-bar__content img {
+    border-radius: 5px;
   }
   .mobile-sticky-bar {
     position: fixed;
     bottom: 0;
     width: 100%;
     z-index: 2;
+
+    /* transition styles */
+    opacity: 0;
+    transform: translateY(100%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  .mobile-sticky-bar.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
   @media screen and (min-width: 768px) {
     .mobile-sticky-bar {
       display: none !important;
-      
     }
   }
 </style>
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+  const stickyBar = document.querySelector(".mobile-sticky-bar");
   const stickyBtn = document.querySelector(".sticky-bar__button");
+  const submitBtn = document.querySelector(".product-form .product-form__submit");
 
-  if (stickyBtn) {
-    stickyBtn.addEventListener("click", () => {
-      debugger;
+  if (!stickyBar || !stickyBtn || !submitBtn) return;
 
-      // Find the product form on the page
-      const productForm = document.querySelector(".product-form");
-
-      if (productForm) {
-        const submitBtn = productForm.querySelector(".product-form__submit");
-        if (submitBtn) {
-          submitBtn.click();
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          stickyBar.classList.remove("visible");
         } else {
-          console.warn("No .product-form__submit found inside .product-form");
+          stickyBar.classList.add("visible");
         }
-      } else {
-        console.warn("No .product-form found on the page");
-      }
-    });
-  }
-});
+      });
+    },
+    { threshold: 0 }
+  );
 
+  observer.observe(submitBtn);
+
+  stickyBtn.addEventListener("click", () => {
+    submitBtn.click();
+  });
+});
 </script>
 
