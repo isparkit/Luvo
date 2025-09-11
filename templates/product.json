@@ -290,6 +290,7 @@
           "type": "video",
           "settings": {
             "video": "shopify://files/videos/video 1.mp4",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/c1a332e344254cb486b0c60c94086c9c.mp4",
             "title": "Body Temperature Monitoring"
           }
         },
@@ -297,6 +298,7 @@
           "type": "video",
           "settings": {
             "video": "shopify://files/videos/video 2.mp4",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/c1a332e344254cb486b0c60c94086c9c.mp4",
             "title": "Sleep Monitoring"
           }
         },
@@ -304,6 +306,7 @@
           "type": "video",
           "settings": {
             "video": "shopify://files/videos/video 3.mp4",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/c1a332e344254cb486b0c60c94086c9c.mp4",
             "title": "Smart Activity Tracking"
           }
         },
@@ -311,6 +314,7 @@
           "type": "video",
           "settings": {
             "video": "shopify://files/videos/video 4.mp4",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/c1a332e344254cb486b0c60c94086c9c.mp4",
             "title": "Smart Touch Control"
           }
         }
