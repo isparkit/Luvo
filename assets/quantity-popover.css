@@ -141,7 +141,7 @@ quantity-popover .quantity__rules span:first-of-type {
 
   .quantity-popover-container {
     width: auto;
-    max-width: 20rem;
+    max-width: 13rem;
   }
 
   .quantity-popover__info.global-settings-popup {
