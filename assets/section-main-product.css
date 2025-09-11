@@ -24,7 +24,7 @@
 .kaching-bundles .kaching-bundles__bar-variant-number,
 .kaching-bundles .kaching-bundles__bar-variant-select,
 .kaching-bundles .kaching-bundles__bar-variant-select {
-    font-family: 'Gordita-Regular';
+    font-family: 'Gordita-Regular' !important;
     font-weight: 400 !important;
 }
 .kaching-bundles .kaching-bundles__upsell {
