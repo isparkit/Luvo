@@ -133,9 +133,9 @@
       </small>
     </div>
     {%- if show_badges -%}
-      <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
+      {% comment %} <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
         {{ 'products.product.on_sale' | t }}
-      </span>
+      </span> {% endcomment %}
 
      {%- if compare_at_price > price and compare_at_price > 0 -%}
       {%- assign savings = compare_at_price | minus: price -%}
