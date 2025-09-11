@@ -16,7 +16,7 @@
             > product.selected_or_first_available_variant.price
         %}
           <span class="compare-price">
-            {{ product.selected_or_first_available_variant.compare_at_price | money }}
+            <s>{{ product.selected_or_first_available_variant.compare_at_price | money }}</s>
           </span>
         {% endif %}
         <span class="actual-price">
