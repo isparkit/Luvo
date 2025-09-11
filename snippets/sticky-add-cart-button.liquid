@@ -43,9 +43,16 @@
   .mobile-sticky-bar .sticky-bar__content img{
     border-radius:5px;
   }
+  .mobile-sticky-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+  }
   @media screen and (min-width: 768px) {
     .mobile-sticky-bar {
       display: none !important;
+      
     }
   }
 </style>
