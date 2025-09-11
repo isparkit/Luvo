@@ -1,17 +1,24 @@
 
+/* kaching-bundles app design start */
 .kaching-bundles .kaching-bundles__block-title {
     margin-bottom: 0 !important;
     font-family: 'Gordita-Bold';
 }
-/* .kaching-bundles .kaching-bundles__block.kaching-bundles__block--loaded {
-    margin-top: 13px !important;
-} */
 .kaching-bundles .kaching-bundles__bar-container * {
     padding-bottom: 0 !important;
 }
 .kaching-bundles .kaching-bundles__block-title:before, .kaching-bundles .kaching-bundles__block-title:after {
   display: none;
 }
+.kaching-bundles .kaching-bundles__bar-title {
+  font-family: 'Gordita-Medium';
+  font-weight: 500 !important;
+}
+.kaching-bundles .kaching-bundles__bar-subtitle {
+    font-family: 'Gordita-Regular';
+    font-weight: 400 !important;
+}
+/* kaching-bundles app design end */
 
 
 .product .product__media-wrapper .product__media-list .product__media-item, .product .product__media-wrapper .thumbnail-list.slider--tablet-up .thumbnail-list__item.slider__slide {
