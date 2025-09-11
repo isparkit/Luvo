@@ -58,10 +58,9 @@
                 block.settings.video
                 | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, preload: 'auto', class: 'product-video', loading: 'eager'
               }}             {% endcomment %}
-                             {% assign video_src = block.settings.video.sources | first %}
   <video
     class="product-video"
-    src="{{ video_src.url }}"
+    src="{{ block.settings.video | file_url }}"
     autoplay
     loop
     muted
