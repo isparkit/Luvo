@@ -56,8 +56,18 @@
             {% if block.settings.video != blank %}
               {{
                 block.settings.video
-                | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, class: 'product-video'
+                | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, preload: 'auto', class: 'product-video', loading: 'eager'
               }}           
+              <video
+                class="product-video"
+                src="{{ block.settings.video | video_url }}"
+                autoplay
+                loop
+                muted
+                playsinline
+                preload="auto"
+              ></video>
+
             {% endif %}
           </div>
           {% if block.settings.title != blank %}
@@ -67,36 +77,6 @@
       {% endfor %}
     </div>
   </div>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const videos = document.querySelectorAll('.product-video');
-
-    videos.forEach(video => {
-      // Shopify's video_tag might delay loading — force it
-      if (!video.getAttribute('preload')) {
-        video.setAttribute('preload', 'auto');
-      }
-
-      // If video hasn't started loading, manually trigger it
-      if (video.readyState === 0) {
-        const src = video.querySelector('source');
-        if (src) {
-          const newSrc = src.getAttribute('src');
-          src.setAttribute('src', '');
-          src.setAttribute('src', newSrc);
-          video.load();
-        } else {
-          // fallback for inline video sources
-          const newSrc = video.getAttribute('src');
-          video.setAttribute('src', '');
-          video.setAttribute('src', newSrc);
-          video.load();
-        }
-      }
-    });
-  });
-</script>
-
 {% schema %}
 {
   "name": "Product Video Grid",
