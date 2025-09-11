@@ -58,15 +58,17 @@
                 block.settings.video
                 | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, preload: 'auto', class: 'product-video', loading: 'eager'
               }}           
-              <video
-                class="product-video"
-                src="{{ block.settings.video | video_url }}"
-                autoplay
-                loop
-                muted
-                playsinline
-                preload="auto"
-              ></video>
+             <video
+              class="product-video"
+              src="{{ block.settings.video.sources[0].url }}"
+              autoplay
+              loop
+              muted
+              playsinline
+              preload="auto"
+              controlslist="nodownload nofullscreen noremoteplayback"
+              disablepictureinpicture
+            ></video>
 
             {% endif %}
           </div>
