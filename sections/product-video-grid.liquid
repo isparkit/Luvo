@@ -54,10 +54,10 @@
         <div class="product-video-block">
           <div class="video-wrapper">
             {% if block.settings.video != blank %}
-              {{
+              {% comment %} {{
                 block.settings.video
                 | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, preload: 'auto', class: 'product-video', loading: 'eager'
-              }}           
+              }}            {% endcomment %}
              <video
               class="product-video"
               src="{{ block.settings.video.sources[0].url }}"
