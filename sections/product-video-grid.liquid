@@ -67,6 +67,35 @@
       {% endfor %}
     </div>
   </div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const videos = document.querySelectorAll('.product-video');
+
+    videos.forEach(video => {
+      // Shopify's video_tag might delay loading — force it
+      if (!video.getAttribute('preload')) {
+        video.setAttribute('preload', 'auto');
+      }
+
+      // If video hasn't started loading, manually trigger it
+      if (video.readyState === 0) {
+        const src = video.querySelector('source');
+        if (src) {
+          const newSrc = src.getAttribute('src');
+          src.setAttribute('src', '');
+          src.setAttribute('src', newSrc);
+          video.load();
+        } else {
+          // fallback for inline video sources
+          const newSrc = video.getAttribute('src');
+          video.setAttribute('src', '');
+          video.setAttribute('src', newSrc);
+          video.load();
+        }
+      }
+    });
+  });
+</script>
 
 {% schema %}
 {
