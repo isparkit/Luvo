@@ -4,7 +4,7 @@
     margin-bottom: 0 !important;
     font-family: 'Gordita-Bold';
 }
-.kaching-bundles .kaching-bundles__bar-container * {
+.kaching-bundles .kaching-bundles__bar-wrapper {
     padding-bottom: 0 !important;
 }
 .kaching-bundles .kaching-bundles__block-title:before, .kaching-bundles .kaching-bundles__block-title:after {
