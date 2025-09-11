@@ -54,10 +54,20 @@
         <div class="product-video-block">
           <div class="video-wrapper">
             {% if block.settings.video != blank %}
-              {{
+              {% comment %} {{
                 block.settings.video
                 | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, preload: 'auto', class: 'product-video', loading: 'eager'
-              }}            
+              }}             {% endcomment %}
+                             {% assign video_src = block.settings.video.sources | first %}
+  <video
+    class="product-video"
+    src="{{ video_src.url }}"
+    autoplay
+    loop
+    muted
+    playsinline
+    preload="auto"
+  ></video>
             {% endif %}
           </div>
           {% if block.settings.title != blank %}
