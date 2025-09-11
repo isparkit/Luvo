@@ -58,6 +58,16 @@
                 block.settings.video
                 | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, class: 'product-video'
               }}
+              <video
+              src="{{ block.settings.video | file_url }}"
+              autoplay
+              loop
+              muted
+              playsinline
+              preload="auto"
+              class="product-video"
+            ></video>
+
             {% endif %}
           </div>
           {% if block.settings.title != blank %}
