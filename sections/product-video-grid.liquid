@@ -59,6 +59,15 @@
                 | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, preload: 'auto', class: 'product-video', loading: 'eager'
               }}
             {% endif %}
+            <video
+              class="product-video"
+              src="{{ block.settings.video_url }}"
+              autoplay
+              loop
+              muted
+              playsinline
+              preload="auto"
+            ></video>
           </div>
           {% if block.settings.title != blank %}
             <p class="product-video-title">{{ block.settings.title }}</p>
@@ -113,6 +122,11 @@
           "id": "video",
           "label": "Video"
         },
+        {
+        "type": "url",
+        "id": "video_url",
+        "label": "Video URL"
+      },
         {
           "type": "text",
           "id": "title",
