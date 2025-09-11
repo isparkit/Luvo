@@ -19,7 +19,11 @@
 }
 .kaching-bundles .kaching-bundles__bar-subtitle,
 .kaching-bundles .kaching-bundles__bar-variant-select span,
-.kaching-bundles .kaching-bundles__bar-full-price {
+.kaching-bundles .kaching-bundles__bar-full-price,
+.kaching-bundles .kaching-bundles__bar-variant-names,
+.kaching-bundles .kaching-bundles__bar-variant-number,
+.kaching-bundles .kaching-bundles__bar-variant-select,
+.kaching-bundles .kaching-bundles__bar-variant-select {
     font-family: 'Gordita-Regular';
     font-weight: 400 !important;
 }
