@@ -1471,6 +1471,7 @@ a.product__text {
   --contained-width: calc(var(--constrained-height) * var(--aspect-ratio));
   /* width: min(var(--contained-width), 100%); */
   width: 100%;
+  height: 100%;
 }
 
 .product-media-container .media {
