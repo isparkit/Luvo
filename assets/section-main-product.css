@@ -2,6 +2,9 @@
 .kaching-bundles .kaching-bundles__block-title {
     margin-bottom: 0 !important;
 }
+.kaching-bundles .kaching-bundles__block.kaching-bundles__block--loaded {
+    margin-top: 6px !important;
+}
 .product .product__media-wrapper .product__media-list .product__media-item, .product .product__media-wrapper .thumbnail-list.slider--tablet-up .thumbnail-list__item.slider__slide {
     border: 1px solid #0000001A;
     background: #ffffff;
