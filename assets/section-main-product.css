@@ -13,7 +13,8 @@
 .kaching-bundles .kaching-bundles__bar-title,
 .kaching-bundles .kaching-bundles__bar-price,
 .kaching-bundles .kaching-bundles__bar--selected .kaching-bundles__upsell__text,
-.kaching-bundles .kaching-bundles__bar-most-popular__content {
+.kaching-bundles .kaching-bundles__bar-most-popular__content,
+.kaching-bundles .kaching-bundles__upsell__price {
   font-family: 'Gordita-Medium' !important;
   font-weight: 500 !important;
 }
