@@ -182,7 +182,7 @@
         "text_DX9FTx": {
           "type": "text",
           "settings": {
-            "text": "<p>Crafted with premium materials and a minimalist design, Luvo is more than wearable tech—it’s a timeless accessory that fits every lifestyle.</p>"
+            "text": "<p>LUVO er fremstillet i høj kvalitet og med et minimalistisk design. Det er mere end bare teknologi - det er et tidløst tilbehør, til enhver livsstil.</p>"
           }
         }
       },
@@ -332,8 +332,8 @@
       "name": "Custom Health App",
       "settings": {
         "color_scheme": "scheme-2",
-        "heading": "Your Health, In Your Hands",
-        "subtext": "The Luvo app gives you a complete view of your wellness track activity, monitor sleep, analyze heart rate, and set personalized goals, all from a beautifully designed dashboard.",
+        "heading": "Din sundhed, i dine hænder",
+        "subtext": "Appen giver dig et komplet overblik over din wellness-aktivitet, overvåger din søvn, og analyserer din puls, alt sammen fra et smukt designet dashboard.",
         "top_image1": "shopify://shop_images/Badge_1.svg",
         "top_link1": "#",
         "top_image2": "shopify://shop_images/Badge.svg",
