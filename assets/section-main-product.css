@@ -75,7 +75,7 @@
 .product .product__info-wrapper .product-form__input--swatch .swatch-input__input:active+.swatch-input__label, .product .product__info-wrapper .product-form__input--swatch .swatch-input__input:checked+.swatch-input__label {
     padding: 6px;
     outline: none;
-    border: 1px solid #000000;
+    /* border: 1px solid #000000; */
 }
 .product .swatch-input__input.visually-disabled:not(:active):not(:checked)+.swatch-input__label {
     padding: 6px;
