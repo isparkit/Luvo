@@ -21,52 +21,33 @@
         "btn_link": "shopify://products/luvoring"
       }
     },
-    "homepage_product_info_fVJWkG": {
-      "type": "homepage-product-info",
-      "blocks": {
-        "info_pRpQyY": {
-          "type": "info",
-          "settings": {
-            "title": "Skin Temperature Sensor",
-            "description": "Continuous temperature tracking for early wellness insights."
-          }
-        },
-        "info_x9EQQx": {
-          "type": "info",
-          "settings": {
-            "title": "Infrared & Green LED Lights",
-            "description": "Multi-wavelength sensors for precise health monitoring—even at night."
-          }
-        },
-        "info_QNaENn": {
-          "type": "info",
-          "settings": {
-            "title": "Ultra-Lightweight Comfort",
-            "description": "Designed for 24/7 wear—you’ll forget it’s even there."
-          }
-        },
-        "info_QTjL66": {
-          "type": "info",
-          "settings": {
-            "title": "Infrared & Green LED Lights",
-            "description": "Multi-wavelength sensors for precise health monitoring—even at night."
-          }
-        }
-      },
-      "block_order": [
-        "info_pRpQyY",
-        "info_x9EQQx",
-        "info_QNaENn",
-        "info_QTjL66"
-      ],
-      "name": "Homepage Product Info",
+    "featured_collection_6rAWQ8": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
       "settings": {
+        "title": "Featured Collection",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "featured-collection",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
         "color_scheme": "scheme-59df7249-e905-4485-8bc5-736404acd64d",
-        "heading": "Why Choose Luvo",
-        "subtext": "More than just a ring Luvo keeps you connected, healthy, and in style. Here’s what makes it special.",
-        "ring_image": "shopify://shop_images/image_8.png",
-        "padding_top": 100,
-        "padding_bottom": 152
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
     "custom_luvo_works_mp4iKQ": {
@@ -138,6 +119,54 @@
         "section_subtext": "Luvo combines cutting-edge sensors, seamless connectivity, and AI-powered insights—so you can focus on living, while it takes care of the tracking.",
         "padding_top": 100,
         "padding_bottom": 52
+      }
+    },
+    "homepage_product_info_fVJWkG": {
+      "type": "homepage-product-info",
+      "blocks": {
+        "info_pRpQyY": {
+          "type": "info",
+          "settings": {
+            "title": "Skin Temperature Sensor",
+            "description": "Continuous temperature tracking for early wellness insights."
+          }
+        },
+        "info_x9EQQx": {
+          "type": "info",
+          "settings": {
+            "title": "Infrared & Green LED Lights",
+            "description": "Multi-wavelength sensors for precise health monitoring—even at night."
+          }
+        },
+        "info_QNaENn": {
+          "type": "info",
+          "settings": {
+            "title": "Ultra-Lightweight Comfort",
+            "description": "Designed for 24/7 wear—you’ll forget it’s even there."
+          }
+        },
+        "info_QTjL66": {
+          "type": "info",
+          "settings": {
+            "title": "Infrared & Green LED Lights",
+            "description": "Multi-wavelength sensors for precise health monitoring—even at night."
+          }
+        }
+      },
+      "block_order": [
+        "info_pRpQyY",
+        "info_x9EQQx",
+        "info_QNaENn",
+        "info_QTjL66"
+      ],
+      "name": "Homepage Product Info",
+      "settings": {
+        "color_scheme": "scheme-59df7249-e905-4485-8bc5-736404acd64d",
+        "heading": "Why Choose Luvo",
+        "subtext": "More than just a ring Luvo keeps you connected, healthy, and in style. Here’s what makes it special.",
+        "ring_image": "shopify://shop_images/image_8.png",
+        "padding_top": 100,
+        "padding_bottom": 152
       }
     },
     "rich_text_igMUry": {
@@ -395,8 +424,9 @@
   },
   "order": [
     "main_video_banner_tQGWci",
-    "homepage_product_info_fVJWkG",
+    "featured_collection_6rAWQ8",
     "custom_luvo_works_mp4iKQ",
+    "homepage_product_info_fVJWkG",
     "rich_text_igMUry",
     "image_banner_GfzjU3",
     "custom_liquid_Pq6hM8",
