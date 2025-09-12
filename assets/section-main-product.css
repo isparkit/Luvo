@@ -154,13 +154,14 @@
 .product .product-form__input--pill input[type=radio].disabled+label::after {
     content: '';
     position: absolute;
-    top: 0;
+    top: 9px;
     left: 0;
     width: 100%;
     height: 100%;
     background-image: url('https://cdn.shopify.com/s/files/1/0599/3044/3889/files/Line_7.svg?v=1757321688');
     background-repeat: no-repeat;
     background-size: 100%;
+    transform: rotate(-3.66deg);
 }
 
 
