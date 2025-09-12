@@ -15,9 +15,9 @@
       "settings": {
         "color_scheme": "scheme-4",
         "bg_video": "shopify://files/videos/Banner Video.mp4",
-        "heading": "Luvo The Future on Your Finger",
-        "subtext": "Experience the perfect blend of technology and elegance. Track health, stay connected, and express your style all with one smart ring.",
-        "btn_text": "Discover Luvo Ring II",
+        "heading": "Din krop taler. Luvo Ring Lytter.",
+        "subtext": "Oplev den perfekte blanding af teknologi og design. Hold styr på dit helbred, forbliv forbundet og udtryk din stil med LUVO.",
+        "btn_text": "Udforsk Luvo Ring II",
         "btn_link": "shopify://products/luvoring"
       }
     },
@@ -56,12 +56,12 @@
         "step_H4HgEC": {
           "type": "step",
           "settings": {
-            "tab_title": "Wear the Ring",
-            "block_heading_one": "01. What Happens:",
-            "block_subtext_one": "Simply slip Luvo on your finger—its lightweight and ergonomic design ensures comfort all day.",
-            "block_heading_two": "02. Why It Matters:",
-            "block_subtext_two": "Unlike bulky wearables, Luvo blends seamlessly with your lifestyle you’ll forget you’re even wearing.",
-            "block_heading_three": "03. Visual Idea:",
+            "tab_title": "Bær ringen",
+            "block_heading_one": "01. Hvad sker der:",
+            "block_subtext_one": "Du skal blot tage LUVO på fingeren - det lette og ergonomiske design sikrer komfort hele dagen.",
+            "block_heading_two": "02. Hvorfor det er vigtigt:",
+            "block_subtext_two": "I modsætning til klodsede wearables passer LUVO perfekt ind i din livsstil, så du glemmer, at du har den på.",
+            "block_heading_three": "03. Visuel idé:",
             "block_subtext_three": "Close-up shot of the ring on a hand, with a glow effect highlighting comfort and elegance.",
             "block_image": "shopify://shop_images/luvo_image.png"
           }
@@ -115,8 +115,8 @@
       "name": "Custom Luvo Works",
       "settings": {
         "color_scheme": "scheme-4",
-        "section_heading": "How Luvo Works",
-        "section_subtext": "Luvo combines cutting-edge sensors, seamless connectivity, and AI-powered insights—so you can focus on living, while it takes care of the tracking.",
+        "section_heading": "Sådan fungerer LUVO",
+        "section_subtext": "LUVO kombinerer avancerede sensorer, problemfri forbindelse og AI-drevet indsigt, så du kan fokusere på at leve, mens den lytter til din krop.",
         "padding_top": 100,
         "padding_bottom": 52
       }
@@ -127,22 +127,22 @@
         "info_pRpQyY": {
           "type": "info",
           "settings": {
-            "title": "Skin Temperature Sensor",
-            "description": "Continuous temperature tracking for early wellness insights."
+            "title": "Hudtemperaturføler",
+            "description": "Kontinuerlig temperaturmåling for tidlig indsigt i velvære."
           }
         },
         "info_x9EQQx": {
           "type": "info",
           "settings": {
-            "title": "Infrared & Green LED Lights",
-            "description": "Multi-wavelength sensors for precise health monitoring—even at night."
+            "title": "Infrarøde og grønne LED-lys",
+            "description": "Sensorer med flere bølgelængder til præcis sundhedsovervågning - selv om natten."
           }
         },
         "info_QNaENn": {
           "type": "info",
           "settings": {
-            "title": "Ultra-Lightweight Comfort",
-            "description": "Designed for 24/7 wear—you’ll forget it’s even there."
+            "title": "Ultralet komfort",
+            "description": "Designet til at bære døgnet rundt - du glemmer, at du har den på."
           }
         },
         "info_QTjL66": {
@@ -162,8 +162,8 @@
       "name": "Homepage Product Info",
       "settings": {
         "color_scheme": "scheme-59df7249-e905-4485-8bc5-736404acd64d",
-        "heading": "Why Choose Luvo",
-        "subtext": "More than just a ring Luvo keeps you connected, healthy, and in style. Here’s what makes it special.",
+        "heading": "Hvorfor vælge LUVO",
+        "subtext": "Mere end bare en ring. LUVO holder dig forbundet, sund og stilfuld hele dagen. \nHer er hvad der gør den speciel.",
         "ring_image": "shopify://shop_images/image_8.png",
         "padding_top": 100,
         "padding_bottom": 152
@@ -175,7 +175,7 @@
         "heading_wYbncy": {
           "type": "heading",
           "settings": {
-            "heading": "Designed for Every Style",
+            "heading": "Designet til enhver stil",
             "heading_size": "h2"
           }
         },
