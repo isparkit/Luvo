@@ -36,6 +36,13 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  .custom-featured-col .collection .title {
+    font-family: 'Gordita-Bold';
+    font-weight: 700;
+    line-height: 1.2em;
+    letter-spacing: 0;
+    text-align: center;
+}
 {%- endstyle -%}
 
 {%- liquid
@@ -201,7 +208,7 @@
 {
   "name": "t:sections.featured-collection.name",
   "tag": "section",
-  "class": "section",
+  "class": "section custom-featured-col",
   "disabled_on": {
     "groups": ["header", "footer"]
   },
