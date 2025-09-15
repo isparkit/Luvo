@@ -148,8 +148,8 @@
         "info_QTjL66": {
           "type": "info",
           "settings": {
-            "title": "Infrared & Green LED Lights",
-            "description": "Multi-wavelength sensors for precise health monitoring—even at night."
+            "title": "AI Analyse",
+            "description": "AI-sundhedsscorer, med personlig optimerings guidance."
           }
         }
       },
@@ -348,15 +348,15 @@
         "faq_rDV8rA": {
           "type": "faq",
           "settings": {
-            "question": "What can Luvo track?",
-            "answer": "Luvo tracks your heart rate, steps, sleep, activity, and stress levels—plus discreet smart notifications."
+            "question": "Hvilke funktioner tilbyder Luvo Ring?",
+            "answer": "Luvo sporer din puls, skridt, kalorier, søvn, aktivitetsniveau og stress - med præcis måling hele dagen. Med over 100 sportsfunktioner, detaljeret søvntracking, sundhedsovervågning (inkl. HRV, SpO₂ og kropstemperatur) samt unikke funktioner til kvinder, giver den dig et komplet indblik i både din aktivitet og velvære."
           }
         },
         "faq_emBfhh": {
           "type": "faq",
           "settings": {
-            "question": "Is Luvo waterproof?",
-            "answer": "Luvo tracks your heart rate, steps, sleep, activity, and stress levels—plus discreet smart notifications."
+            "question": "Er Luvo Ring vandtæt?",
+            "answer": "Ja, Luvo Ring er 5AMT vandtæt og kan bæres når du vasker hænder, under træning og i badet. Dog anbefales det ikke at bruge den under svømning i mere end maks 30 minutter. Svømmer du i saltvand, så husk at vask ringen umiddelbart efter, da det kan have indvirkning på sensorerne."
           }
         },
         "faq_DFGUtA": {
