@@ -42,8 +42,8 @@
         "text_6gdNpA": {
           "type": "text",
           "settings": {
-            "heading": "About",
-            "subtext": "<p>We are a Danish brand that puts quality and design at the forefront. Our goal is to help you achieve a better balance in life by providing you with the tools you need to understand and optimize your health – directly from your finger.</p>"
+            "heading": "Om os",
+            "subtext": "<p>Vi er et dansk brand, der sætter kvalitet og design i højsædet. Vores mål er at hjælpe dig med at opnå en bedre balance i livet ved at give dig de værktøjer, du har brug for til at forstå og optimere dit helbred.</p>"
           }
         }
       },
