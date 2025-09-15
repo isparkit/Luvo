@@ -383,8 +383,8 @@
         "faq_faiqGT": {
           "type": "faq",
           "settings": {
-            "question": "Can Luvo sync with Apple Health or Google Fit?",
-            "answer": "Luvo tracks your heart rate, steps, sleep, activity, and stress levels—plus discreet smart notifications."
+            "question": "Kan Luvo synkroniseres med Apple Health eller Google Fit?",
+            "answer": "Ja; Luvo Ring synkroniserer med Apple Health. Google Fit er i proces, og vil blive tilgængeligt meget snart."
           }
         }
       },
