@@ -362,8 +362,8 @@
         "faq_DFGUtA": {
           "type": "faq",
           "settings": {
-            "question": "How long does the battery last?",
-            "answer": "Luvo tracks your heart rate, steps, sleep, activity, and stress levels—plus discreet smart notifications."
+            "question": "Hvordan oplader jeg Luvo Ring, og hvor lang tid holder batteriet?",
+            "answer": "Luvo Ring oplades med den medfølgende oplader. Efter en fuld opladning og under normalt brug, holder batteriet 4-7 dage takket være et kredsløbsdesign med superlavt strømforbrug. Benyttes der flere af ringens funktioner som sportstracking, eller hyppigere målinger, vil det have indvirkning på batterilevetiden. Har du valgt en model hvor der medfølger et opladningsetuiet kan levetiden forlænges helt op til 60 dage.\nOpladning af ringen tager maks 1 time."
           }
         },
         "faq_ULwTX7": {
@@ -376,8 +376,8 @@
         "faq_myKEwH": {
           "type": "faq",
           "settings": {
-            "question": "Does Luvo work with both iOS and Android?",
-            "answer": "Luvo tracks your heart rate, steps, sleep, activity, and stress levels—plus discreet smart notifications."
+            "question": "Fungerer Luvo med både iOS og Android?",
+            "answer": "Ja; Luvo fungerer til både IOS og Android."
           }
         },
         "faq_faiqGT": {
@@ -399,8 +399,8 @@
       "name": "Custom FAQ Accordion",
       "settings": {
         "color_scheme": "scheme-1ab87929-c766-459a-9e9f-732581f51200",
-        "heading": "Everything You Need to Know About Luvo",
-        "subheading": "From battery life to compatibility, here are answers to the most common questions about Luvo Smart Ring.",
+        "heading": "Alt du behøver at vide om LUVO",
+        "subheading": "Fra batterilevetid til kompatibilitet - her finder du svar på de mest almindelige spørgsmål om LUVO Ring.",
         "faq_image": "shopify://shop_images/59.jpg",
         "padding_top": 100,
         "padding_bottom": 100
